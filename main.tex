@@ -214,7 +214,7 @@ level for most groups.
 
 This thesis analyzes two independent global soil datasets. The first is the global topsoil
 survey of Bahram et al.\ (2018), comprising 193 samples after filtering, processed from raw
-FASTQ files through a DADA2 pipeline. The second is the Earth Microbiome Project (EMP)
+FASTQ files through a Divisive Amplicon Denoising Algorithm 2 (DADA2) pipeline. The second is the Earth Microbiome Project (EMP)
 soil subset (Thompson et al.\ 2017), comprising 2,209 samples drawn from a coordinated
 multi-study archive. The datasets differ in scope, sequencing depth, and upstream processing
 methodology; consistent findings in both indicate that results are robust to these differences.
@@ -237,7 +237,7 @@ coordinated single-survey design in which composite soil cores were collected fr
 spanning all major terrestrial biomes globally, producing 7,560 subsamples with matched
 environmental metadata. The bacterial 16S rRNA gene V4 region was amplified using primers
 515F/806RB and sequenced on Illumina platforms as paired-end reads; raw sequence data are
-publicly archived under EBI accession PRJEB19856 (ERP021922) as paired-end FASTQ files.
+publicly archived under European Bioinformatics Institute (EBI) accession PRJEB19856 (ERP021922) as paired-end FASTQ files.
 A total of 234 paired-end samples were downloaded for processing; 193 remained after
 quality-based sample exclusions. Matched sample metadata, obtained from the SRA run table
 (\texttt{sraRunTable.csv}), include biome type, country of collection, geographic coordinates
@@ -322,7 +322,7 @@ Access
 %------------------------------------------------------------
 
 All analyses were performed on the Hopper high performance computer (HPC) cluster at
-Claremont McKenna College (Rocky Linux), managed by SLURM. Compute nodes provide up to
+Claremont McKenna College (Rocky Linux), managed by SLURM (Yoo et al.\ 2003)\cite{yoo2003}. Compute nodes provide up to
 128 CPUs and either 750 GB RAM or 3 TB RAM (high-memory nodes). Each analytical step is
 wrapped in a dedicated SLURM batch script and output files from each step are written to
 structured subdirectories to ensure reproducibility and auditability of the full pipeline.
@@ -549,7 +549,7 @@ shown in Figure~\ref{fig:4}.
 %------------------------------------------------------------
 
 Three alpha diversity metrics were computed from the bacteria-only post-chimera ASV
-matrix (global topsoil) and from the genus-collapsed count matrix (EMP): observed OTUs,
+matrix (global topsoil) and from the genus-collapsed count matrix (EMP): observed operational taxonomic units (OTUs),
 Chao1 bias-corrected richness (Chao 1984)\cite{chao1984}, and Shannon entropy (Shannon
 1948)\cite{shannon1948}. These were computed using the vegan package (Dixon
 2003)\cite{dixon2003}. Cluster assignments were joined to the resulting per-sample table and
@@ -646,9 +646,8 @@ threshold of 20 samples was approximately 10\% of the 193-sample dataset, and re
 165 genus-level lineages.
 
 For the EMP soil subset, a threshold of 50 samples (approximately 2.3\% of 2,209
-samples) was applied, retaining 1,533 genus-level lineages and approximately 98.7\% of
-the read counts. In both datasets, abundance signal was well preserved at the selected
-thresholds.
+samples) was applied, retaining 1,533 lineages (942 genus-resolved and 591 partial-taxonomy
+lineages at phylum, class, order, or family level) and approximately 98.7\% of the read counts.
 
 The final CLR-transformed feature matrices used in all downstream analyses were
 193 samples\,$\times$\,165 lineages (global topsoil) and 2,209 samples\,$\times$\,1,533
@@ -872,8 +871,7 @@ predictive lineages by permutation importance (MDA) under original biome labels 
 in Figure~\ref{fig:12}.
 
 For the EMP soil subset, the same architecture was applied to 11 original and 9 grouped
-biome classes. Classification performance was higher than in the global topsoil dataset:
-test-set accuracy was 97.11\% under original biome labels ($\kappa\,=\,0.961$) and 98.17\%
+biome classes. Test-set accuracy was 97.11\% under original biome labels ($\kappa\,=\,0.961$) and 98.17\%
 under grouped labels ($\kappa\,=\,0.975$). The confusion matrix for original biome labels
 showed near-perfect diagonal results for most classes: marine (92 of 92), montane grassland
 (68 of 68), urban (252 of 252), small river (13 of 13), and tropical moist broadleaf forest
@@ -1005,6 +1003,11 @@ Thompson LR, Sanders JG, McDonald D, Amir A, Ladau J, Locey KJ, Prill RJ,
 Tripathi A, Gibbons SM, Ackermann G, et al. 2017.
 A communal catalogue reveals Earth's multiscale microbial diversity.
 \textit{Nature} 551:457--463.
+
+\bibitem{yoo2003}
+Yoo, A.B., Jette, M.A., and Grondona, M. (2003).
+SLURM: Simple Linux Utility for Resource Management.
+\textit{Lecture Notes in Computer Science}, 2862, 44--60.
 
 \bibitem{yooseph2022}
 Yooseph S, Tavakoli S. 2022.
@@ -1373,12 +1376,12 @@ genus\_retention\_sd\_pct & \% & 22.15 & SD of \% retained \\
 \midrule
 total\_genera\_before\_prevalence\_filter &  & 2513 & Total unique genus-level lineages before prevalence filtering \\
 prevalence\_filter\_threshold & samples & 50 & Minimum number of samples a lineage must appear in to be retained \\
-genera\_after\_prevalence\_filter &  & 966 & Genus-level lineages retained after prevalence filter (threshold=50) \\
+genera\_after\_prevalence\_filter &  & 966 & Genus-resolved lineages retained after prevalence filter (threshold=50); excludes higher-level partial-taxonomy lineages \\
 pct\_lineages\_retained & \% & 38.44 & Percentage of lineages retained at threshold=50 \\
 pct\_abundance\_retained & \% & 98.71 & Percentage of total read count abundance retained at threshold=50 \\
 samples\_excluded\_low\_reads &  & 0 & Samples excluded for having fewer than 5000 total counts \\
 final\_samples &  & 2209 & Final number of samples in CLR-transformed feature matrix \\
-final\_lineages &  & 1533 & Final number of lineages in CLR-transformed feature matrix \\
+final\_lineages &  & 1533 & Final lineages in CLR-transformed feature matrix (942 genus-resolved + 591 partial-taxonomy lineages at phylum/class/order/family level) \\
 pseudocount &  & 1 & Pseudocount added to all entries before log transformation to handle zeros \\
 \end{longtable}
 \endgroup
