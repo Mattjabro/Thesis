@@ -219,6 +219,18 @@ soil subset (Thompson et al.\ 2017), comprising 2,209 samples drawn from a coord
 multi-study archive. The datasets differ in scope, sequencing depth, and upstream processing
 methodology; consistent findings in both indicate that results are robust to these differences.
 
+What makes these questions non-trivial is the compositional nature of amplicon count data:
+read counts are constrained to sum to a fixed library size, making standard Euclidean
+distances geometrically inappropriate and Pearson correlations spurious (Aitchison 1982;
+Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017}. Soil microbiome data are
+additionally high-dimensional and sparse, with thousands of lineages and many rare taxa
+present in only a handful of samples. Critically, no reference taxonomy of community types
+exists: whether recurring clusters reflect genuine ecological units or artefacts of sampling
+design cannot be resolved by appeal to any external standard, making unsupervised inference
+the only viable approach. The relationship between microbial composition and habitat is
+likewise confounded by variation in sequencing depth, land-use history, and geographic
+proximity, so high classification accuracy, if achieved, carries real biological meaning.
+
 We ask two questions. First, can unsupervised clustering of centered log-ratio
 (CLR)-transformed profiles reveal recurring community types without reference to sample
 metadata? Second, does community composition allow a random forest classifier, trained on
@@ -362,9 +374,8 @@ chimeric sequences removed with \texttt{removeBimeraDenovo()}. Non-bacterial ASV
 tracked across all stages as a quality-control (QC) check.
 
 Taxonomy was assigned against the pre-filtered SILVA v138.2 reference to genus level
-with \texttt{assignTaxonomy()}. Lineages present in fewer than 20 of 193 samples were
-excluded. The centered log-ratio (CLR) transformation (Aitchison 1982; Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017}
-was then applied, producing the final feature matrix.
+with \texttt{assignTaxonomy()}. Prevalence filtering and CLR transformation are described
+in Sections~\ref{sec:prevalence} and~\ref{sec:clr} respectively.
 
 %--- Figure 1 placeholder -----------------------------------
 \begin{figure}[H]
@@ -378,9 +389,8 @@ was then applied, producing the final feature matrix.
     (\texttt{learnErrors()}), denoising (\texttt{dada()}), paired-end merging
     (\texttt{mergePairs()}; 43.7\% retained), ASV table construction
     (\texttt{makeSequenceTable()}; 33.3\% retained), eukaryote removal, ASV
-    tracking (exported as QC), taxonomy assignment (\texttt{assignTaxonomy()};
-    resolved to genus level), and CLR transformation (lineages present in
-    $\geq$\,20 of 193 samples retained; final feature matrix produced).
+    tracking (exported as QC), and taxonomy assignment (\texttt{assignTaxonomy()};
+    resolved to genus level).
     Individual scripts (Script 00–09) correspond to each step and are provided
     as supplementary materials.
   }
@@ -398,7 +408,7 @@ fixed 150 bp read length, accompanied by a representative FASTA file of all uniq
 and a comprehensive metadata table. 
 
 Soil samples were extracted by filtering the metadata on \texttt{env\_material} using the
-regular expression \texttt{soil|sediment|rhizosphere}. The BIOM count table was converted to
+regular expression \texttt{soil|sediment|rhizosphere}. The Biological Observation Matrix (BIOM) count table was converted to
 TSV with \texttt{biom convert} and parsed in R to a dense ASV~$\times$~sample matrix.
 Because the EMP release uses internal sequence identifiers rather than taxonomy strings,
 taxonomy was assigned \textit{de novo} with the SILVA v138.1 genus-level reference. ASV-level
@@ -673,7 +683,10 @@ lineages (EMP soil subset).
 \label{res:gmm}
 %------------------------------------------------------------
 
-As described in Section~\ref{sec:gmm}, the MixGGM algorithm was applied to both CLR-transformed feature matrices.
+As described in Section~\ref{sec:gmm}, the MixGGM algorithm was applied to both
+CLR-transformed feature matrices. Clusters are numbered C1--C20 (the initialized upper
+bound); empty components receive no samples and are absent from figures and descriptions,
+so the numbering contains gaps.
 
 For the global topsoil dataset, 19 of the 20 initialized components were populated after convergence (Figure~\ref{fig:7}a).
 Cluster sizes ranged from 2 to 39 samples across the 193-sample dataset. The largest
