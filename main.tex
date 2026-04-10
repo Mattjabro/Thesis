@@ -1376,7 +1376,7 @@ genus\_retention\_sd\_pct & \% & 22.15 & SD of \% retained \\
 \midrule
 total\_genera\_before\_prevalence\_filter &  & 2513 & Total unique genus-level lineages before prevalence filtering \\
 prevalence\_filter\_threshold & samples & 50 & Minimum number of samples a lineage must appear in to be retained \\
-genera\_after\_prevalence\_filter &  & 966 & Genus-resolved lineages retained after prevalence filter (threshold=50); excludes higher-level partial-taxonomy lineages \\
+genera\_after\_prevalence\_filter & samples &  942 & Genus-resolved lineages retained after prevalence filter (threshold=50) and exclusion of samples with fewer than 5,000 total counts; 24 genera that met the prevalence threshold were dropped when low-read samples were removed \\
 pct\_lineages\_retained & \% & 38.44 & Percentage of lineages retained at threshold=50 \\
 pct\_abundance\_retained & \% & 98.71 & Percentage of total read count abundance retained at threshold=50 \\
 samples\_excluded\_low\_reads &  & 0 & Samples excluded for having fewer than 5000 total counts \\
