@@ -1039,9 +1039,7 @@ Yooseph S. 2022.
 %============================================================
 
 The following supplementary tables provide complete per-sample and per-cluster statistics
-supporting the results reported in the main text. Tables 4a and 4d (per-sample data) and
-Table 5a (ordination scores) are provided as separate CSV files due to their size;
-all other supplementary tables are reproduced in full below.
+supporting the results reported in the main text.
 
 \newpage
 
@@ -1336,15 +1334,23 @@ Summary statistics for the EMP soil subset processing pipeline, grouped by secti
 pre-filter EMP summary, post-filter soil subset summary, taxonomy assignment statistics,
 and genus-level collapse and CLR transformation statistics.
 
-\begin{table}[H]
-\centering
+\begingroup\footnotesize
+\begin{longtable}{p{4.0cm} p{1.5cm} p{1.8cm} p{5.5cm}}
 \caption[EMP processing statistics]{EMP soil subset processing statistics.}
-\label{tab:supp2}
-\footnotesize
-\begin{tabular}{p{4.0cm} p{1.5cm} p{1.8cm} p{5.5cm}}
+\label{tab:supp2} \\
 \toprule
 \textbf{Statistic} & \textbf{Unit} & \textbf{Value} & \textbf{Notes} \\
 \midrule
+\endfirsthead
+\multicolumn{4}{l}{\small\itshape(continued from previous page)} \\[2pt]
+\toprule
+\textbf{Statistic} & \textbf{Unit} & \textbf{Value} & \textbf{Notes} \\
+\midrule
+\endhead
+\midrule\multicolumn{4}{r}{\small\itshape(continued on next page)} \\
+\endfoot
+\bottomrule
+\endlastfoot
 \multicolumn{4}{l}{\textit{All EMP Samples (pre-soil filter)}} \\
 \midrule
 n\_samples &  & 27751 & Total samples in EMP Release 1 \\
@@ -1382,7 +1388,7 @@ genus\_retention\_max\_pct & \% & 100 & Maximum \% retained \\
 genus\_retention\_sd\_pct & \% & 22.15 & SD of \% retained \\
 \multicolumn{4}{l}{\textit{Genus-Level Collapse and CLR Transformation}} \\
 \midrule
-total\_genera\_before\_prevalence\_filter &  & 2513 & Total unique genus-level lineages before prevalence filtering (threshold=1 in sweep: 2057 from 100\% lineages => raw from SILVA assignment; rounded) \\
+total\_genera\_before\_prevalence\_filter &  & 2513 & Total unique genus-level lineages before prevalence filtering \\
 prevalence\_filter\_threshold & samples & 50 & Minimum number of samples a lineage must appear in to be retained \\
 genera\_after\_prevalence\_filter &  & 966 & Genus-level lineages retained after prevalence filter (threshold=50) \\
 pct\_lineages\_retained & \% & 38.44 & Percentage of lineages retained at threshold=50 \\
@@ -1391,9 +1397,8 @@ samples\_excluded\_low\_reads &  & 0 & Samples excluded for having fewer than 50
 final\_samples &  & 2209 & Final number of samples in CLR-transformed feature matrix \\
 final\_lineages &  & 1533 & Final number of lineages in CLR-transformed feature matrix \\
 pseudocount &  & 1 & Pseudocount added to all entries before log transformation to handle zeros \\
-\bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
+\endgroup
 \newpage
 
 %------------------------------------------------------------
@@ -1401,12 +1406,6 @@ pseudocount &  & 1 & Pseudocount added to all entries before log transformation 
 \addcontentsline{toc}{section}{Supplementary Table 4}
 \label{supp:tab4}
 %------------------------------------------------------------
-
-\subsection*{(a) Per-Sample Data --- Global Topsoil Dataset}
-
-Per-sample cluster assignments, environmental metadata, and alpha diversity values for
-all 193 global topsoil samples are provided as a separate CSV file
-(Supplementary Table 4a: Per Sample Data Global Topsoil).
 
 \subsection*{(b) Alpha Diversity Summary by Cluster --- Global Topsoil Dataset}
 
@@ -1473,12 +1472,6 @@ elevation\_m & numeric & kruskal & --- & --- & --- (epsilon\_squared) & 193 \\
 \end{tabular}%
 }
 \end{table}
-
-\subsection*{(d) Per-Sample Data --- EMP Soil Subset}
-
-Per-sample cluster assignments, environmental metadata, and alpha diversity values for
-all 2,209 EMP soil samples are provided as a separate CSV file
-(Supplementary Table 4d: Per Sample Data EMP Soil).
 
 \subsection*{(e) Alpha Diversity Summary by Cluster --- EMP Soil Subset}
 
@@ -1554,14 +1547,6 @@ nitrate\_umol\_per\_l & numeric & kruskal & $4.14\times10^{-28}$ & $5.41\times10
 \label{supp:tab5}
 %------------------------------------------------------------
 
-\subsection*{(a) Ordination Scores --- Global Topsoil Dataset}
-
-PCA (PC1--PC10), PCoA (Axis 1--10), and t-SNE (dimensions 1--2) scores for all 193
-global topsoil samples are provided as a separate CSV file
-(Supplementary Table 5a: Ordination Scores Global Topsoil).
-Columns include sample ID, cluster (MixGGM hard label), original and grouped biome
-annotation, PC1--PC10 from PCA, PCoA Axis 1--10, and tSNE1/tSNE2.
-
 \subsection*{(b) PCA Variance Explained --- Global Topsoil Dataset}
 
 \begin{table}[H]
@@ -1596,6 +1581,370 @@ PC20 & 2.4784 & 6.1426 & 1.05 & 63.29 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\subsection*{(c) PCA Variance Explained --- EMP Soil Subset}
+
+\begin{table}[H]
+\centering
+\caption[PCA variance --- EMP Soil]{PCA variance explained by component --- EMP Soil Subset (20 components retained).}
+\label{tab:supp5c}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{PC} & \textbf{Std Dev} & \textbf{Variance} & \textbf{\% Var} & \textbf{Cumul.\ \%} \\
+\midrule
+PC1  & 27.6444 & 764.2151 & 41.37 & 41.37 \\
+PC2  & 13.6568 & 186.5087 & 10.10 & 51.46 \\
+PC3  &  9.9365 &  98.7343 &  5.34 & 56.81 \\
+PC4  &  8.1301 &  66.0981 &  3.58 & 60.38 \\
+PC5  &  6.2008 &  38.4494 &  2.08 & 62.47 \\
+PC6  &  6.1357 &  37.6471 &  2.04 & 64.50 \\
+PC7  &  5.8180 &  33.8495 &  1.83 & 66.34 \\
+PC8  &  5.2360 &  27.4152 &  1.48 & 67.82 \\
+PC9  &  5.0806 &  25.8129 &  1.40 & 69.22 \\
+PC10 &  4.7249 &  22.3245 &  1.21 & 70.43 \\
+PC11 &  4.3631 &  19.0370 &  1.03 & 71.46 \\
+PC12 &  4.3167 &  18.6338 &  1.01 & 72.46 \\
+PC13 &  4.1139 &  16.9238 &  0.92 & 73.38 \\
+PC14 &  3.8937 &  15.1607 &  0.82 & 74.20 \\
+PC15 &  3.4719 &  12.0540 &  0.65 & 74.85 \\
+PC16 &  3.2739 &  10.7183 &  0.58 & 75.43 \\
+PC17 &  3.1334 &   9.8182 &  0.53 & 75.96 \\
+PC18 &  2.9491 &   8.6971 &  0.47 & 76.44 \\
+PC19 &  2.8279 &   7.9969 &  0.43 & 76.87 \\
+PC20 &  2.7430 &   7.5239 &  0.41 & 77.28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{(d) Biome Grouping Schemes}
+
+\begingroup\small
+\begin{longtable}{llp{5cm}}
+\caption[Biome grouping schemes]{Biome grouping schemes used for random forest classification. Each original biome label is mapped to a broader grouped category.}
+\label{tab:supp5d} \\
+\toprule
+\textbf{Dataset} & \textbf{Original Biome} & \textbf{Grouped Biome} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\itshape(continued from previous page)} \\[2pt]
+\toprule
+\textbf{Dataset} & \textbf{Original Biome} & \textbf{Grouped Biome} \\
+\midrule
+\endhead
+\midrule\multicolumn{3}{r}{\small\itshape(continued on next page)} \\
+\endfoot
+\bottomrule
+\endlastfoot
+Global Topsoil & Moist\_tropical\_forests & TROPICAL\_FOREST \\
+Global Topsoil & Dry\_tropical\_forests & TROPICAL\_FOREST \\
+Global Topsoil & Tropical\_montane\_forests & TROPICAL\_FOREST \\
+Global Topsoil & Temperate\_deciduous\_forests & TEMPERATE\_FOREST \\
+Global Topsoil & Temperate\_coniferous\_forests & TEMPERATE\_FOREST \\
+Global Topsoil & Southern\_temperate\_forests & TEMPERATE\_FOREST \\
+Global Topsoil & Boreal\_forests & BOREAL\_FOREST \\
+Global Topsoil & Savannas & GRASSLAND\_SHRUBLAND \\
+Global Topsoil & Grasslands\_and\_shrublands & GRASSLAND\_SHRUBLAND \\
+Global Topsoil & Mediterrean & MEDITERRANEAN \\
+Global Topsoil & Arctic\_tundra & ARCTIC\_TUNDRA \\
+Global Topsoil & - & UNKNOWN \\
+Global Topsoil & (missing/unknown) & UNKNOWN \\
+Global Topsoil & missing: Not provided & UNKNOWN \\
+Global Topsoil & not provided & UNKNOWN \\
+EMP Soil Subset & cropland biome & AGRICULTURAL \\
+EMP Soil Subset & rangeland biome & AGRICULTURAL \\
+EMP Soil Subset & urban biome & URBAN\_DEVELOPED \\
+EMP Soil Subset & dense settlement biome & URBAN\_DEVELOPED \\
+EMP Soil Subset & marine biome & AQUATIC\_MARINE \\
+EMP Soil Subset & marine benthic biome & AQUATIC\_MARINE \\
+EMP Soil Subset & marginal sea biome & AQUATIC\_MARINE \\
+EMP Soil Subset & Small lake biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & Large river biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & Small river biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & freshwater lake biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & lake biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & river biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & tundra biome & COLD\_TUNDRA\_POLAR \\
+EMP Soil Subset & polar desert biome & COLD\_TUNDRA\_POLAR \\
+EMP Soil Subset & alpine tundra biome & COLD\_TUNDRA\_POLAR \\
+EMP Soil Subset & forest biome & FOREST \\
+EMP Soil Subset & coniferous forest biome & FOREST \\
+EMP Soil Subset & temperate mixed forest biome & FOREST \\
+EMP Soil Subset & temperate coniferous forest biome & FOREST \\
+EMP Soil Subset & boreal forest biome & FOREST \\
+EMP Soil Subset & montane grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & shrubland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & tropical shrubland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & montane shrubland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & temperate grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & tropical grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & savanna biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & tropical moist broadleaf forest biome & TROPICAL\_FOREST \\
+EMP Soil Subset & tropical broadleaf forest biome & TROPICAL\_FOREST \\
+EMP Soil Subset & mangrove biome & TROPICAL\_FOREST \\
+EMP Soil Subset & tropical forest biome & TROPICAL\_FOREST \\
+EMP Soil Subset & desert biome & DESERT \\
+EMP Soil Subset & freshwater biome & OTHER \\
+EMP Soil Subset & estuarine biome & OTHER \\
+EMP Soil Subset & wetland biome & OTHER \\
+\end{longtable}
+\endgroup
+
+\newpage
+
+%------------------------------------------------------------
+\section*{Supplementary Table 6: Random Forest Classification}
+\addcontentsline{toc}{section}{Supplementary Table 6}
+\label{supp:tab6}
+%------------------------------------------------------------
+
+\subsection*{(a) Model Performance Metrics}
+
+\begin{table}[H]
+\centering
+\caption[RF model performance]{Random forest model performance metrics for all dataset and biome label scheme combinations.}
+\label{tab:supp6a}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrrrrrrrrrr}
+\toprule
+\textbf{Dataset} & \textbf{Biome Scheme} &
+\textbf{$n$ Train} & \textbf{$n$ Feat.} & \textbf{$n$ Class} &
+\textbf{Trees} & \textbf{Mtry} &
+\textbf{OOB Err.} & \textbf{Test Acc.} & \textbf{Kappa} &
+\textbf{Prec.} & \textbf{Recall} & \textbf{F1} \\
+\midrule
+Global Topsoil   & original biomes & 126  & 165  & 8  & 500 & 12 & 0.5397 & 0.4375 & 0.3268 & 0.4162 & 0.4056 & 0.5082 \\
+Global Topsoil   & grouped biomes  & 137  & 165  & 6  & 500 & 12 & 0.4088 & 0.6182 & 0.4407 & 0.6605 & 0.4046 & 0.5848 \\
+EMP Soil Subset  & original biomes & 1549 & 1533 & 11 & 500 & 39 & 0.0303 & 0.9711 & 0.9613 & 0.9001 & 0.7993 & 0.8854 \\
+EMP Soil Subset  & grouped biomes  & 1549 & 1533 & 9  & 500 & 39 & 0.0213 & 0.9817 & 0.9755 & 0.9617 & 0.9544 & 0.9578 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\subsection*{(b) Feature Importance --- Top 50 Genera Across All Models}
+
+\begingroup\small
+\begin{longtable}{llrp{3.5cm}p{3cm}rr}
+\caption[Feature importance top 50]{Top 50 most important genera by Mean Decrease in Accuracy for each random forest model (dataset $\times$ biome label scheme combination).}
+\label{tab:supp6b} \\
+\toprule
+\textbf{Dataset} & \textbf{Biome Scheme} & \textbf{Rank} & \textbf{Genus} & \textbf{Phylum} & \textbf{MDA} & \textbf{MDG} \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\small\itshape(continued from previous page)} \\[2pt]
+\toprule
+\textbf{Dataset} & \textbf{Biome Scheme} & \textbf{Rank} & \textbf{Genus} & \textbf{Phylum} & \textbf{MDA} & \textbf{MDG} \\
+\midrule
+\endhead
+\midrule\multicolumn{7}{r}{\small\itshape(continued on next page)} \\
+\endfoot
+\bottomrule
+\endlastfoot
+Global Topsoil & original biomes & 1 & Ellin516 & Verrucomicrobiota & 7.9731 & 2.0677 \\
+Global Topsoil & original biomes & 2 & Tundrisphaera & Planctomycetota & 7.8009 & 2.0974 \\
+Global Topsoil & original biomes & 3 & Pedomicrobium & Pseudomonadota & 7.7325 & 2.3557 \\
+Global Topsoil & original biomes & 4 & Acidibacter & Pseudomonadota & 7.3477 & 1.6770 \\
+Global Topsoil & original biomes & 5 & ADurb.Bin063-1 & Verrucomicrobiota & 7.2605 & 2.1520 \\
+Global Topsoil & original biomes & 6 & Granulicella & Acidobacteriota & 7.1812 & 1.8848 \\
+Global Topsoil & original biomes & 7 & Conexibacter & Actinomycetota & 6.8082 & 1.4304 \\
+Global Topsoil & original biomes & 8 & Bacillus & Bacillota & 6.1983 & 1.4104 \\
+Global Topsoil & original biomes & 9 & Tengunoibacter & Chloroflexota & 5.6615 & 1.0864 \\
+Global Topsoil & original biomes & 10 & Aquisphaera & Planctomycetota & 5.3600 & 1.2741 \\
+Global Topsoil & original biomes & 11 & Rubrobacter & Actinomycetota & 4.9007 & 0.6517 \\
+Global Topsoil & original biomes & 12 & Silvibacterium & Acidobacteriota & 4.5302 & 0.9454 \\
+Global Topsoil & original biomes & 13 & Acidiferrimicrobium & Actinomycetota & 4.3504 & 1.2226 \\
+Global Topsoil & original biomes & 14 & Sphingomonas & Pseudomonadota & 4.3128 & 1.1112 \\
+Global Topsoil & original biomes & 15 & RB41 & Acidobacteriota & 4.2871 & 1.2567 \\
+Global Topsoil & original biomes & 16 & Acidothermus & Actinomycetota & 4.0088 & 1.0118 \\
+Global Topsoil & original biomes & 17 & Candidatus Xiphinematobacter & Verrucomicrobiota & 3.9416 & 1.2417 \\
+Global Topsoil & original biomes & 18 & Adhaeribacter & Bacteroidota & 3.9060 & 0.9203 \\
+Global Topsoil & original biomes & 19 & Gaiella & Actinomycetota & 3.8380 & 1.1029 \\
+Global Topsoil & original biomes & 20 & Variibacter & Pseudomonadota & 3.7775 & 0.6228 \\
+Global Topsoil & original biomes & 21 & Mycobacterium & Actinomycetota & 3.5964 & 0.6293 \\
+Global Topsoil & original biomes & 22 & Iamia & Actinomycetota & 3.5841 & 0.9386 \\
+Global Topsoil & original biomes & 23 & Croceibacterium & Pseudomonadota & 3.5795 & 1.0332 \\
+Global Topsoil & original biomes & 24 & Burkholderia-Caballeronia-Paraburkholderia & Pseudomonadota & 3.5181 & 1.1264 \\
+Global Topsoil & original biomes & 25 & Terracidiphilus & Acidobacteriota & 3.4961 & 0.6650 \\
+Global Topsoil & original biomes & 26 & Jatrophihabitans & Actinomycetota & 3.4862 & 0.7107 \\
+Global Topsoil & original biomes & 27 & Arsenicitalea & Pseudomonadota & 3.4817 & 0.9371 \\
+Global Topsoil & original biomes & 28 & Rhodanobacter & Pseudomonadota & 3.4744 & 0.7388 \\
+Global Topsoil & original biomes & 29 & Dictyobacter & Chloroflexota & 3.4159 & 0.5967 \\
+Global Topsoil & original biomes & 30 & Acidicaldus & Pseudomonadota & 3.2742 & 0.7357 \\
+Global Topsoil & original biomes & 31 & Roseiarcus & Pseudomonadota & 3.2522 & 0.9703 \\
+Global Topsoil & original biomes & 32 & Kineosporia & Actinomycetota & 3.2147 & 0.2407 \\
+Global Topsoil & original biomes & 33 & Steroidobacter & Pseudomonadota & 3.1173 & 0.6061 \\
+Global Topsoil & original biomes & 34 & Luedemannella & Actinomycetota & 3.0162 & 1.0304 \\
+Global Topsoil & original biomes & 35 & Methylovirgula & Pseudomonadota & 2.9916 & 0.2517 \\
+Global Topsoil & original biomes & 36 & Specibacter & Actinomycetota & 2.9772 & 0.5066 \\
+Global Topsoil & original biomes & 37 & Luteolibacter & Verrucomicrobiota & 2.9686 & 0.7701 \\
+Global Topsoil & original biomes & 38 & Skermanella & Pseudomonadota & 2.8906 & 0.5243 \\
+Global Topsoil & original biomes & 39 & Candidatus Solibacter & Acidobacteriota & 2.8224 & 1.2680 \\
+Global Topsoil & original biomes & 40 & Gemmata & Planctomycetota & 2.8053 & 1.1114 \\
+Global Topsoil & original biomes & 41 & Chungangia & Bacillota & 2.7941 & 0.9265 \\
+Global Topsoil & original biomes & 42 & Nitrobacter & Pseudomonadota & 2.6956 & 0.9235 \\
+Global Topsoil & original biomes & 43 & Acidipila & Acidobacteriota & 2.6495 & 0.7687 \\
+Global Topsoil & original biomes & 44 & Hyphomicrobium & Pseudomonadota & 2.5720 & 0.7920 \\
+Global Topsoil & original biomes & 45 & HSB OF53-F07 & Chloroflexota & 2.5378 & 0.5270 \\
+Global Topsoil & original biomes & 46 & Nordella & Pseudomonadota & 2.5200 & 0.4353 \\
+Global Topsoil & original biomes & 47 & Rhodopila & Pseudomonadota & 2.5174 & 0.4107 \\
+Global Topsoil & original biomes & 48 & Paraconexibacter & Actinomycetota & 2.4864 & 0.6050 \\
+Global Topsoil & original biomes & 49 & Actinomycetospora & Actinomycetota & 2.4835 & 0.5732 \\
+Global Topsoil & original biomes & 50 & Methylobacterium & Pseudomonadota & 2.4638 & 0.6424 \\
+Global Topsoil & grouped biomes & 1 & Ellin516 & Verrucomicrobiota & 7.4706 & 2.0379 \\
+Global Topsoil & grouped biomes & 2 & Anaeromyxobacter & Myxococcota & 7.3147 & 1.9998 \\
+Global Topsoil & grouped biomes & 3 & Bacillus & Bacillota & 6.5779 & 1.6867 \\
+Global Topsoil & grouped biomes & 4 & Geodermatophilus & Actinomycetota & 6.5020 & 1.3986 \\
+Global Topsoil & grouped biomes & 5 & Acidibacter & Pseudomonadota & 5.8325 & 1.8148 \\
+Global Topsoil & grouped biomes & 6 & Pedomicrobium & Pseudomonadota & 5.8304 & 1.9649 \\
+Global Topsoil & grouped biomes & 7 & Aquisphaera & Planctomycetota & 5.5927 & 0.9397 \\
+Global Topsoil & grouped biomes & 8 & Granulicella & Acidobacteriota & 5.5372 & 1.5436 \\
+Global Topsoil & grouped biomes & 9 & ADurb.Bin063-1 & Verrucomicrobiota & 5.2271 & 2.1567 \\
+Global Topsoil & grouped biomes & 10 & Thermosporothrix & Chloroflexota & 5.1905 & 1.1137 \\
+Global Topsoil & grouped biomes & 11 & RB41 & Acidobacteriota & 4.9766 & 1.0584 \\
+Global Topsoil & grouped biomes & 12 & Rugosimonospora & Actinomycetota & 4.9252 & 1.0905 \\
+Global Topsoil & grouped biomes & 13 & Hephaestia & Pseudomonadota & 4.7081 & 1.3728 \\
+Global Topsoil & grouped biomes & 14 & Luedemannella & Actinomycetota & 4.4139 & 1.5580 \\
+Global Topsoil & grouped biomes & 15 & Candidatus Solibacter & Acidobacteriota & 4.3361 & 1.4693 \\
+Global Topsoil & grouped biomes & 16 & Terracidiphilus & Acidobacteriota & 4.2805 & 0.9499 \\
+Global Topsoil & grouped biomes & 17 & Chungangia & Bacillota & 4.2532 & 1.3153 \\
+Global Topsoil & grouped biomes & 18 & Rhodanobacter & Pseudomonadota & 4.0424 & 0.5918 \\
+Global Topsoil & grouped biomes & 19 & Methylobacterium & Pseudomonadota & 3.9336 & 1.0279 \\
+Global Topsoil & grouped biomes & 20 & Puia & Bacteroidota & 3.8536 & 1.1003 \\
+Global Topsoil & grouped biomes & 21 & Bryobacter & Acidobacteriota & 3.5483 & 1.2990 \\
+Global Topsoil & grouped biomes & 22 & Rubrobacter & Actinomycetota & 3.5411 & 0.9968 \\
+Global Topsoil & grouped biomes & 23 & Burkholderia-Caballeronia-Paraburkholderia & Pseudomonadota & 3.5341 & 1.0990 \\
+Global Topsoil & grouped biomes & 24 & Conexibacter & Actinomycetota & 3.3420 & 0.9118 \\
+Global Topsoil & grouped biomes & 25 & Sphingomonas & Pseudomonadota & 3.2459 & 1.2863 \\
+Global Topsoil & grouped biomes & 26 & Massilia & Pseudomonadota & 3.0980 & 0.7674 \\
+Global Topsoil & grouped biomes & 27 & Singulisphaera & Planctomycetota & 3.0700 & 0.5826 \\
+Global Topsoil & grouped biomes & 28 & mle1-7 & Pseudomonadota & 3.0486 & 0.6440 \\
+Global Topsoil & grouped biomes & 29 & HSB OF53-F07 & Chloroflexota & 2.9154 & 0.9169 \\
+Global Topsoil & grouped biomes & 30 & Luteolibacter & Verrucomicrobiota & 2.8991 & 0.6234 \\
+Global Topsoil & grouped biomes & 31 & Streptacidiphilus & Actinomycetota & 2.8536 & 0.6765 \\
+Global Topsoil & grouped biomes & 32 & Gemmata & Planctomycetota & 2.7973 & 1.3437 \\
+Global Topsoil & grouped biomes & 33 & Variibacter & Pseudomonadota & 2.6630 & 0.3830 \\
+Global Topsoil & grouped biomes & 34 & Microvirga & Pseudomonadota & 2.6627 & 0.5548 \\
+Global Topsoil & grouped biomes & 35 & Agromyces & Actinomycetota & 2.6248 & 0.3838 \\
+Global Topsoil & grouped biomes & 36 & AKYG587 & Planctomycetota & 2.5824 & 0.2662 \\
+Global Topsoil & grouped biomes & 37 & Candidatus Xiphinematobacter & Verrucomicrobiota & 2.5534 & 0.7810 \\
+Global Topsoil & grouped biomes & 38 & Crossiella & Actinomycetota & 2.5053 & 0.9822 \\
+Global Topsoil & grouped biomes & 39 & Silvibacterium & Acidobacteriota & 2.4961 & 0.6101 \\
+Global Topsoil & grouped biomes & 40 & Plot4-2H12 & Pseudomonadota & 2.4884 & 0.4795 \\
+Global Topsoil & grouped biomes & 41 & Iamia & Actinomycetota & 2.4044 & 0.4020 \\
+Global Topsoil & grouped biomes & 42 & Kribbella & Actinomycetota & 2.3736 & 0.7311 \\
+Global Topsoil & grouped biomes & 43 & Phaselicystis & Myxococcota & 2.3617 & 0.9001 \\
+Global Topsoil & grouped biomes & 44 & Chthonomonas & Armatimonadota & 2.3613 & 0.4384 \\
+Global Topsoil & grouped biomes & 45 & Hypericibacter & Pseudomonadota & 2.2890 & 0.9222 \\
+Global Topsoil & grouped biomes & 46 & Piscinibacter & Pseudomonadota & 2.2569 & 1.0463 \\
+Global Topsoil & grouped biomes & 47 & SH-PL14 & Planctomycetota & 2.2161 & 0.3277 \\
+Global Topsoil & grouped biomes & 48 & Inquilinus & Pseudomonadota & 2.1649 & 0.4402 \\
+Global Topsoil & grouped biomes & 49 & Steroidobacter & Pseudomonadota & 2.1449 & 0.6538 \\
+Global Topsoil & grouped biomes & 50 & Micromonospora & Actinomycetota & 2.1129 & 0.3860 \\
+EMP Soil Subset & original biomes & 1 & Sphingomonas & Proteobacteria & 10.7566 & 7.0851 \\
+EMP Soil Subset & original biomes & 2 & Paenibacillus & Firmicutes & 10.6671 & 13.5192 \\
+EMP Soil Subset & original biomes & 3 & Candidatus Udaeobacter & Verrucomicrobiota & 9.3865 & 19.2268 \\
+EMP Soil Subset & original biomes & 4 & Planococcaceae & Firmicutes & 9.3564 & 6.2137 \\
+EMP Soil Subset & original biomes & 5 & ADurb.Bin063-1 & Verrucomicrobiota & 9.1659 & 18.0483 \\
+EMP Soil Subset & original biomes & 6 & IS-44 & Proteobacteria & 8.6208 & 3.5883 \\
+EMP Soil Subset & original biomes & 7 & Pseudonocardia & Actinobacteriota & 8.5610 & 6.4551 \\
+EMP Soil Subset & original biomes & 8 & Asanoa & Actinobacteriota & 8.5254 & 7.0869 \\
+EMP Soil Subset & original biomes & 9 & Citrifermentans & Desulfobacterota & 8.3711 & 17.8103 \\
+EMP Soil Subset & original biomes & 10 & GOUTA6 & Proteobacteria & 8.3653 & 3.3585 \\
+EMP Soil Subset & original biomes & 11 & Pseudarthrobacter & Actinobacteriota & 8.2346 & 2.3817 \\
+EMP Soil Subset & original biomes & 12 & Actinobacteriota & Actinobacteriota & 8.2340 & 5.9166 \\
+EMP Soil Subset & original biomes & 13 & Geobacter & Desulfobacterota & 7.9812 & 16.2532 \\
+EMP Soil Subset & original biomes & 14 & Candidatus Nitrososphaera & Crenarchaeota & 7.7439 & 5.7424 \\
+EMP Soil Subset & original biomes & 15 & BIrii41 & Myxococcota & 7.5548 & 9.8910 \\
+EMP Soil Subset & original biomes & 16 & Rubrobacter & Actinobacteriota & 7.5083 & 6.2926 \\
+EMP Soil Subset & original biomes & 17 & NB1-j & NB1-j & 7.5039 & 1.9402 \\
+EMP Soil Subset & original biomes & 18 & Desulfobacterota & Desulfobacterota & 7.4516 & 3.4483 \\
+EMP Soil Subset & original biomes & 19 & Flavisolibacter & Bacteroidota & 7.4121 & 3.6851 \\
+EMP Soil Subset & original biomes & 20 & Subgroup 2 & Acidobacteriota & 7.3610 & 3.2974 \\
+EMP Soil Subset & original biomes & 21 & AD3 & Chloroflexi & 7.1150 & 4.2681 \\
+EMP Soil Subset & original biomes & 22 & Anaerolineaceae & Chloroflexi & 6.9909 & 2.9794 \\
+EMP Soil Subset & original biomes & 23 & Blastococcus & Actinobacteriota & 6.9821 & 4.0143 \\
+EMP Soil Subset & original biomes & 24 & Enterobacterales & Proteobacteria & 6.9682 & 4.0953 \\
+EMP Soil Subset & original biomes & 25 & Nitrososphaeraceae & Crenarchaeota & 6.9681 & 4.3690 \\
+EMP Soil Subset & original biomes & 26 & Xanthomonadaceae & Proteobacteria & 6.9560 & 5.8322 \\
+EMP Soil Subset & original biomes & 27 & Woesearchaeales & Nanoarchaeota & 6.9395 & 2.3343 \\
+EMP Soil Subset & original biomes & 28 & Geobacteraceae & Desulfobacterota & 6.9074 & 7.7130 \\
+EMP Soil Subset & original biomes & 29 & Acidothermus & Actinobacteriota & 6.8700 & 4.2515 \\
+EMP Soil Subset & original biomes & 30 & Pseudolabrys & Proteobacteria & 6.8539 & 8.7237 \\
+EMP Soil Subset & original biomes & 31 & Yersinia & Proteobacteria & 6.8307 & 5.7808 \\
+EMP Soil Subset & original biomes & 32 & RCP2-54 & RCP2-54 & 6.7979 & 3.4282 \\
+EMP Soil Subset & original biomes & 33 & Gaiellales & Actinobacteriota & 6.7002 & 2.9498 \\
+EMP Soil Subset & original biomes & 34 & Stenotrophobacter & Acidobacteriota & 6.6412 & 5.8075 \\
+EMP Soil Subset & original biomes & 35 & Phyllobacterium & Proteobacteria & 6.6345 & 4.0364 \\
+EMP Soil Subset & original biomes & 36 & Ellin516 & Verrucomicrobiota & 6.6200 & 12.0092 \\
+EMP Soil Subset & original biomes & 37 & MBNT15 & MBNT15 & 6.5358 & 5.0043 \\
+EMP Soil Subset & original biomes & 38 & Rhodomicrobium & Proteobacteria & 6.4460 & 3.6798 \\
+EMP Soil Subset & original biomes & 39 & Blastocatellaceae & Acidobacteriota & 6.4418 & 2.8413 \\
+EMP Soil Subset & original biomes & 40 & JGI 0001001-H03 & Acidobacteriota & 6.4155 & 8.1723 \\
+EMP Soil Subset & original biomes & 41 & Subgroup 5 & Acidobacteriota & 6.3734 & 10.3321 \\
+EMP Soil Subset & original biomes & 42 & Crossiella & Actinobacteriota & 6.3586 & 3.4072 \\
+EMP Soil Subset & original biomes & 43 & Sulfurovum & Campylobacterota & 6.3450 & 8.7822 \\
+EMP Soil Subset & original biomes & 44 & KI89A clade & Proteobacteria & 6.2922 & 3.1100 \\
+EMP Soil Subset & original biomes & 45 & JG36-TzT-191 & Proteobacteria & 6.2296 & 1.1734 \\
+EMP Soil Subset & original biomes & 46 & Bradyrhizobium & Proteobacteria & 6.0652 & 2.8504 \\
+EMP Soil Subset & original biomes & 47 & Rhizobiales Incertae Sedis & Proteobacteria & 6.0320 & 3.7870 \\
+EMP Soil Subset & original biomes & 48 & Planctomycetales & Planctomycetota & 6.0299 & 8.2283 \\
+EMP Soil Subset & original biomes & 49 & Ramlibacter & Proteobacteria & 6.0261 & 2.9656 \\
+EMP Soil Subset & original biomes & 50 & Oryzihumus & Actinobacteriota & 5.8542 & 1.3026 \\
+EMP Soil Subset & grouped biomes & 1 & Paenibacillus & Firmicutes & 10.1871 & 12.5442 \\
+EMP Soil Subset & grouped biomes & 2 & ADurb.Bin063-1 & Verrucomicrobiota & 9.5433 & 16.2878 \\
+EMP Soil Subset & grouped biomes & 3 & Planococcaceae & Firmicutes & 9.4569 & 5.9545 \\
+EMP Soil Subset & grouped biomes & 4 & Asanoa & Actinobacteriota & 9.0496 & 7.3485 \\
+EMP Soil Subset & grouped biomes & 5 & Sphingomonas & Proteobacteria & 8.5609 & 5.9990 \\
+EMP Soil Subset & grouped biomes & 6 & Pseudonocardia & Actinobacteriota & 8.4420 & 7.2987 \\
+EMP Soil Subset & grouped biomes & 7 & Candidatus Nitrososphaera & Crenarchaeota & 8.1883 & 5.7922 \\
+EMP Soil Subset & grouped biomes & 8 & Gaiellales & Actinobacteriota & 8.1847 & 4.4218 \\
+EMP Soil Subset & grouped biomes & 9 & Citrifermentans & Desulfobacterota & 8.1719 & 17.3107 \\
+EMP Soil Subset & grouped biomes & 10 & Blastococcus & Actinobacteriota & 8.1080 & 5.2578 \\
+EMP Soil Subset & grouped biomes & 11 & Pseudarthrobacter & Actinobacteriota & 8.0716 & 3.0341 \\
+EMP Soil Subset & grouped biomes & 12 & Candidatus Udaeobacter & Verrucomicrobiota & 8.0624 & 12.5512 \\
+EMP Soil Subset & grouped biomes & 13 & Actinobacteriota & Actinobacteriota & 8.0587 & 6.4343 \\
+EMP Soil Subset & grouped biomes & 14 & Xanthomonadaceae & Proteobacteria & 8.0547 & 6.3324 \\
+EMP Soil Subset & grouped biomes & 15 & Rubrobacter & Actinobacteriota & 7.8867 & 4.8100 \\
+EMP Soil Subset & grouped biomes & 16 & Phyllobacterium & Proteobacteria & 7.8055 & 5.0379 \\
+EMP Soil Subset & grouped biomes & 17 & Yersinia & Proteobacteria & 7.7528 & 6.7503 \\
+EMP Soil Subset & grouped biomes & 18 & WX65 & Methylomirabilota & 7.6002 & 1.8398 \\
+EMP Soil Subset & grouped biomes & 19 & GOUTA6 & Proteobacteria & 7.4908 & 3.2261 \\
+EMP Soil Subset & grouped biomes & 20 & Pseudolabrys & Proteobacteria & 7.4571 & 6.8807 \\
+EMP Soil Subset & grouped biomes & 21 & Geobacter & Desulfobacterota & 7.3497 & 10.6618 \\
+EMP Soil Subset & grouped biomes & 22 & Nitrososphaeraceae & Crenarchaeota & 7.2213 & 4.4510 \\
+EMP Soil Subset & grouped biomes & 23 & RCP2-54 & RCP2-54 & 7.2180 & 2.4313 \\
+EMP Soil Subset & grouped biomes & 24 & Flavisolibacter & Bacteroidota & 7.1927 & 3.8582 \\
+EMP Soil Subset & grouped biomes & 25 & BIrii41 & Myxococcota & 7.1785 & 14.5431 \\
+EMP Soil Subset & grouped biomes & 26 & Subgroup 2 & Acidobacteriota & 7.1389 & 3.3089 \\
+EMP Soil Subset & grouped biomes & 27 & Candidatus Nitrocosmicus & Crenarchaeota & 7.0704 & 2.6511 \\
+EMP Soil Subset & grouped biomes & 28 & KI89A clade & Proteobacteria & 6.9390 & 5.0589 \\
+EMP Soil Subset & grouped biomes & 29 & Desulfobacterota & Desulfobacterota & 6.8825 & 3.0973 \\
+EMP Soil Subset & grouped biomes & 30 & IS-44 & Proteobacteria & 6.7520 & 2.9253 \\
+EMP Soil Subset & grouped biomes & 31 & AD3 & Chloroflexi & 6.6516 & 3.5683 \\
+EMP Soil Subset & grouped biomes & 32 & Enterobacterales & Proteobacteria & 6.6189 & 4.1364 \\
+EMP Soil Subset & grouped biomes & 33 & Solibacillus & Firmicutes & 6.5710 & 3.4143 \\
+EMP Soil Subset & grouped biomes & 34 & Methylocella & Proteobacteria & 6.5372 & 15.9517 \\
+EMP Soil Subset & grouped biomes & 35 & Azohydromonas & Proteobacteria & 6.4954 & 1.4402 \\
+EMP Soil Subset & grouped biomes & 36 & Geobacteraceae & Desulfobacterota & 6.4703 & 8.2112 \\
+EMP Soil Subset & grouped biomes & 37 & Haliangium & Myxococcota & 6.4414 & 11.0564 \\
+EMP Soil Subset & grouped biomes & 38 & NB1-j & NB1-j & 6.4318 & 2.4385 \\
+EMP Soil Subset & grouped biomes & 39 & Rhodomicrobium & Proteobacteria & 6.3707 & 3.2722 \\
+EMP Soil Subset & grouped biomes & 40 & Acidothermus & Actinobacteriota & 6.3423 & 4.9097 \\
+EMP Soil Subset & grouped biomes & 41 & MND1 & Proteobacteria & 6.3298 & 4.0757 \\
+EMP Soil Subset & grouped biomes & 42 & Gaiella & Actinobacteriota & 6.1982 & 3.4816 \\
+EMP Soil Subset & grouped biomes & 43 & Stenotrophobacter & Acidobacteriota & 6.1735 & 4.7980 \\
+EMP Soil Subset & grouped biomes & 44 & Ellin6055 & Proteobacteria & 6.1224 & 2.6621 \\
+EMP Soil Subset & grouped biomes & 45 & Rhizobiales Incertae Sedis & Proteobacteria & 6.1178 & 4.5855 \\
+EMP Soil Subset & grouped biomes & 46 & Flavitalea & Bacteroidota & 6.1161 & 1.9833 \\
+EMP Soil Subset & grouped biomes & 47 & SCGC AAA011-D5 & Nanoarchaeota & 6.0911 & 1.3424 \\
+EMP Soil Subset & grouped biomes & 48 & Woesearchaeales & Nanoarchaeota & 6.0881 & 1.3871 \\
+EMP Soil Subset & grouped biomes & 49 & Subgroup 5 & Acidobacteriota & 6.0249 & 10.5142 \\
+EMP Soil Subset & grouped biomes & 50 & Planctomycetales & Planctomycetota & 5.8725 & 7.2748 \\
+\end{longtable}
+\endgroup
 
 %============================================================
 \end{document}
