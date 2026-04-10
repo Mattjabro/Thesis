@@ -195,15 +195,15 @@ No.\ 2408259. [Add any additional acknowledgements here.]
 \chapter{Introduction}
 %============================================================
 
-Soil is among the most microbially diverse environments on Earth. A single gram can
+Soil is among the most diverse microbial environments on Earth. A single gram can
 harbor thousands of distinct bacterial taxa, and the collective activity of these communities
-drives the biogeochemical cycles that underpin terrestrial ecosystem function globally
+drives the biogeochemical cycles that underpin the function of terrestrial ecosystems globally
 (Fierer et al.\ 2006). Despite this importance, large-scale patterns in soil microbial
 community structure remain difficult to characterize: whether predictable community types
 exist across biomes and whether composition encodes the environment of origin remain open
 questions at global scale.
 
-Two DNA sequencing strategies exist for profiling these communities. Shotgun
+There are two DNA sequencing strategies for profiling these communities. Shotgun
 metagenomics sequences DNA extracted from a soil sample, providing both functional and
 taxonomic information but at increased cost and computational burden that limits the total
 number of samples that can be sequenced. 16S ribosomal RNA (rRNA) amplicon sequencing
@@ -243,8 +243,7 @@ quality-based sample exclusions. Matched sample metadata, obtained from the SRA 
 (\texttt{sraRunTable.csv}), include biome type, country of collection, geographic coordinates
 (latitude and longitude), elevation, soil pH, and mean annual temperature. For classification
 analyses, the original biome categories were consolidated into seven broader groups (see
-Section~\ref{sec:biome-grouping}). After prevalence filtering and CLR transformation, the final
-feature matrix contains 193 samples~$\times$~165 genus-level lineages.
+Section~\ref{sec:biome-grouping}). 
 
 %------------------------------------------------------------
 \section{EMP Soil Subset (Thompson et al.\ 2017)}
@@ -254,18 +253,20 @@ The Earth Microbiome Project (EMP) dataset originates from Thompson et al.\
 (2017, \textit{Nature}), which aggregated and harmonized 16S rRNA amplicon data from
 97 independent studies comprising 27,751 samples spanning diverse environment types
 worldwide. EMP Release 1 data were obtained from Zenodo as three files: the Deblur count
-table (\texttt{emp\_deblur\_150bp\_release1.biom}), a representative FASTA file of all unique
+table
+\\
+(\texttt{emp\_deblur\_150bp\_release1.biom}), a representative FASTA file of all unique
 sequences (\texttt{emp\_deblur\_150bp\_min25.fasta}), and the comprehensive metadata table
 (\texttt{emp\_metadata\_release1\_20170912.tsv}). Soil samples were extracted by filtering on
 the \texttt{env\_material} metadata field using the regular expression
+\\
 \texttt{soil|sediment|rhizosphere}, yielding 2,209 samples. Available metadata include Earth
 Microbiome Project Ontology (EMPO) environment classification at three hierarchical levels,
 Environmental Ontology (ENVO) biome descriptors at four levels, and continuous
 physicochemical measurements including pH, temperature, salinity, phosphate, nitrate,
 ammonium, elevation, and geographic coordinates. For classification analyses, biome
 annotations were consolidated into a 10-group scheme (see Section~\ref{sec:biome-grouping}).
-After prevalence filtering and CLR transformation, the final feature matrix contains
-2,209 samples~$\times$~1,533 genus-level lineages.
+
 
 %------------------------------------------------------------
 \section{Dataset Comparison}
@@ -391,12 +392,10 @@ was then applied, producing the final feature matrix.
 \label{sec:emp-processing}
 %------------------------------------------------------------
 
-The EMP soil subset was obtained from the EMP Release 1 Zenodo archive
-(DOI 10.5281/zenodo.890000) as a pre-processed resource. The data released included a
+The EMP soil subset data used was a
 centrally harmonized ASV table denoised with Deblur (Amir et al.\ 2017)\cite{amir2017} at a
 fixed 150 bp read length, accompanied by a representative FASTA file of all unique sequences
-and a comprehensive metadata table. The full processing pipeline is shown in
-Figure~\ref{fig:2}; key statistics are provided in Supplementary Table~2.
+and a comprehensive metadata table. 
 
 Soil samples were extracted by filtering the metadata on \texttt{env\_material} using the
 regular expression \texttt{soil|sediment|rhizosphere}. The BIOM count table was converted to
@@ -405,7 +404,8 @@ Because the EMP release uses internal sequence identifiers rather than taxonomy 
 taxonomy was assigned \textit{de novo} with the SILVA v138.1 genus-level reference. ASV-level
 counts were then collapsed to genus level by summing counts sharing a resolved genus
 assignment; entries with unresolved (NA) genus were discarded. Samples present in the
-metadata but absent from the Deblur count matrix were inserted as all-zero rows.
+metadata but absent from the Deblur count matrix were inserted as all-zero rows. The full processing pipeline is shown in
+Figure~\ref{fig:2}; key statistics are provided in Supplementary Table~2.
 
 %--- Figure 2 placeholder -----------------------------------
 \begin{figure}[H]
