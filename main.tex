@@ -363,7 +363,7 @@ tracked across all stages as a quality-control (QC) check.
 
 Taxonomy was assigned against the pre-filtered SILVA v138.2 reference to genus level
 with \texttt{assignTaxonomy()}. Lineages present in fewer than 20 of 193 samples were
-excluded. The centered log-ratio (CLR) transformation (Aitchison 1982)\cite{aitchison1986}
+excluded. The centered log-ratio (CLR) transformation (Aitchison 1982; Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017}
 was then applied, producing the final feature matrix.
 
 %--- Figure 1 placeholder -----------------------------------
@@ -456,12 +456,12 @@ global topsoil dataset, and 50 for the EMP dataset.
 \label{sec:clr}
 %------------------------------------------------------------
 
-The centered log-ratio (CLR) transformation (Aitchison 1982)\cite{aitchison1986} maps
+The centered log-ratio (CLR) transformation (Aitchison 1982; Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017} maps
 compositional data into an unrestricted space, providing the geometrically appropriate metric
 for compositional data analysis. The transformation pipeline is shown in Figure~\ref{fig:3}.
 
 \begin{equation}
-  \mathrm{CLR}(X_{ij}) = \log(X_{ij}+1) - \frac{1}{D}\sum_{i=1}^{D}\log(X_{ij}+1)
+  \mathrm{CLR}(X_{ij}) = \log(X_{ij}+1) - \frac{1}{D}\sum_{k=1}^{D}\log(X_{kj}+1)
   \label{eq:clr}
 \end{equation}
 
@@ -480,8 +480,7 @@ was added to all entries to handle structural zeros.
   \centering
   \includegraphics[width=1\linewidth]{Fig3_Thesis.png}      
     \caption[CLR transformation pipeline]{
-    Centered log-ratio (CLR) transformation pipeline (Aitchison
-    1982)\cite{aitchison1986}, applied identically to both datasets. Input: sparse
+    Centered log-ratio (CLR) transformation pipeline (Aitchison 1982; Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017}, applied identically to both datasets. Input: sparse
     integer count matrix (lineages\,$\times$\,samples). Steps left to right:
     pseudocount addition (+1, placeholder for count of zero); log transform
     ($\log(X_{ij}+1)$ per sample); row-centering (subtract per-sample geometric
@@ -516,7 +515,7 @@ all downstream analyses.
 
 Cluster assignments were joined to sample metadata on sample identifiers to produce an
 annotated table linking each sample's cluster label to all available environmental variables
-(Supplementary Table~4). For the global topsoil dataset this included biome type, country,
+(Supplementary Table~3). For the global topsoil dataset this included biome type, country,
 geographic coordinates, elevation, soil pH, and mean annual temperature. For the EMP dataset
 it included EMPO classification at three hierarchical levels, ENVO biome descriptors at four
 levels, and continuous physicochemical measurements. To characterize the taxonomic signature
@@ -532,15 +531,13 @@ shown in Figure~\ref{fig:4}.
   \centering
   \includegraphics[width=0.9\linewidth]{Fig4_Thesis.png}
     \caption[Cluster characterization pipeline]{
-    Pipeline for cluster characterization, alpha diversity analysis, and enhanced CLR
-    statistics (Sections~\ref{sec:cluster-char}--\ref{sec:clr-stats}), completed twice:
+    Pipeline for cluster characterization and alpha diversity analysis (Section~\ref{sec:cluster-char}), completed twice:
     once for each dataset. Input: CLR cluster assignments (argmax posterior). Cluster
     assignments are joined to sample metadata by sample identifier, producing an annotated
     sample matrix (cluster number + environmental variables). Two parallel branches follow.
     \textit{Taxonomy branch}: mean CLR is computed per lineage across all samples in each
-    cluster (lineages\,$\times$\,clusters matrix); error bar plots are produced for the top
-    20 cluster-discriminatory lineages; a variance heatmap is produced for the top 50 most
-    variable lineages. \textit{Environmental branch}: environmental variables are joined and
+    cluster, producing a lineages\,$\times$\,clusters matrix of average abundances.
+    \textit{Environmental branch}: environmental variables are joined and
     per-variable visualizations (cluster label vs.\ environmental gradient) are generated.
   }
   \label{fig:4}
@@ -556,19 +553,7 @@ matrix (global topsoil) and from the genus-collapsed count matrix (EMP): observe
 Chao1 bias-corrected richness (Chao 1984)\cite{chao1984}, and Shannon entropy (Shannon
 1948)\cite{shannon1948}. These were computed using the vegan package (Dixon
 2003)\cite{dixon2003}. Cluster assignments were joined to the resulting per-sample table and
-summary statistics (mean, SD, median, IQR) computed per cluster.
-
-%------------------------------------------------------------
-\section{Enhanced CLR Statistics per Cluster}
-\label{sec:clr-stats}
-%------------------------------------------------------------
-
-For each lineage--cluster combination, four statistics were computed across all samples
-assigned to that cluster: mean CLR, standard deviation, standard error, and 95\% confidence
-interval. Error bar plots showing mean\,$\pm$\,95\% CI were generated for the top 20 most
-cluster-discriminatory lineages (ranked by variance of cluster-mean CLR across clusters). A
-variance heatmap was produced for the top 50 most variable lineages across all non-empty
-clusters.
+summary statistics (mean, SD, median) computed per cluster.
 
 %------------------------------------------------------------
 \section{Ordination}
@@ -583,7 +568,7 @@ CLR-transformed data is mathematically equivalent to CLR-PCA. t-distributed Stoc
 Neighbor Embedding (t-SNE) was applied (van der Maaten and Hinton
 2008)\cite{maaten2008} using Rtsne to capture non-linear structure not visible in linear
 projections. Sample scores from all three methods were exported alongside cluster labels and
-biome codes for visualization (Supplementary Table~5).
+biome codes for visualization.
 
 %------------------------------------------------------------
 \section{Biome Grouping}
@@ -601,7 +586,7 @@ and vegetation structure. For the EMP dataset, a 10-group scheme was applied.
 %------------------------------------------------------------
 
 Random forest classifiers (Breiman 2001)\cite{breiman2001} were trained on
-CLR-transformed composition profiles to predict biome of origin (Supplementary Table~6).
+CLR-transformed composition profiles to predict biome of origin (Supplementary Table~5).
 Classes with fewer than 10 samples were excluded, and the dataset was split 70/30 into
 stratified train and test sets using caret. Separate models were trained for original and grouped
 biome labels, yielding four models in total. Test-set performance was assessed by accuracy,
@@ -667,8 +652,7 @@ thresholds.
 
 The final CLR-transformed feature matrices used in all downstream analyses were
 193 samples\,$\times$\,165 lineages (global topsoil) and 2,209 samples\,$\times$\,1,533
-lineages (EMP soil subset). Full threshold sweep statistics are provided in Supplementary
-Table~3.
+lineages (EMP soil subset).
 
 %--- Figure 6 placeholder -----------------------------------
 \begin{figure}[H]
@@ -690,20 +674,14 @@ Table~3.
 \label{res:gmm}
 %------------------------------------------------------------
 
-The MixGGM algorithm was applied to both CLR-transformed feature matrices to identify
-recurring community types. The model was initialized with K\,=\,20 components as an upper
-bound.
+As described in Section~\ref{sec:gmm}, the MixGGM algorithm was applied to both CLR-transformed feature matrices.
 
-For the global topsoil dataset, the model was fit using 25 random initializations and
-150 EM iterations, retaining the solution with the highest ELBO across all starts. After
-convergence, 19 of the 20 initialized components were populated (Figure~\ref{fig:7}a).
+For the global topsoil dataset, 19 of the 20 initialized components were populated after convergence (Figure~\ref{fig:7}a).
 Cluster sizes ranged from 2 to 39 samples across the 193-sample dataset. The largest
 cluster was Cluster~17 ($n\,=\,39$), while Clusters~3, 4, and~7 each contained only
 2 samples.
 
-For the EMP soil subset, computational constraints imposed by the larger dataset required
-reducing the fitting procedure to 5 random initializations and 10 EM iterations. Despite the
-reduced search, the model converged on a solution in which only 10 of the 20 initialized
+For the EMP soil subset, the model converged on a solution in which only 10 of the 20 initialized
 components were populated, accounting for all 2,209 samples (Figure~\ref{fig:7}b). Cluster
 sizes ranged from 33 (Cluster~11) to 792 (Cluster~3).
 
@@ -728,11 +706,11 @@ sizes ranged from 33 (Cluster~11) to 792 (Cluster~3).
 
 The association between cluster assignments and sample metadata was evaluated using
 chi-squared tests for categorical variables and Kruskal-Wallis tests for continuous variables;
-results for all tested variables are provided in Supplementary Table~4. For the global topsoil
+results for all tested variables are provided in Supplementary Table~3. For the global topsoil
 dataset, cluster assignment was significantly associated with annotated biome type
 ($\chi^2$ $p\,=\,6.1\times10^{-28}$, Cram\'{e}r's $V\,=\,0.485$), country of collection
 ($p\,=\,4.5\times10^{-8}$, Cram\'{e}r's $V\,=\,0.503$), and latitude (Kruskal-Wallis
-$p\,=\,2.9\times10^{-9}$, $\varepsilon^2\,=\,0.339$), but not longitude ($p\,=\,0.050$). The
+$p\,=\,2.9\times10^{-9}$, $\varepsilon^2\,=\,0.339$), but not longitude ($p\,=\,0.051$). The
 biome composition of each cluster is shown in Figure~\ref{fig:8}. No cluster was exclusively
 composed of a single biome; however, several clusters showed strong biome enrichment.
 Cluster~17, the largest cluster ($n\,=\,39$), was dominated by tropical forest samples,
@@ -747,13 +725,14 @@ deciduous, 1 temperate coniferous, 1 arctic tundra), and was the only cluster to
 single arctic tundra sample.
 
 For the EMP soil subset, cluster membership showed stronger associations with
-environmental classification variables at all hierarchical levels. EMPO level-3 habitat
+environmental classification variables at all hierarchical levels. EMPO level-2 habitat
 classification was most strongly associated with cluster assignment
-($\chi^2$ $p\,\approx\,0$, Cram\'{e}r's $V\,=\,0.819$), followed by \texttt{env\_material}
-(Cram\'{e}r's $V\,=\,0.743$) and \texttt{envo\_biome\_2} (Cram\'{e}r's $V\,=\,0.597$).
-Among continuous variables, pH was most strongly structured
-(Kruskal-Wallis $\varepsilon^2\,=\,0.741$, $p\,\approx\,0$), followed by salinity
-($\varepsilon^2\,=\,0.777$, $p\,\approx\,0$) and elevation ($\varepsilon^2\,=\,0.614$,
+($\chi^2$ $p\,\approx\,0$, Cram\'{e}r's $V\,=\,0.822$), followed by EMPO level-3
+(Cram\'{e}r's $V\,=\,0.819$), \texttt{env\_material}
+(Cram\'{e}r's $V\,=\,0.743$), and \texttt{env\_biome} (Cram\'{e}r's $V\,=\,0.597$).
+Among continuous variables, salinity was most strongly structured
+(Kruskal-Wallis $\varepsilon^2\,=\,0.778$, $p\,\approx\,0$), followed by pH
+($\varepsilon^2\,=\,0.741$, $p\,\approx\,0$) and elevation ($\varepsilon^2\,=\,0.614$,
 $p\,\approx\,0$). The 10 populated clusters separated by habitat type: Clusters~20 ($n\,=\,217$)
 and~11 ($n\,=\,33$) comprised entirely of marine saline sediment; Clusters~2 ($n\,=\,700$) and
 16 ($n\,=\,78$) were dominated by anthropogenic terrestrial soil; Cluster~17 ($n\,=\,44$)
@@ -794,7 +773,7 @@ Among clusters with four or more samples, mean observed genus richness ranged fr
 richness estimates tracked observed richness closely in all clusters. The three clusters with only
 two samples (Clusters~3, 4, and~7) showed the most variable diversity estimates. Per-sample
 alpha diversity values and cluster-level summary statistics are provided in Supplementary
-Table~4.
+Table~3.
 
 For the EMP soil subset, alpha diversity varied far more broadly across the 10 populated
 clusters, along with the habitat diversity of that dataset. Mean observed genus richness ranged
@@ -822,9 +801,7 @@ standard deviation of all clusters.
 
 PCA, PCoA, and t-SNE were applied to both CLR-transformed feature matrices. PCA
 biplots and variance scree plots for both datasets are shown in Figure~\ref{fig:10};
-t-SNE projections are shown in Figure~\ref{fig:11}. Ordination scores for all methods,
-with cluster labels and biome codes, are provided in Supplementary Table~5. PCoA on
-CLR-transformed data is mathematically equivalent to CLR-PCA.
+t-SNE projections are shown in Figure~\ref{fig:11}. PCA variance explained by component is provided in Supplementary Table~4.
 
 For the global topsoil dataset, 20 principal components (PCs) were retained; PC1
 explained 20.0\% of total variance and PC2 explained 6.3\%, with the first three components
@@ -874,15 +851,15 @@ Random Forest classifiers were trained to predict biome of origin from CLR-trans
 microbial composition. Four classifiers were trained in total, one for each combination of
 dataset (global topsoil, EMP soil subset) and label scheme (original, grouped biomes).
 Test-set performance metrics and full feature importance rankings are provided in
-Supplementary Table~6.
+Supplementary Table~5.
 
 For the global topsoil dataset, eight original biome classes were retained for classifier
 training; consolidation into grouped labels reduced this to six classes after exclusion of Arctic
 Tundra ($n\,=\,1$). Under original biome labels, the Random Forest achieved 43.75\%
 test-set accuracy (Cohen's $\kappa\,=\,0.327$). Grouping biomes into six broader categories
 improved accuracy to 61.82\% ($\kappa\,=\,0.441$), with Grassland/Shrubland and
-Mediterranean categories too small to appear in the 30\% test split and not contributing to
-the grouped accuracy estimate. Within the original label model, the moist tropical forest class
+Mediterranean categories excluded before splitting due to having fewer than 10 samples, and
+therefore not contributing to the grouped accuracy estimate. Within the original label model, the moist tropical forest class
 showed the highest recall of the larger classes (63.6\%), while the southern temperate forest
 class showed the lowest recall (14.3\%), with misclassification distributed across multiple
 other temperate categories. Under grouped labels, the Tropical Forest group showed the best
@@ -901,7 +878,7 @@ under grouped labels ($\kappa\,=\,0.975$). The confusion matrix for original bio
 showed near-perfect diagonal results for most classes: marine (92 of 92), montane grassland
 (68 of 68), urban (252 of 252), small river (13 of 13), and tropical moist broadleaf forest
 (22 of 22) were all classified with perfect test-set recall. The cropland class showed the most
-misclassification (12 of 183 errors, primarily predicted as rangeland), and tundra samples
+misclassification (12 of 183 test-set cropland samples were misclassified, primarily predicted as rangeland), and tundra samples
 showed the second-highest error rate (3 of 9 test samples predicted as freshwater). The top
 predictive lineages under original biome labels were \textit{Sphingomonas} (MDA\,=\,10.76),
 \textit{Paenibacillus} (MDA\,=\,10.67), and \textit{Candidatus} Udaeobacter
@@ -1408,17 +1385,17 @@ pseudocount &  & 1 & Pseudocount added to all entries before log transformation 
 \newpage
 
 %------------------------------------------------------------
-\section*{Supplementary Table 4: Cluster Metadata and Alpha Diversity}
-\addcontentsline{toc}{section}{Supplementary Table 4}
-\label{supp:tab4}
+\section*{Supplementary Table 3: Cluster Metadata and Alpha Diversity}
+\addcontentsline{toc}{section}{Supplementary Table 3}
+\label{supp:tab3}
 %------------------------------------------------------------
 
-\subsection*{(b) Alpha Diversity Summary by Cluster --- Global Topsoil Dataset}
+\subsection*{(a) Alpha Diversity Summary by Cluster --- Global Topsoil Dataset}
 
 \begin{table}[H]
 \centering
 \caption[Alpha diversity by cluster --- Global Topsoil]{Alpha diversity summary by MixGGM cluster --- Global Topsoil Dataset.}
-\label{tab:supp4b}
+\label{tab:supp3a}
 \small
 \begin{tabular}{rr rrr rrr rrr}
 \toprule
@@ -1452,12 +1429,12 @@ pseudocount &  & 1 & Pseudocount added to all entries before log transformation 
 \end{tabular}
 \end{table}
 
-\subsection*{(c) Cluster--Metadata Association Tests --- Global Topsoil Dataset}
+\subsection*{(b) Cluster--Metadata Association Tests --- Global Topsoil Dataset}
 
 \begin{table}[H]
 \centering
 \caption[Association tests --- Global Topsoil]{Cluster--metadata association tests --- Global Topsoil Dataset. Categorical: chi-squared; continuous: Kruskal-Wallis. Effect sizes: Cram\'{e}r's $V$ (categorical), $\varepsilon^2$ (continuous). Adj.\ $p$: Bonferroni.}
-\label{tab:supp4c}
+\label{tab:supp3b}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lllllll}
@@ -1479,12 +1456,12 @@ elevation\_m & numeric & kruskal & --- & --- & --- (epsilon\_squared) & 193 \\
 }
 \end{table}
 
-\subsection*{(e) Alpha Diversity Summary by Cluster --- EMP Soil Subset}
+\subsection*{(c) Alpha Diversity Summary by Cluster --- EMP Soil Subset}
 
 \begin{table}[H]
 \centering
 \caption[Alpha diversity by cluster --- EMP Soil Subset]{Alpha diversity summary by MixGGM cluster --- EMP Soil Subset.}
-\label{tab:supp4e}
+\label{tab:supp3c}
 \small
 \begin{tabular}{rr rrr rrr rrr}
 \toprule
@@ -1509,12 +1486,12 @@ elevation\_m & numeric & kruskal & --- & --- & --- (epsilon\_squared) & 193 \\
 \end{tabular}
 \end{table}
 
-\subsection*{(f) Cluster--Metadata Association Tests --- EMP Soil Subset}
+\subsection*{(d) Cluster--Metadata Association Tests --- EMP Soil Subset}
 
 \begin{table}[H]
 \centering
 \caption[Association tests --- EMP Soil Subset]{Cluster--metadata association tests --- EMP Soil Subset.}
-\label{tab:supp4f}
+\label{tab:supp3d}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{lllllll}
@@ -1548,9 +1525,9 @@ nitrate\_umol\_per\_l & numeric & kruskal & $4.14\times10^{-28}$ & $5.41\times10
 \newpage
 
 %------------------------------------------------------------
-\section*{Supplementary Table 5: Ordination}
-\addcontentsline{toc}{section}{Supplementary Table 5}
-\label{supp:tab5}
+\section*{Supplementary Table 4: Ordination}
+\addcontentsline{toc}{section}{Supplementary Table 4}
+\label{supp:tab4}
 %------------------------------------------------------------
 
 \subsection*{(b) PCA Variance Explained --- Global Topsoil Dataset}
@@ -1558,7 +1535,7 @@ nitrate\_umol\_per\_l & numeric & kruskal & $4.14\times10^{-28}$ & $5.41\times10
 \begin{table}[H]
 \centering
 \caption[PCA variance --- Global Topsoil]{PCA variance explained by component --- Global Topsoil Dataset (20 components retained).}
-\label{tab:supp5b}
+\label{tab:supp4a}
 \small
 \begin{tabular}{lrrrr}
 \toprule
@@ -1593,7 +1570,7 @@ PC20 & 2.4784 & 6.1426 & 1.05 & 63.29 \\
 \begin{table}[H]
 \centering
 \caption[PCA variance --- EMP Soil]{PCA variance explained by component --- EMP Soil Subset (20 components retained).}
-\label{tab:supp5c}
+\label{tab:supp4b}
 \small
 \begin{tabular}{lrrrr}
 \toprule
@@ -1623,86 +1600,12 @@ PC20 &  2.7430 &   7.5239 &  0.41 & 77.28 \\
 \end{tabular}
 \end{table}
 
-\subsection*{(d) Biome Grouping Schemes}
-
-\begingroup\small
-\begin{longtable}{llp{5cm}}
-\caption[Biome grouping schemes]{Biome grouping schemes used for random forest classification. Each original biome label is mapped to a broader grouped category.}
-\label{tab:supp5d} \\
-\toprule
-\textbf{Dataset} & \textbf{Original Biome} & \textbf{Grouped Biome} \\
-\midrule
-\endfirsthead
-\multicolumn{3}{l}{\small\itshape(continued from previous page)} \\[2pt]
-\toprule
-\textbf{Dataset} & \textbf{Original Biome} & \textbf{Grouped Biome} \\
-\midrule
-\endhead
-\midrule\multicolumn{3}{r}{\small\itshape(continued on next page)} \\
-\endfoot
-\bottomrule
-\endlastfoot
-Global Topsoil & Moist\_tropical\_forests & TROPICAL\_FOREST \\
-Global Topsoil & Dry\_tropical\_forests & TROPICAL\_FOREST \\
-Global Topsoil & Tropical\_montane\_forests & TROPICAL\_FOREST \\
-Global Topsoil & Temperate\_deciduous\_forests & TEMPERATE\_FOREST \\
-Global Topsoil & Temperate\_coniferous\_forests & TEMPERATE\_FOREST \\
-Global Topsoil & Southern\_temperate\_forests & TEMPERATE\_FOREST \\
-Global Topsoil & Boreal\_forests & BOREAL\_FOREST \\
-Global Topsoil & Savannas & GRASSLAND\_SHRUBLAND \\
-Global Topsoil & Grasslands\_and\_shrublands & GRASSLAND\_SHRUBLAND \\
-Global Topsoil & Mediterrean & MEDITERRANEAN \\
-Global Topsoil & Arctic\_tundra & ARCTIC\_TUNDRA \\
-Global Topsoil & - & UNKNOWN \\
-Global Topsoil & (missing/unknown) & UNKNOWN \\
-Global Topsoil & missing: Not provided & UNKNOWN \\
-Global Topsoil & not provided & UNKNOWN \\
-EMP Soil Subset & cropland biome & AGRICULTURAL \\
-EMP Soil Subset & rangeland biome & AGRICULTURAL \\
-EMP Soil Subset & urban biome & URBAN\_DEVELOPED \\
-EMP Soil Subset & dense settlement biome & URBAN\_DEVELOPED \\
-EMP Soil Subset & marine biome & AQUATIC\_MARINE \\
-EMP Soil Subset & marine benthic biome & AQUATIC\_MARINE \\
-EMP Soil Subset & marginal sea biome & AQUATIC\_MARINE \\
-EMP Soil Subset & Small lake biome & AQUATIC\_FRESHWATER \\
-EMP Soil Subset & Large river biome & AQUATIC\_FRESHWATER \\
-EMP Soil Subset & Small river biome & AQUATIC\_FRESHWATER \\
-EMP Soil Subset & freshwater lake biome & AQUATIC\_FRESHWATER \\
-EMP Soil Subset & lake biome & AQUATIC\_FRESHWATER \\
-EMP Soil Subset & river biome & AQUATIC\_FRESHWATER \\
-EMP Soil Subset & tundra biome & COLD\_TUNDRA\_POLAR \\
-EMP Soil Subset & polar desert biome & COLD\_TUNDRA\_POLAR \\
-EMP Soil Subset & alpine tundra biome & COLD\_TUNDRA\_POLAR \\
-EMP Soil Subset & forest biome & FOREST \\
-EMP Soil Subset & coniferous forest biome & FOREST \\
-EMP Soil Subset & temperate mixed forest biome & FOREST \\
-EMP Soil Subset & temperate coniferous forest biome & FOREST \\
-EMP Soil Subset & boreal forest biome & FOREST \\
-EMP Soil Subset & montane grassland biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & shrubland biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & tropical shrubland biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & grassland biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & montane shrubland biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & temperate grassland biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & tropical grassland biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & savanna biome & GRASSLAND\_SHRUBLAND \\
-EMP Soil Subset & tropical moist broadleaf forest biome & TROPICAL\_FOREST \\
-EMP Soil Subset & tropical broadleaf forest biome & TROPICAL\_FOREST \\
-EMP Soil Subset & mangrove biome & TROPICAL\_FOREST \\
-EMP Soil Subset & tropical forest biome & TROPICAL\_FOREST \\
-EMP Soil Subset & desert biome & DESERT \\
-EMP Soil Subset & freshwater biome & OTHER \\
-EMP Soil Subset & estuarine biome & OTHER \\
-EMP Soil Subset & wetland biome & OTHER \\
-\end{longtable}
-\endgroup
-
 \newpage
 
 %------------------------------------------------------------
-\section*{Supplementary Table 6: Random Forest Classification}
-\addcontentsline{toc}{section}{Supplementary Table 6}
-\label{supp:tab6}
+\section*{Supplementary Table 5: Random Forest Classification}
+\addcontentsline{toc}{section}{Supplementary Table 5}
+\label{supp:tab5}
 %------------------------------------------------------------
 
 \subsection*{(a) Model Performance Metrics}
@@ -1950,6 +1853,80 @@ EMP Soil Subset & grouped biomes & 49 & Subgroup 5 & Acidobacteriota & 6.0249 & 
 EMP Soil Subset & grouped biomes & 50 & Planctomycetales & Planctomycetota & 5.8725 & 7.2748 \\
 \end{longtable}
 \end{center}
+
+\subsection*{(c) Biome Grouping Schemes}
+
+\begingroup\small
+\begin{longtable}{llp{5cm}}
+\caption[Biome grouping schemes]{Biome grouping schemes used for random forest classification. Each original biome label is mapped to a broader grouped category.}
+\label{tab:supp5c} \\
+\toprule
+\textbf{Dataset} & \textbf{Original Biome} & \textbf{Grouped Biome} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\itshape(continued from previous page)} \\[2pt]
+\toprule
+\textbf{Dataset} & \textbf{Original Biome} & \textbf{Grouped Biome} \\
+\midrule
+\endhead
+\midrule\multicolumn{3}{r}{\small\itshape(continued on next page)} \\
+\endfoot
+\bottomrule
+\endlastfoot
+Global Topsoil & Moist\_tropical\_forests & TROPICAL\_FOREST \\
+Global Topsoil & Dry\_tropical\_forests & TROPICAL\_FOREST \\
+Global Topsoil & Tropical\_montane\_forests & TROPICAL\_FOREST \\
+Global Topsoil & Temperate\_deciduous\_forests & TEMPERATE\_FOREST \\
+Global Topsoil & Temperate\_coniferous\_forests & TEMPERATE\_FOREST \\
+Global Topsoil & Southern\_temperate\_forests & TEMPERATE\_FOREST \\
+Global Topsoil & Boreal\_forests & BOREAL\_FOREST \\
+Global Topsoil & Savannas & GRASSLAND\_SHRUBLAND \\
+Global Topsoil & Grasslands\_and\_shrublands & GRASSLAND\_SHRUBLAND \\
+Global Topsoil & Mediterrean & MEDITERRANEAN \\
+Global Topsoil & Arctic\_tundra & ARCTIC\_TUNDRA \\
+Global Topsoil & - & UNKNOWN \\
+Global Topsoil & (missing/unknown) & UNKNOWN \\
+Global Topsoil & missing: Not provided & UNKNOWN \\
+Global Topsoil & not provided & UNKNOWN \\
+EMP Soil Subset & cropland biome & AGRICULTURAL \\
+EMP Soil Subset & rangeland biome & AGRICULTURAL \\
+EMP Soil Subset & urban biome & URBAN\_DEVELOPED \\
+EMP Soil Subset & dense settlement biome & URBAN\_DEVELOPED \\
+EMP Soil Subset & marine biome & AQUATIC\_MARINE \\
+EMP Soil Subset & marine benthic biome & AQUATIC\_MARINE \\
+EMP Soil Subset & marginal sea biome & AQUATIC\_MARINE \\
+EMP Soil Subset & Small lake biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & Large river biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & Small river biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & freshwater lake biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & lake biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & river biome & AQUATIC\_FRESHWATER \\
+EMP Soil Subset & tundra biome & COLD\_TUNDRA\_POLAR \\
+EMP Soil Subset & polar desert biome & COLD\_TUNDRA\_POLAR \\
+EMP Soil Subset & alpine tundra biome & COLD\_TUNDRA\_POLAR \\
+EMP Soil Subset & forest biome & FOREST \\
+EMP Soil Subset & coniferous forest biome & FOREST \\
+EMP Soil Subset & temperate mixed forest biome & FOREST \\
+EMP Soil Subset & temperate coniferous forest biome & FOREST \\
+EMP Soil Subset & boreal forest biome & FOREST \\
+EMP Soil Subset & montane grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & shrubland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & tropical shrubland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & montane shrubland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & temperate grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & tropical grassland biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & savanna biome & GRASSLAND\_SHRUBLAND \\
+EMP Soil Subset & tropical moist broadleaf forest biome & TROPICAL\_FOREST \\
+EMP Soil Subset & tropical broadleaf forest biome & TROPICAL\_FOREST \\
+EMP Soil Subset & mangrove biome & TROPICAL\_FOREST \\
+EMP Soil Subset & tropical forest biome & TROPICAL\_FOREST \\
+EMP Soil Subset & desert biome & DESERT \\
+EMP Soil Subset & freshwater biome & OTHER \\
+EMP Soil Subset & estuarine biome & OTHER \\
+EMP Soil Subset & wetland biome & OTHER \\
+\end{longtable}
+\endgroup
 
 %============================================================
 \end{document}
