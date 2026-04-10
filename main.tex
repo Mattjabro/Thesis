@@ -362,7 +362,7 @@ tracked across all stages as a quality-control (QC) check.
 
 Taxonomy was assigned against the pre-filtered SILVA v138.2 reference to genus level
 with \texttt{assignTaxonomy()}. Lineages present in fewer than 20 of 193 samples were
-excluded. The centered log-ratio (CLR) transformation (Aitchison 1986)\cite{aitchison1986}
+excluded. The centered log-ratio (CLR) transformation (Aitchison 1982)\cite{aitchison1986}
 was then applied, producing the final feature matrix.
 
 %--- Figure 1 placeholder -----------------------------------
@@ -456,7 +456,7 @@ global topsoil dataset, and 50 for the EMP dataset.
 \label{sec:clr}
 %------------------------------------------------------------
 
-The centered log-ratio (CLR) transformation (Aitchison 1986)\cite{aitchison1986} maps
+The centered log-ratio (CLR) transformation (Aitchison 1982)\cite{aitchison1986} maps
 compositional data into an unrestricted space, providing the geometrically appropriate metric
 for compositional data analysis. The transformation pipeline is shown in Figure~\ref{fig:3}.
 
@@ -481,7 +481,7 @@ was added to all entries to handle structural zeros.
   \includegraphics[width=1\linewidth]{Fig3_Thesis.png}      
     \caption[CLR transformation pipeline]{
     Centered log-ratio (CLR) transformation pipeline (Aitchison
-    1986)\cite{aitchison1986}, applied identically to both datasets. Input: sparse
+    1982)\cite{aitchison1986}, applied identically to both datasets. Input: sparse
     integer count matrix (lineages\,$\times$\,samples). Steps left to right:
     pseudocount addition (+1, placeholder for count of zero); log transform
     ($\log(X_{ij}+1)$ per sample); row-centering (subtract per-sample geometric
@@ -496,7 +496,7 @@ was added to all entries to handle structural zeros.
 \label{sec:gmm}
 %------------------------------------------------------------
 
-A mixture of Gaussian Graphical Models (MixGGM) framework (Yooseph
+A mixture of Gaussian Graphical Models (MixGGM) framework (Yooseph and Tavakoli
 2022)\cite{yooseph2022} was applied to both CLR-transformed feature matrices to identify
 recurring community types. The model was initialized with K\,=\,20 components as an upper
 bound; components with negligible mixing coefficients become unpopulated after convergence,
@@ -944,9 +944,9 @@ highest. Top lineage importances for both EMP models are shown in Figure~\ref{fi
 \begin{thebibliography}{99}
 
 \bibitem{aitchison1986}
-Aitchison J. 1986.
-\textit{The Statistical Analysis of Compositional Data}.
-Chapman and Hall, London.
+Aitchison J. 1982.
+The statistical analysis of compositional data.
+\textit{Journal of the Royal Statistical Society: Series B} 44:139--177.
 
 \bibitem{amir2017}
 Amir A, McDonald D, Navas-Molina JA, Kopylova E, Morton JT, Xu ZZ, Kightley EP,
@@ -984,6 +984,11 @@ VEGAN, a package of R functions for community ecology.
 Fierer N, Jackson RB. 2006.
 The diversity and biogeography of soil bacterial communities.
 \textit{Proceedings of the National Academy of Sciences} 103:626--631.
+
+\bibitem{gloor2017}
+Gloor GB, Macklaim JM, Pawlowsky-Glahn V, Egozcue JJ. 2017.
+Microbiome datasets are compositional: and this is not optional.
+\textit{Frontiers in Microbiology} 8:2224.
 
 \bibitem{gower1966}
 Gower JC. 1966.
@@ -1025,8 +1030,9 @@ A communal catalogue reveals Earth's multiscale microbial diversity.
 \textit{Nature} 551:457--463.
 
 \bibitem{yooseph2022}
-Yooseph S. 2022.
-[Full citation for MixGGM paper to be confirmed and inserted here.]
+Yooseph S, Tavakoli S. 2022.
+Variational approximation-based model selection for microbial network inference.
+\textit{Journal of Computational Biology} 29:724--737.
 
 \end{thebibliography}
 
@@ -1335,7 +1341,7 @@ pre-filter EMP summary, post-filter soil subset summary, taxonomy assignment sta
 and genus-level collapse and CLR transformation statistics.
 
 \begingroup\footnotesize
-\begin{longtable}{p{4.0cm} p{1.5cm} p{1.8cm} p{5.5cm}}
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.8cm} >{\raggedright\arraybackslash}p{1.3cm} >{\raggedright\arraybackslash}p{1.8cm} >{\raggedright\arraybackslash}p{4.9cm}}
 \caption[EMP processing statistics]{EMP soil subset processing statistics.}
 \label{tab:supp2} \\
 \toprule
