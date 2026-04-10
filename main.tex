@@ -1703,32 +1703,30 @@ EMP Soil Subset & wetland biome & OTHER \\
 
 \begin{table}[H]
 \centering
-\caption[RF model performance]{Random forest model performance metrics for all dataset and biome label scheme combinations.}
+\caption[RF model performance]{Random forest model performance metrics. $n$ Train: number of training samples; $n$ Feat.: number of features; $n$ Class: number of classes; OOB Err.: out-of-bag error; Test Acc.: test accuracy; Prec./Recall/F1: macro-averaged precision, recall, F1 score.}
 \label{tab:supp6a}
-\small
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{llrrrrrrrrrrrr}
+\tiny
+\begin{tabular}{llrrrrrrrrrrr}
 \toprule
 \textbf{Dataset} & \textbf{Biome Scheme} &
-\textbf{$n$ Train} & \textbf{$n$ Feat.} & \textbf{$n$ Class} &
+\textbf{n Train} & \textbf{n Feat.} & \textbf{n Class} &
 \textbf{Trees} & \textbf{Mtry} &
 \textbf{OOB Err.} & \textbf{Test Acc.} & \textbf{Kappa} &
 \textbf{Prec.} & \textbf{Recall} & \textbf{F1} \\
 \midrule
-Global Topsoil   & original biomes & 126  & 165  & 8  & 500 & 12 & 0.5397 & 0.4375 & 0.3268 & 0.4162 & 0.4056 & 0.5082 \\
-Global Topsoil   & grouped biomes  & 137  & 165  & 6  & 500 & 12 & 0.4088 & 0.6182 & 0.4407 & 0.6605 & 0.4046 & 0.5848 \\
-EMP Soil Subset  & original biomes & 1549 & 1533 & 11 & 500 & 39 & 0.0303 & 0.9711 & 0.9613 & 0.9001 & 0.7993 & 0.8854 \\
-EMP Soil Subset  & grouped biomes  & 1549 & 1533 & 9  & 500 & 39 & 0.0213 & 0.9817 & 0.9755 & 0.9617 & 0.9544 & 0.9578 \\
+Global Topsoil & original biomes & 126 & 165 & 8 & 500 & 12 & 0.5397 & 0.4375 & 0.3268 & 0.4162 & 0.4056 & 0.5082 \\
+Global Topsoil & grouped biomes & 137 & 165 & 6 & 500 & 12 & 0.4088 & 0.6182 & 0.4407 & 0.6605 & 0.4046 & 0.5848 \\
+EMP Soil Subset & original biomes & 1549 & 1533 & 11 & 500 & 39 & 0.0303 & 0.9711 & 0.9613 & 0.9001 & 0.7993 & 0.8854 \\
+EMP Soil Subset & grouped biomes & 1549 & 1533 & 9 & 500 & 39 & 0.0213 & 0.9817 & 0.9755 & 0.9617 & 0.9544 & 0.9578 \\
 \bottomrule
-\end{tabular}%
-}
+\end{tabular}
 \end{table}
 
 \subsection*{(b) Feature Importance --- Top 50 Genera Across All Models}
 
 \begingroup\small
 \begin{longtable}{llrp{3.5cm}p{3cm}rr}
-\caption[Feature importance top 50]{Top 50 most important genera by Mean Decrease in Accuracy for each random forest model (dataset $\times$ biome label scheme combination).}
+\caption[Feature importance top 50]{Top 50 most important genera for each random forest model. MDA: Mean Decrease in Accuracy (importance by prediction accuracy); MDG: Mean Decrease in Gini (importance by impurity reduction).}
 \label{tab:supp6b} \\
 \toprule
 \textbf{Dataset} & \textbf{Biome Scheme} & \textbf{Rank} & \textbf{Genus} & \textbf{Phylum} & \textbf{MDA} & \textbf{MDG} \\
