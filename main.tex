@@ -915,9 +915,7 @@ CLR-transformed 16S rRNA profiles can recover recurring microbial community type
 reference to environmental metadata, and whether microbial composition carries enough
 predictive signal for a supervised classifier to identify a sample's biome of origin. Both
 questions received affirmative answers, with important caveats that depend on the scale and
-environmental heterogeneity of the dataset. The results, taken together across the global
-topsoil survey and the EMP soil subset, point toward a view of soil microbial communities as
-environmentally structured but not deterministically assembled --- community composition
+environmental diversity of the dataset. Taken together, results from the global topsoil survey and the EMP soil subset suggest that soil microbial communities are shaped by environmental conditions, but not fully determined by them: community composition
 tracks habitat, but considerable overlap between biomes means that composition alone is an
 imperfect fingerprint.
 
@@ -931,8 +929,8 @@ components in the 193-sample global topsoil dataset and 10 in the 2,209-sample E
 subset. These clusters were not random partitions. In both datasets, cluster assignments were
 significantly associated with biome labels, geographic location, and, where available,
 physicochemical measurements such as pH and salinity (Supplementary Tables~3--4). The fact
-that an algorithm operating purely on CLR-transformed abundance profiles --- with no access
-to metadata --- recovered groupings that correspond to independently annotated habitat
+that an algorithm operating purely on CLR-transformed abundance profiles, with no access
+to metadata, recovered groupings that correspond to independently annotated habitat
 categories constitutes evidence that compositional structure in soil microbial communities is
 shaped by environment in a manner detectable even at genus-level resolution.
 
@@ -944,7 +942,7 @@ assignment indicates that the unsupervised groupings tracked habitat type closel
 clusters (C20, C11) separated cleanly from terrestrial clusters, and the freshwater cluster
 (C17) was compositionally distinct from both. This makes ecological sense: the transition
 from saline to non-saline environments selects for fundamentally different microbial
-assemblages, and that difference overwhelms finer-grained within-terrestrial variation.
+assemblages, and that difference overwhelms the more similar within-terrestrial habitats.
 Indeed, salinity has been identified as a primary driver of global microbial biogeography
 (Lozupone and Knight 2007)\cite{lozupone2007}, and the EMP clustering reflects this.
 
@@ -955,13 +953,13 @@ one biome. Cluster~17 ($n = 39$) was dominated by tropical forest samples, and C
 ($n = 18$) was enriched for boreal and coniferous environments, but every cluster contained
 at least some mixture of biome types. This partial overlap is consistent with what is known
 about soil microbial communities at the global scale: biome labels capture vegetation
-structure and climate, but microbial communities respond to a combination of factors ---
-especially soil pH --- that do not always align neatly with biome boundaries
+structure and climate, but microbial communities respond to a combination of factors,
+like soil pH, that do not always align neatly with biome boundaries
 (Fierer and Jackson 2006; Lauber et al.\ 2009)\cite{fierer2006}\cite{lauber2009}. Two soils
 from different biomes but with similar pH values may harbor more similar microbial
 communities than two soils from the same biome at different pH values. The clustering
 captures this: it finds compositional groupings that track biome imperfectly precisely
-because composition is shaped by a combination of environmental gradients, not by biome
+because composition is shaped by a combination of environmental factors, not by biome
 identity alone.
 
 %------------------------------------------------------------
@@ -972,31 +970,27 @@ identity alone.
 The alpha diversity analysis showed that the clusters identified by MixGGM differed in
 their within-sample taxonomic richness and evenness. In the global topsoil dataset, mean
 observed genus richness ranged from 244 (Cluster~9) to 709 (Cluster~20), and Shannon
-entropy ranged from 5.18 to 6.23 across these same clusters. The low diversity of
-Cluster~9 --- which contained four samples --- may reflect sampling from environments with
+entropy varied from 5.18 to 6.23 across these same clusters. The low diversity of
+Cluster~9, which contained four samples, may reflect sampling from environments with
 strong abiotic filters, such as extreme pH or low organic matter, that constrain the pool
 of taxa able to colonize and persist. In contrast, Cluster~20, with the highest richness,
 drew from samples in temperate and southern temperate forests where moderate pH and higher
 organic carbon availability may support a broader range of taxa.
 
 The EMP dataset showed an even wider spread, with mean observed richness ranging from 289
-(Cluster~10) to 5,402 (Cluster~5). Cluster~10 was predominantly marine sediment --- an
+(Cluster~10) to 5,402 (Cluster~5). Cluster~10 was predominantly marine sediment, an
 environment where the combination of high salinity and anaerobic conditions is known to
 constrain bacterial diversity relative to terrestrial soils
 (Thompson et al.\ 2017)\cite{thompson2017}. Cluster~5, with the highest richness,
-corresponded to terrestrial samples from varied soil environments. This disparity is
-consistent with the broader ecological observation that terrestrial soils, and particularly
+corresponded to terrestrial samples from varied soil environments. This discrepancy is
+consistent with the  ecological observation that terrestrial soils, and particularly
 those with moderate pH, tend to harbor the highest bacterial diversity of any environment
 on Earth (Fierer and Jackson 2006)\cite{fierer2006}. The fact that Chao1 richness estimates
 tracked observed richness closely across all clusters in both datasets suggests that
 sampling depth was generally adequate for the genus-level resolution used here; the unseen
 fraction was small relative to the detected community.
 
-These diversity differences matter beyond description. They confirm that the unsupervised
-clustering is not merely grouping samples by overall library size or sequencing noise ---
-the clusters capture biologically meaningful differences in community structure that are
-reflected in independent metrics computed from the raw count data prior to CLR
-transformation.
+These differences are meaningful because diversity provides an independent ecological metric not used in the clustering procedure. They suggest that the unsupervised clustering is not merely driven by overall library size or sequencing noise. Instead, the clusters reflect biologically meaningful differences in community structure that are also captured by diversity metrics computed from the raw count data prior to CLR transformation.
 
 %------------------------------------------------------------
 \section{Ordination Confirms Separation but Reveals Continuous Gradients}
@@ -1008,11 +1002,7 @@ In the global topsoil dataset, the first principal component explained 20.0\% of
 and the first ten components together explained 50.7\%. This moderate concentration of
 variance across many components indicates that soil microbial composition varies along
 multiple independent axes rather than being dominated by a single environmental gradient.
-The PCA biplot showed partial separation of MixGGM clusters along the first two components,
-with boreal and tropical samples tending to occupy opposite ends of PC1, but with
-substantial overlap in between. This pattern is consistent with a continuous environmental
-gradient --- most likely driven by temperature and its correlates --- rather than discrete
-community types with sharp boundaries.
+The PCA biplot showed partial separation along PC1, with Arctic Tundra samples occupying the negative extreme and Tropical Forest samples tending toward the positive end, but with substantial overlap among the remaining biomes in the center of the plot. This pattern is consistent with a continuous environmental gradient, most likely driven by temperature and its correlates, rather than discrete community types with sharp boundaries.
 
 In the EMP soil subset, the variance structure was markedly different. PC1 alone accounted
 for 41.4\% of total variance, nearly twice the proportion observed in the topsoil dataset.
@@ -1020,16 +1010,15 @@ This strong first axis reflects the dominant marine-versus-terrestrial split: sa
 saline environments clustered tightly on one end of PC1, with terrestrial samples
 distributed along the remainder. The concentration of variance in PC1 in the EMP dataset,
 compared to the more diffuse distribution in the topsoil dataset, is a direct consequence
-of the wider environmental scope --- when both marine and terrestrial samples are present,
-the salinity gradient overwhelms the finer signals that differentiate one terrestrial biome
+of the wider environmental scope. When both marine and terrestrial samples are present,
+the salinity variability overwhelms the finer signals that differentiate one terrestrial biome
 from another.
 
 The $t$-SNE projections reinforced these observations nonlinearly. In the EMP dataset,
 $t$-SNE produced clearly separated islands corresponding to MixGGM clusters, particularly
 for marine and freshwater samples. In the topsoil dataset, the separation was less distinct,
-with clusters overlapping in the two-dimensional embedding. This is not a failure of the
-method --- it accurately reflects the underlying data structure, in which terrestrial soil
-communities vary more continuously than the discrete cluster labels suggest.
+with clusters overlapping in the two-dimensional projection. This is not a failure of the
+method: it accurately reflects the underlying data structure, where terrestrial soil communities change gradually along environmental gradients rather than separating into discrete types.
 
 %------------------------------------------------------------
 \section{Random Forest Classification: Composition Encodes Habitat}
@@ -1044,14 +1033,14 @@ biome labels and 98.2\% under grouped labels, with near-perfect recall for marin
 and tropical forest classes. On the global topsoil dataset, accuracy was 43.8\% under
 original labels and 61.8\% under grouped labels.
 
-This contrast is not paradoxical. The EMP dataset included major environment types ---
-marine, freshwater, urban, agricultural, tundra --- that differ from one another in
+This contrast is not paradoxical. The EMP dataset included major environment types
+(marine, freshwater, urban, agricultural, tundra) that differ from one another in
 physicochemical conditions far more than the biomes within the terrestrial topsoil dataset
 differ from each other. Classifying a marine sediment sample as marine on the basis of its
 microbial community is, in a sense, straightforward: the microbial assemblage of a saline,
 anoxic marine sediment shares very few genera with an arable field. The topsoil dataset,
 by contrast, asks the classifier to distinguish moist tropical forest from dry tropical
-forest, or southern temperate forest from temperate coniferous forest --- biomes that share
+forest, or southern temperate forest from temperate coniferous forest; biomes that share
 substantial portions of their bacterial communities and whose compositional differences
 are subtle.
 
@@ -1063,8 +1052,8 @@ sample size per class, both of which favor better performance. Even so, the 61.8
 in the topsoil data means the classifier made errors on roughly four of every ten test
 samples. This is itself informative: it quantifies the degree to which biome identity is
 encoded in genus-level microbial composition at global scale, and suggests that while the
-signal is present, it is not dominant. Local factors --- pH, moisture, soil texture, land
-use history --- introduce enough variation within biomes to blur the compositional
+signal is present, it is not dominant. Local factors such as pH, moisture, soil texture, 
+and land use history introduce enough variation within biomes to blur the compositional
 boundaries between them.
 
 %------------------------------------------------------------
@@ -1073,20 +1062,20 @@ boundaries between them.
 %------------------------------------------------------------
 
 The taxa identified as most important by Random Forest permutation importance provide
-biologically interpretable links between microbial composition and habitat. Across the four
-models (two datasets $\times$ two label schemes), several genera and higher-level lineages
+biologically interpretable connections between microbial composition and habitat. Across the four
+models (two datasets $\times$ two label schemes), several genera
 appeared repeatedly, and their known ecology is consistent with the biome associations
-detected here.
+detected.
 
 \textit{Ellin516} (Verrucomicrobiota), the top-ranked lineage in both topsoil models, is a
 member of a phylum that is abundant in soils globally but remains poorly represented in
 culture collections (Bergmann et al.\ 2011)\cite{bergmann2011}. Verrucomicrobiota are
 involved in the degradation of complex plant-derived polysaccharides through the production
 of cellulases and xylanases, and their relative abundance is known to vary with vegetation
-type and soil organic matter quality (Navarrete et al.\ 2015)\cite{navarrete2015}. That
+type and soil organic matter quality (Navarrete et al.\ 2015)\cite{navarrete2015}. The fact that
 \textit{Ellin516} carried the strongest signal for biome discrimination in the topsoil
-dataset suggests that differences in litter chemistry between biomes --- tropical forests
-producing more recalcitrant leaf litter than temperate deciduous forests, for example ---
+dataset suggests that there are differences in litter chemistry between biomes. Tropical forests
+producing more recalcitrant leaf litter than temperate deciduous forests, for example,
 are reflected in the abundance of polysaccharide-degrading Verrucomicrobiota.
 
 \textit{Candidatus Udaeobacter} (Verrucomicrobiota), which ranked among the top predictive
@@ -1095,24 +1084,23 @@ having an unusually small, streamlined genome (${\sim}$2.8~Mbp) with multiple am
 and vitamin auxotrophies (Brewer et al.\ 2017)\cite{brewer2017}. Its abundance is highest
 in grassland soils and it is thought to rely on nutrients released by neighboring organisms
 rather than synthesizing them \textit{de novo} (Willms et al.\ 2020)\cite{willms2020}. The
-ecological strategy of \textit{Ca.}\ Udaeobacter --- an oligotrophic scavenger with a
-minimized genome --- makes it a sensitive indicator of soil conditions, and its differential
+ecological strategy of \textit{Ca.}\ Udaeobacter, an oligotrophic scavenger with a
+minimized genome, makes it a sensitive indicator of soil conditions, and its differential
 abundance across the EMP biome categories is consistent with its known preference for
-well-drained, circumneutral terrestrial soils.
+well-drained, neutral pH terrestrial soils.
 
 \textit{Anaeromyxobacter} (Myxococcota), the second-ranked genus in the grouped topsoil
 model, is a facultative anaerobe capable of iron and nitrate reduction that thrives in
 waterlogged soils (Treude et al.\ 2003; Thomas et al.\ 2008)\cite{treude2003}\cite{thomas2008}.
 Its high importance for biome classification in the topsoil dataset likely reflects its
-differential abundance between the poorly drained tropical forest soils --- where periods
-of anoxia are common --- and the well-drained temperate and boreal soils where its niche
+differential abundance between the poorly drained tropical forest soils (where periods
+of low oxygen are common) and the well-drained temperate and boreal soils where its niche
 is less available.
 
 \textit{Bacillus} (Bacillota), ranked third in the grouped topsoil model, is among the
 most metabolically versatile genera in soil, capable of forming endospores that allow
 persistence under drought and temperature extremes (Nicholson 2002)\cite{nicholson2002}.
-Its importance in the classifier may reflect the variable selective pressures across biomes
---- \textit{Bacillus}-dominated communities may be favored in drier grassland and savanna
+Its importance in the classifier may reflect the variable selective pressures across biomes; \textit{Bacillus}-dominated communities may be favored in drier grassland and savanna
 soils where sporulation provides a survival advantage.
 
 In the EMP models, \textit{Paenibacillus} (Firmicutes) and \textit{Sphingomonas}
@@ -1121,10 +1109,7 @@ In the EMP models, \textit{Paenibacillus} (Firmicutes) and \textit{Sphingomonas}
 where it contributes to nitrogen fixation and phosphate solubilization
 (Grady et al.\ 2016)\cite{grady2016}. \textit{Sphingomonas} is a metabolically versatile
 genus found across diverse soil environments but often enriched in anthropogenically
-disturbed soils (Asaf et al.\ 2020)\cite{asaf2020}. The high predictive value of these
-taxa in the EMP models reflects the dataset's inclusion of agricultural and urban soils,
-environments where anthropogenic disturbance selects for different functional guilds than
-undisturbed natural habitats.
+disturbed soils (Asaf et al.\ 2020)\cite{asaf2020}. Their high predictive value in the EMP models reflects the inclusion of agricultural and urban soils, where human disturbance favors different microbial functional groups than those found in undisturbed natural environments.
 
 %------------------------------------------------------------
 \section{Convergence of Supervised and Unsupervised Approaches}
@@ -1132,9 +1117,9 @@ undisturbed natural habitats.
 %------------------------------------------------------------
 
 A central question motivating this thesis was whether unsupervised and supervised analyses
-of the same compositional data would yield consistent conclusions. They do. The MixGGM
+of the same compositional data would yield consistent conclusions. They do; the MixGGM
 clusters, derived without any metadata, recovered groupings that correspond closely to
-biome labels --- the same labels that the Random Forest used as training targets. The taxa
+biome labels (the same labels that the Random Forest used as training targets). The taxa
 that the Random Forest identified as most predictive of biome identity are also the taxa
 whose CLR values varied most across MixGGM clusters. This convergence across
 methodologically independent approaches strengthens the conclusion that global soil
@@ -1144,13 +1129,11 @@ genus-level 16S rRNA profiles.
 The fact that both approaches succeeded more clearly on the EMP dataset than on the global
 topsoil dataset is itself meaningful. It demonstrates that the strength of compositional
 structuring scales with the breadth of environmental contrast. When the sample set spans a
-wide gradient --- from ocean sediment to tundra to cropland --- community types are well
+wide gradient, from ocean sediment to tundra to cropland, community types are well
 defined and classification is nearly perfect. When the sample set covers terrestrial soils
 only, the compositional signal is weaker, clusters are fuzzier, and classification accuracy
 is moderate. This is not a limitation of the analytical methods; it is a property of the
-biological system. Soil microbial communities across terrestrial biomes share a large core
-of cosmopolitan genera, and it is only shifts in relative abundance --- not the complete
-replacement of one community by another --- that distinguish tropical from boreal soils.
+biological system. This reflects a biological reality: soil microbial communities across terrestrial biomes share many widespread genera, and differences between biomes arise mainly from shifts in relative abundance rather than entire turnover of taxa.
 
 %------------------------------------------------------------
 \section{Limitations}
@@ -1158,16 +1141,16 @@ replacement of one community by another --- that distinguish tropical from borea
 %------------------------------------------------------------
 
 Several limitations of this analysis should be noted. First, 16S rRNA amplicon sequencing
-provides taxonomic information only and cannot directly resolve functional potential. Two
+provides taxonomic information only and cannot directly resolve their function. Two
 communities with similar genus-level profiles may differ in their functional gene content,
 and conversely, functionally similar communities may differ taxonomically. Shotgun
 metagenomics would provide complementary functional resolution but at the cost of reduced
 sample throughput and increased computational burden.
 
-Second, the two datasets were processed through different upstream pipelines --- DADA2 for
-the global topsoil data and Deblur for the EMP soil subset --- introducing a potential
-source of pipeline-specific bias in the inferred amplicon sequence variants (ASVs). We
-mitigated this by collapsing both datasets to genus level and applying the same CLR
+Second, the two datasets were processed through different upstream pipelines: DADA2 for
+the global topsoil data and Deblur for the EMP soil subset. This introduces a potential
+source of pipeline-specific bias in the inferred amplicon sequence variants (ASVs). This was
+mitigated by collapsing both datasets to genus level and applying the same CLR
 transformation and downstream analyses, but subtle differences in how the two denoising
 algorithms handle sequencing error and chimeras cannot be entirely excluded as a
 confounding factor.
@@ -1181,9 +1164,8 @@ would yield a solution with higher likelihood or different cluster structure, pa
 given the high dimensionality of the EMP feature matrix (1,533 lineages).
 
 Fourth, the global topsoil dataset, despite its global geographic coverage, is relatively
-small (193 samples after filtering). Small per-biome sample sizes --- a single Arctic
-tundra sample, for example --- limit the statistical power to characterize rare biome types
-and inflate the variance of per-cluster diversity estimates.
+small (193 samples after filtering). Small per-biome sample sizes, like a single Arctic
+tundra sample, for example, limit the statistical power to characterize rare biome types.
 
 Finally, the prevalence filtering thresholds (20 samples for the topsoil data, 50 for the
 EMP data) necessarily excluded rare taxa that may be ecologically important in specific
@@ -1193,12 +1175,12 @@ This is a common tradeoff in compositional data analysis: retaining very rare ta
 dimensionality and noise, while removing them risks discarding biologically relevant signal.
 
 %------------------------------------------------------------
-\section{Outlook}
+\section{Future Direction}
 \label{disc:outlook}
 %------------------------------------------------------------
 
-The analytical framework developed here --- CLR transformation, MixGGM clustering, and
-Random Forest classification applied to the same feature matrix --- could be extended in
+The analytical framework developed here; CLR transformation, MixGGM clustering, and
+Random Forest classification applied to the same feature matrix could be extended in
 several directions. Incorporating functional gene data from shotgun metagenomics would
 allow the community types identified here to be linked to specific metabolic capabilities,
 testing whether the compositional clusters correspond to functionally distinct microbiome
