@@ -167,7 +167,7 @@ No.\ 2408259. [Add any additional acknowledgements here.]
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-[Abstract text to be inserted here.]
+Soil harbors the most diverse microbial communities on Earth, yet whether predictable community types exist across biomes and whether composition encodes habitat of origin remain open questions at global scale. This thesis addresses both questions by applying unsupervised clustering and supervised classification to centered log-ratio (CLR)-transformed 16S ribosomal RNA (rRNA) amplicon profiles from two independent datasets: the global topsoil survey of Bahram et al.\ (2018; 193 samples, 165 genus-level lineages after filtering) and the Earth Microbiome Project (EMP) soil subset of Thompson et al.\ (2017; 2,209 samples, 1,533 lineages). A mixture of Gaussian Graphical Models (MixGGM) framework identified 19 non-empty clusters in the topsoil dataset and 10 in the EMP dataset without access to environmental metadata; cluster assignments were significantly associated with biome type, geographic location, and physicochemical variables in both cases. Random forest classifiers trained on the same feature matrices achieved 61.8\% test-set accuracy under grouped biome labels for the topsoil data and 98.2\% for the EMP data. The performance gap reflects the underlying biology: major habitat boundaries (marine vs.\ terrestrial vs.\ freshwater) produce strong compositional contrasts, while within-terrestrial biome differences are subtler and driven by overlapping environmental gradients rather than discrete community turnover. The most predictive taxa --- including \textit{Ellin516}, \textit{Candidatus Udaeobacter}, \textit{Anaeromyxobacter}, \textit{Bacillus}, and \textit{Paenibacillus} --- have known ecological associations consistent with the biome categories they discriminated. Taken together, these results demonstrate that genus-level 16S rRNA profiles carry sufficient information to recover recurring community types and predict habitat of origin, with predictive power scaling with the breadth of environmental contrast in the dataset.
 
 \newpage
 
@@ -206,11 +206,9 @@ questions at global scale.
 There are two DNA sequencing strategies for profiling these communities. Shotgun
 metagenomics sequences DNA extracted from a soil sample, providing both functional and
 taxonomic information but at increased cost and computational burden that limits the total
-number of samples that can be sequenced. 16S ribosomal RNA (rRNA) amplicon sequencing
-offers a complementary approach. Because the 16S gene is phylogenetically conserved across
-all bacteria and archaea yet contains hypervariable regions sufficient to discriminate taxa, it
-allows community-wide profiling at taxonomic resolution sufficient to reach genus and family
-level for most groups.
+number of samples that can be sequenced. 16S ribosomal RNA (rRNA) amplicon sequencing targets a phylogenetically conserved marker
+gene present in all bacteria and archaea, allowing community-wide profiling at genus-level
+resolution.
 
 This thesis analyzes two independent global soil datasets. The first is the global topsoil
 survey of Bahram et al.\ (2018), comprising 193 samples after filtering, processed from raw
@@ -221,8 +219,7 @@ methodology; consistent findings in both indicate that results are robust to the
 
 What makes these questions non-trivial is the compositional nature of amplicon count data:
 read counts are constrained to sum to a fixed library size, making standard Euclidean
-distances geometrically inappropriate and Pearson correlations spurious (Aitchison 1982;
-Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017}. Soil microbiome data are
+distances geometrically inappropriate and Pearson correlations spurious\cite{aitchison1986}\cite{gloor2017}. Soil microbiome data are
 additionally high-dimensional and sparse, with thousands of lineages and many rare taxa
 present in only a handful of samples. 
 
@@ -329,18 +326,13 @@ Access
 %------------------------------------------------------------
 
 All analyses were performed on the Hopper high performance computer (HPC) cluster at
-Claremont McKenna College (Rocky Linux), managed by SLURM (Yoo et al.\ 2003)\cite{yoo2003}. Compute nodes provide up to
+Claremont McKenna College (Rocky Linux), managed by SLURM\cite{yoo2003}. Compute nodes provide up to
 128 CPUs and either 750 GB RAM or 3 TB RAM (high-memory nodes). Each analytical step is
 wrapped in a dedicated SLURM batch script and output files from each step are written to
 structured subdirectories to ensure reproducibility and auditability of the full pipeline.
 
 R 4.2.0 (deployed via a dedicated \texttt{r-dada2} conda environment) was the primary
-language throughout, with the following packages providing core functionality: DADA2
-(Callahan et al.\ 2016)\cite{callahan2016} for amplicon denoising; Biostrings and phyloseq
-(McMurdie et al.\ 2013)\cite{mcmurdie2013} for sequence and count-table handling; vegan
-(Dixon 2003)\cite{dixon2003} for alpha diversity metrics; randomForest (Breiman
-2001)\cite{breiman2001} and caret for classifier training and train/test partitioning; Rtsne
-(van der Maaten and Hinton 2008)\cite{maaten2008} for non-linear dimensionality reduction;
+language throughout, with the following packages providing core functionality: DADA2\cite{callahan2016} for amplicon denoising; Biostrings and phyloseq\cite{mcmurdie2013} for sequence and count-table handling; vegan\cite{dixon2003} for alpha diversity metrics; randomForest\cite{breiman2001} and caret for classifier training and train/test partitioning; Rtsne\cite{maaten2008} for non-linear dimensionality reduction;
 pheatmap and ggplot2 for visualization; and tidyverse for data manipulation throughout.
 Cluster metadata visualization was implemented in Python using pandas, seaborn, and
 matplotlib.
@@ -357,7 +349,7 @@ matplotlib.
 Raw paired-end FASTQ files were processed through a DADA2 amplicon sequence variant
 (ASV) pipeline in R on an HPC cluster. The full pipeline structure is shown in
 Figure~\ref{fig:1}; per-step read retention statistics are provided in Supplementary Table~1.
-The SILVA v138.2 genus-level reference (Quast et al.\ 2013)\cite{quast2013} was pre-filtered
+The SILVA v138.2 genus-level reference\cite{quast2013} was pre-filtered
 to remove Eukaryota, Chloroplast, and Mitochondria entries prior to taxonomy assignment.
 Reads were quality-filtered with \texttt{filterAndTrim()} (maximum errors set to 2, minimum
 quality cutoff Q\,=\,2). Sequencing error models were estimated independently for forward and
@@ -380,10 +372,10 @@ in Sections~\ref{sec:prevalence} and~\ref{sec:clr} respectively.
     DADA2 processing pipeline for the global topsoil dataset (Bahram et al.\ 2018),
     run on EBI accession PRJEB19856. Steps proceed top to bottom: classifier
     filtering (SILVA v138.2; Eukaryota, Chloroplast, and Mitochondria removed),
-    quality filtering (\texttt{filterAndTrim()}; 77\% retained), error rate learning
+    quality filtering (\texttt{filterAndTrim()}), error rate learning
     (\texttt{learnErrors()}), denoising (\texttt{dada()}), paired-end merging
-    (\texttt{mergePairs()}; 43.7\% retained), ASV table construction
-    (\texttt{makeSequenceTable()}; 33.3\% retained), eukaryote removal, ASV
+    (\texttt{mergePairs()}), ASV table construction
+    (\texttt{makeSequenceTable()}), eukaryote removal, ASV
     tracking (exported as QC), and taxonomy assignment (\texttt{assignTaxonomy()};
     resolved to genus level).
     Individual scripts (Script 00–09) correspond to each step and are provided
@@ -398,7 +390,7 @@ in Sections~\ref{sec:prevalence} and~\ref{sec:clr} respectively.
 %------------------------------------------------------------
 
 The EMP soil subset data used was a
-centrally harmonized ASV table denoised with Deblur (Amir et al.\ 2017)\cite{amir2017} at a
+centrally harmonized ASV table denoised with Deblur\cite{amir2017} at a
 fixed 150 bp read length, accompanied by a representative FASTA file of all unique sequences
 and a comprehensive metadata table. 
 
@@ -461,7 +453,7 @@ global topsoil dataset, and 50 for the EMP dataset.
 \label{sec:clr}
 %------------------------------------------------------------
 
-The centered log-ratio (CLR) transformation (Aitchison 1982; Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017} maps
+The centered log-ratio (CLR) transformation \cite{aitchison1986}\cite{gloor2017} maps
 compositional data into an unrestricted space, providing the geometrically appropriate metric
 for compositional data analysis. The transformation pipeline is shown in Figure~\ref{fig:3}.
 
@@ -485,7 +477,7 @@ was added to all entries to handle structural zeros.
   \centering
   \includegraphics[width=1\linewidth]{Fig3_Thesis.png}      
     \caption[CLR transformation pipeline]{
-    Centered log-ratio (CLR) transformation pipeline (Aitchison 1982; Gloor et al.\ 2017)\cite{aitchison1986}\cite{gloor2017}, applied identically to both datasets. Input: sparse
+    Centered log-ratio (CLR) transformation pipeline \cite{aitchison1986}\cite{gloor2017}, applied identically to both datasets. Input: sparse
     integer count matrix (lineages\,$\times$\,samples). Steps left to right:
     pseudocount addition (+1, placeholder for count of zero); log transform
     ($\log(X_{ij}+1)$ per sample); row-centering (subtract per-sample geometric
@@ -500,8 +492,7 @@ was added to all entries to handle structural zeros.
 \label{sec:gmm}
 %------------------------------------------------------------
 
-Sample clustering was done using a mixture of Gaussian Graphical Models (MixGGM) framework (Yooseph and Tavakoli
-2022)\cite{yooseph2022} was applied to both CLR-transformed feature matrices to identify
+A mixture of Gaussian Graphical Models (MixGGM) framework\cite{yooseph2022} was applied to both CLR-transformed feature matrices to identify
 recurring community types. The model was initialized with K\,=\,20 components as an upper
 bound; components with negligible mixing coefficients become unpopulated after convergence,
 so the effective number of clusters is determined by which components retain sample
@@ -554,10 +545,8 @@ shown in Figure~\ref{fig:4}.
 %------------------------------------------------------------
 
 Three alpha diversity metrics were computed from the bacteria-only post-chimera ASV
-matrix (global topsoil) and from the genus-collapsed count matrix (EMP): observed operational taxonomic units (OTUs),
-Chao1 bias-corrected richness (Chao 1984)\cite{chao1984}, and Shannon entropy (Shannon
-1948)\cite{shannon1948}. These were computed using the vegan package (Dixon
-2003)\cite{dixon2003}. Cluster assignments were joined to the resulting per-sample table and
+matrix (global topsoil) and from the genus-collapsed count matrix (EMP): observed richness,
+Chao1 bias-corrected richness\cite{chao1984}, and Shannon entropy\cite{shannon1948}. These were computed using the vegan package\cite{dixon2003}. Cluster assignments were joined to the resulting per-sample table and
 summary statistics (mean, SD, median) computed per cluster.
 
 %------------------------------------------------------------
@@ -566,12 +555,10 @@ summary statistics (mean, SD, median) computed per cluster.
 %------------------------------------------------------------
 
 Three ordination methods were applied to the CLR matrices. Principal Component
-Analysis (PCA) was performed (Pearson 1901)\cite{pearson1901} using \texttt{prcomp()} in
-R, retaining 20 components. Principal Coordinate Analysis (PCoA) was computed (Gower
-1966)\cite{gower1966} using \texttt{cmdscale()} and used as a consistency check; PCoA on
+Analysis (PCA)\cite{pearson1901} was performed using \texttt{prcomp()} in
+R, retaining 20 components. Principal Coordinate Analysis (PCoA)\cite{gower1966} was computed using \texttt{cmdscale()} and used as a consistency check; PCoA on
 CLR-transformed data is mathematically equivalent to CLR-PCA. t-distributed Stochastic
-Neighbor Embedding (t-SNE) was applied (van der Maaten and Hinton
-2008)\cite{maaten2008} using Rtsne to capture non-linear structure not visible in linear
+Neighbor Embedding (t-SNE)\cite{maaten2008} was applied using Rtsne to capture non-linear structure not visible in linear
 projections. Sample scores from all three methods were exported alongside cluster labels and
 biome codes for visualization.
 
@@ -590,7 +577,7 @@ and vegetation structure. For the EMP dataset, they were collapsed to 10 groups.
 \label{sec:rf}
 %------------------------------------------------------------
 
-Random forest classifiers (Breiman 2001)\cite{breiman2001} were trained on
+Random forest classifiers\cite{breiman2001} were trained on
 CLR-transformed composition profiles to predict biome of origin (Supplementary Table~5).
 Classes with fewer than 10 samples were excluded, and the dataset was split 70/30 into
 stratified train and test sets using caret. Separate models were trained for original and grouped
@@ -615,8 +602,7 @@ contributed 33,170,669 raw input reads. Quality filtering and primer trimming wi
 After ASV table construction and chimeric sequence removal with
 \texttt{removeBimeraDenovo()}, a mean 33.4\% of input reads were retained as non-chimeric
 across all samples. Non-bacterial ASVs (chloroplasts, mitochondria, eukaryotic 18S) were
-removed, and 41 samples with fewer than 5,000 non-chimeric reads were excluded as
-insufficiently sequenced. The final analysis set comprised 193 samples spanning 38 countries
+removed, and 41 samples with fewer than 5,000 non-chimeric reads were excluded. The final analysis set comprised 193 samples spanning 38 countries
 and latitudes from $-54.8^{\circ}$ to $78.2^{\circ}$. Per-step read counts for all samples are
 provided in Supplementary Table~1. The per-sample read retention trajectory across all DADA2
 stages is shown in Figure~\ref{fig:5}.
@@ -740,7 +726,7 @@ classification was most strongly associated with cluster assignment
 Among continuous variables, salinity was most strongly structured
 (Kruskal-Wallis $\varepsilon^2\,=\,0.778$, $p\,\approx\,0$), followed by pH
 ($\varepsilon^2\,=\,0.741$, $p\,\approx\,0$) and elevation ($\varepsilon^2\,=\,0.614$,
-$p\,\approx\,0$). The 10 populated clusters separated by habitat type: Clusters~20 ($n\,=\,217$)
+$p\,\approx\,0$). The 10 populated clusters showed distinct habitat compositions: Clusters~20 ($n\,=\,217$)
 and~11 ($n\,=\,33$) comprised entirely of marine saline sediment; Clusters~2 ($n\,=\,700$) and
 16 ($n\,=\,78$) were dominated by anthropogenic terrestrial soil; Cluster~17 ($n\,=\,44$)
 comprised exclusively freshwater sediment; and Cluster~18 ($n\,=\,129$) was enriched for
@@ -769,8 +755,7 @@ composition of each EMP cluster is shown in Figure~\ref{fig:8}.
 \label{res:alpha}
 %------------------------------------------------------------
 
-Observed richness, Chao1 richness (Chao 1984)\cite{chao1984}, and Shannon entropy
-(Shannon 1948)\cite{shannon1948} were computed per sample and compared across cluster
+Observed richness, Chao1 richness\cite{chao1984}, and Shannon entropy\cite{shannon1948} were computed per sample and compared across cluster
 assignments for both datasets (Figure~\ref{fig:9}).
 
 For the global topsoil dataset, alpha diversity varied across the 19 populated clusters.
@@ -793,7 +778,7 @@ standard deviation of all clusters.
   \includegraphics[width=1.05\linewidth] {fig_alpha_diversity_by_cluster.png}
     \caption[Alpha diversity per MixGGM cluster]{
     Alpha diversity per MixGGM cluster for (a) the global topsoil dataset and (b) the
-    EMP soil subset. Three metrics are shown (rows): observed OTUs, Chao1 richness, and
+    EMP soil subset. Three metrics are shown (rows): observed genera, Chao1 richness, and
     Shannon diversity index. Box plots show median, interquartile range, and outliers.
     Cluster labels on the x-axis include sample size in parentheses. Asterisks ($*$)
     indicate outlier samples.
@@ -924,7 +909,7 @@ imperfect fingerprint.
 \label{disc:clustering}
 %------------------------------------------------------------
 
-The MixGGM clustering (Yooseph and Tavakoli 2022)\cite{yooseph2022} identified 19 non-empty
+The MixGGM clustering \cite{yooseph2022} identified 19 non-empty
 components in the 193-sample global topsoil dataset and 10 in the 2,209-sample EMP soil
 subset. These clusters were not random partitions. In both datasets, cluster assignments were
 significantly associated with biome labels, geographic location, and, where available,
@@ -944,7 +929,7 @@ clusters (C20, C11) separated cleanly from terrestrial clusters, and the freshwa
 from saline to non-saline environments selects for fundamentally different microbial
 assemblages, and that difference overwhelms the more similar within-terrestrial habitats.
 Indeed, salinity has been identified as a primary driver of global microbial biogeography
-(Lozupone and Knight 2007)\cite{lozupone2007}, and the EMP clustering reflects this.
+\cite{lozupone2007}, and the EMP clustering reflects this.
 
 In the global topsoil dataset, where all samples came from terrestrial soils, the
 cluster-biome association was weaker but still highly significant (Cram\'{e}r's
@@ -955,7 +940,7 @@ at least some mixture of biome types. This partial overlap is consistent with wh
 about soil microbial communities at the global scale: biome labels capture vegetation
 structure and climate, but microbial communities respond to a combination of factors,
 like soil pH, that do not always align neatly with biome boundaries
-(Fierer and Jackson 2006; Lauber et al.\ 2009)\cite{fierer2006}\cite{lauber2009}. Two soils
+\cite{fierer2006}\cite{lauber2009}. Two soils
 from different biomes but with similar pH values may harbor more similar microbial
 communities than two soils from the same biome at different pH values. The clustering
 captures this: it finds compositional groupings that track biome imperfectly precisely
@@ -981,11 +966,11 @@ The EMP dataset showed an even wider spread, with mean observed richness ranging
 (Cluster~10) to 5,402 (Cluster~5). Cluster~10 was predominantly marine sediment, an
 environment where the combination of high salinity and anaerobic conditions is known to
 constrain bacterial diversity relative to terrestrial soils
-(Thompson et al.\ 2017)\cite{thompson2017}. Cluster~5, with the highest richness,
+\cite{thompson2017}. Cluster~5, with the highest richness,
 corresponded to terrestrial samples from varied soil environments. This discrepancy is
 consistent with the  ecological observation that terrestrial soils, and particularly
 those with moderate pH, tend to harbor the highest bacterial diversity of any environment
-on Earth (Fierer and Jackson 2006)\cite{fierer2006}. The fact that Chao1 richness estimates
+on Earth \cite{fierer2006}. The fact that Chao1 richness estimates
 tracked observed richness closely across all clusters in both datasets suggests that
 sampling depth was generally adequate for the genus-level resolution used here; the unseen
 fraction was small relative to the detected community.
@@ -1069,10 +1054,10 @@ detected.
 
 \textit{Ellin516} (Verrucomicrobiota), the top-ranked lineage in both topsoil models, is a
 member of a phylum that is abundant in soils globally but remains poorly represented in
-culture collections (Bergmann et al.\ 2011)\cite{bergmann2011}. Verrucomicrobiota are
+culture collections\cite{bergmann2011}. Verrucomicrobiota are
 involved in the degradation of complex plant-derived polysaccharides through the production
 of cellulases and xylanases, and their relative abundance is known to vary with vegetation
-type and soil organic matter quality (Navarrete et al.\ 2015)\cite{navarrete2015}. The fact that
+type and soil organic matter quality\cite{navarrete2015}. The fact that
 \textit{Ellin516} carried the strongest signal for biome discrimination in the topsoil
 dataset suggests that there are differences in litter chemistry between biomes. Tropical forests
 producing more recalcitrant leaf litter than temperate deciduous forests, for example,
@@ -1081,9 +1066,9 @@ are reflected in the abundance of polysaccharide-degrading Verrucomicrobiota.
 \textit{Candidatus Udaeobacter} (Verrucomicrobiota), which ranked among the top predictive
 lineages in the EMP models, is one of the most abundant soil bacteria on Earth despite
 having an unusually small, streamlined genome (${\sim}$2.8~Mbp) with multiple amino acid
-and vitamin auxotrophies (Brewer et al.\ 2017)\cite{brewer2017}. Its abundance is highest
+and vitamin auxotrophies\cite{brewer2017}. Its abundance is highest
 in grassland soils and it is thought to rely on nutrients released by neighboring organisms
-rather than synthesizing them \textit{de novo} (Willms et al.\ 2020)\cite{willms2020}. The
+rather than synthesizing them \textit{de novo}\cite{willms2020}. The
 ecological strategy of \textit{Ca.}\ Udaeobacter, an oligotrophic scavenger with a
 minimized genome, makes it a sensitive indicator of soil conditions, and its differential
 abundance across the EMP biome categories is consistent with its known preference for
@@ -1091,7 +1076,7 @@ well-drained, neutral pH terrestrial soils.
 
 \textit{Anaeromyxobacter} (Myxococcota), the second-ranked genus in the grouped topsoil
 model, is a facultative anaerobe capable of iron and nitrate reduction that thrives in
-waterlogged soils (Treude et al.\ 2003; Thomas et al.\ 2008)\cite{treude2003}\cite{thomas2008}.
+waterlogged soils\cite{treude2003}\cite{thomas2008}.
 Its high importance for biome classification in the topsoil dataset likely reflects its
 differential abundance between the poorly drained tropical forest soils (where periods
 of low oxygen are common) and the well-drained temperate and boreal soils where its niche
@@ -1099,7 +1084,7 @@ is less available.
 
 \textit{Bacillus} (Bacillota), ranked third in the grouped topsoil model, is among the
 most metabolically versatile genera in soil, capable of forming endospores that allow
-persistence under drought and temperature extremes (Nicholson 2002)\cite{nicholson2002}.
+persistence under drought and temperature extremes\cite{nicholson2002}.
 Its importance in the classifier may reflect the variable selective pressures across biomes; \textit{Bacillus}-dominated communities may be favored in drier grassland and savanna
 soils where sporulation provides a survival advantage.
 
@@ -1107,9 +1092,9 @@ In the EMP models, \textit{Paenibacillus} (Firmicutes) and \textit{Sphingomonas}
 (Pseudomonadota) ranked first and fifth, respectively, under grouped labels.
 \textit{Paenibacillus} is commonly associated with agricultural and rhizosphere soils,
 where it contributes to nitrogen fixation and phosphate solubilization
-(Grady et al.\ 2016)\cite{grady2016}. \textit{Sphingomonas} is a metabolically versatile
+\cite{grady2016}. \textit{Sphingomonas} is a metabolically versatile
 genus found across diverse soil environments but often enriched in anthropogenically
-disturbed soils (Asaf et al.\ 2020)\cite{asaf2020}. Their high predictive value in the EMP models reflects the inclusion of agricultural and urban soils, where human disturbance favors different microbial functional groups than those found in undisturbed natural environments.
+disturbed soils\cite{asaf2020}. Their high predictive value in the EMP models reflects the inclusion of agricultural and urban soils, where human disturbance favors different microbial functional groups than those found in undisturbed natural environments.
 
 %------------------------------------------------------------
 \section{Convergence of Supervised and Unsupervised Approaches}
@@ -1196,7 +1181,13 @@ characterized, are high-priority targets for further genomic and physiological s
 \chapter{Conclusion}
 %============================================================
 
-[Conclusion text to be inserted here.]
+This thesis applied a consistent analytical framework --- centered log-ratio transformation, mixture of Gaussian Graphical Models clustering, and random forest classification --- to two independent global soil microbiome datasets derived from 16S rRNA amplicon sequencing. The global topsoil dataset (Bahram et al.\ 2018) provided 193 samples from a single coordinated survey of terrestrial biomes, while the Earth Microbiome Project soil subset (Thompson et al.\ 2017) provided 2,209 samples spanning terrestrial, marine, and freshwater environments across 97 independent studies.
+
+Unsupervised clustering recovered environmentally coherent community groupings in both datasets without access to sample metadata. In the global topsoil dataset, 19 populated clusters showed significant associations with biome type, country, and latitude, though no cluster was exclusively composed of a single biome. In the EMP soil subset, 10 populated clusters separated sharply by habitat type, with marine, freshwater, and terrestrial samples occupying distinct clusters. The strength of cluster-metadata correspondence scaled with the breadth of environmental contrast represented in the dataset: wider environmental gradients produced cleaner separations.
+
+Random forest classifiers trained on the same CLR-transformed profiles achieved 61.8\% accuracy on the global topsoil dataset under grouped biome labels and 98.2\% on the EMP soil subset. The contrast reflects the underlying biology: distinguishing marine sediment from agricultural soil is a fundamentally easier classification problem than separating moist tropical forest from dry tropical forest on the basis of genus-level composition alone. The taxa carrying the strongest predictive signal --- \textit{Ellin516} and \textit{Candidatus Udaeobacter} (Verrucomicrobiota), \textit{Anaeromyxobacter} (Myxococcota), \textit{Bacillus} (Bacillota), and \textit{Paenibacillus} (Firmicutes) --- have known ecological associations with the biome categories they discriminated, providing biological grounding for the statistical results.
+
+The convergence of supervised and unsupervised approaches on consistent conclusions strengthens the central finding: soil microbial communities are structured by environment in a manner encoded in genus-level 16S rRNA profiles. That structure is strongest across major habitat boundaries and weaker, though still detectable, within terrestrial biomes where communities share many of the same genera and differ primarily in relative abundance.
 
 %============================================================
 % BIBLIOGRAPHY
@@ -1755,7 +1746,7 @@ pseudocount &  & 1 & Pseudocount added to all entries before log transformation 
 \begin{tabular}{rr rrr rrr rrr}
 \toprule
 \textbf{Clust.} & \textbf{$n$} &
-\multicolumn{3}{c}{\textbf{Obs.\ OTUs}} &
+\multicolumn{3}{c}{\textbf{Obs.\ Genera}} &
 \multicolumn{3}{c}{\textbf{Chao1}} &
 \multicolumn{3}{c}{\textbf{Shannon}} \\
 \cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}
@@ -1821,7 +1812,7 @@ elevation\_m & numeric & kruskal & --- & --- & --- (epsilon\_squared) & 193 \\
 \begin{tabular}{rr rrr rrr rrr}
 \toprule
 \textbf{Clust.} & \textbf{$n$} &
-\multicolumn{3}{c}{\textbf{Obs.\ OTUs}} &
+\multicolumn{3}{c}{\textbf{Obs.\ Genera}} &
 \multicolumn{3}{c}{\textbf{Chao1}} &
 \multicolumn{3}{c}{\textbf{Shannon}} \\
 \cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}
