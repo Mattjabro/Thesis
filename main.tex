@@ -159,7 +159,7 @@
 \addcontentsline{toc}{chapter}{Acknowledgements}
 
 This material is based upon work supported by the National Science Foundation under Award
-No.\ 2408259. [Add any additional acknowledgements here.]
+No.\ 2408259.
 
 \newpage
 
@@ -167,7 +167,7 @@ No.\ 2408259. [Add any additional acknowledgements here.]
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
 
-Soil harbors the most diverse microbial communities on Earth, yet whether predictable community types exist across biomes and whether composition encodes habitat of origin remain open questions at global scale. This thesis addresses both questions by applying unsupervised clustering and supervised classification to centered log-ratio (CLR)-transformed 16S ribosomal RNA (rRNA) amplicon profiles from two independent datasets: the global topsoil survey of Bahram et al.\ (2018; 193 samples, 165 genus-level lineages after filtering) and the Earth Microbiome Project (EMP) soil subset of Thompson et al.\ (2017; 2,209 samples, 1,533 lineages). A mixture of Gaussian Graphical Models (MixGGM) framework identified 19 non-empty clusters in the topsoil dataset and 10 in the EMP dataset without access to environmental metadata; cluster assignments were significantly associated with biome type, geographic location, and physicochemical variables in both cases. Random forest classifiers trained on the same feature matrices achieved 61.8\% test-set accuracy under grouped biome labels for the topsoil data and 98.2\% for the EMP data. The performance gap reflects the underlying biology: major habitat boundaries (marine vs.\ terrestrial vs.\ freshwater) produce strong compositional contrasts, while within-terrestrial biome differences are subtler and driven by overlapping environmental gradients rather than discrete community turnover. The most predictive taxa --- including \textit{Ellin516}, \textit{Candidatus Udaeobacter}, \textit{Anaeromyxobacter}, \textit{Bacillus}, and \textit{Paenibacillus} --- have known ecological associations consistent with the biome categories they discriminated. Taken together, these results demonstrate that genus-level 16S rRNA profiles carry sufficient information to recover recurring community types and predict habitat of origin, with predictive power scaling with the breadth of environmental contrast in the dataset.
+Soil harbors the most diverse microbial communities on Earth, yet whether predictable community types exist across biomes and whether taxonomic composition encodes habitat of origin remain open questions at global scale. This thesis addresses both questions by applying unsupervised clustering and supervised classification to transformed 16S ribosomal RNA (rRNA) amplicon profiles from two independent datasets: the global topsoil survey of Bahram et al.\ (2018; 193 samples) and the Earth Microbiome Project (EMP) soil subset of Thompson et al.\ (2017; 2,209 samples). Application of a sample clustering method based on a mixture of Gaussian Graphical Models (MixGGM) identified 19 clusters in the topsoil dataset and 10 in the EMP dataset; cluster assignments were significantly associated with biome type, geographic location, and physicochemical variables in both cases. Random forest classifiers trained on the same sample-taxa matrices achieved 61.8\% test-set accuracy under grouped biome labels for the topsoil data and 98.2\% for the EMP data. The performance gap likely reflects the underlying biology: major habitat boundaries (marine vs.\ terrestrial vs.\ freshwater) produce strong compositional contrasts, while within-terrestrial biome differences are subtler and driven by overlapping environmental gradients rather than discrete community turnover. The most predictive taxa, including \textit{Ellin516}, \textit{Candidatus Udaeobacter}, \textit{Anaeromyxobacter}, \textit{Bacillus}, and \textit{Paenibacillus}, have known ecological associations consistent with the biome categories they discriminated. Taken together, these results demonstrate that genus-level 16S rRNA profiles carry sufficient information to recover recurring community types and predict habitat of origin, with predictive power scaling with the breadth of environmental contrast in the dataset.
 
 \newpage
 
@@ -200,31 +200,29 @@ harbor thousands of distinct bacterial taxa, and the collective activity of thes
 drives the biogeochemical cycles that underpin the function of terrestrial ecosystems globally
 (Fierer et al.\ 2006). Despite this importance, large-scale patterns in soil microbial
 community structure remain difficult to characterize: whether predictable community types
-exist across biomes and whether composition encodes the environment of origin remain open
+exist across biomes and whether taxonomic composition encodes the environment of origin remain open
 questions at global scale.
 
 There are two DNA sequencing strategies for profiling these communities. Shotgun
 metagenomics sequences DNA extracted from a soil sample, providing both functional and
-taxonomic information but at increased cost and computational burden that limits the total
-number of samples that can be sequenced. 16S ribosomal RNA (rRNA) amplicon sequencing targets a phylogenetically conserved marker
-gene present in all bacteria and archaea, allowing community-wide profiling at genus-level
+taxonomic information but at increased cost and computational burden. 16S ribosomal RNA (rRNA) amplicon sequencing targets a phylogenetically conserved marker
+gene present in all bacteria and archaea, allowing community-wide profiling, often at genus-level
 resolution.
 
 This thesis analyzes two independent global soil datasets. The first is the global topsoil
 survey of Bahram et al.\ (2018), comprising 193 samples after filtering, processed from raw
-FASTQ files through a Divisive Amplicon Denoising Algorithm 2 (DADA2) pipeline. The second is the Earth Microbiome Project (EMP)
+FASTQ files through the Divisive Amplicon Denoising Algorithm 2 (DADA2) pipeline (Callahan et al.\ 2016). The second is the Earth Microbiome Project (EMP)
 soil subset (Thompson et al.\ 2017), comprising 2,209 samples drawn from a coordinated
 multi-study archive. The datasets differ in scope, sequencing depth, and upstream processing
 methodology; consistent findings in both indicate that results are robust to these differences.
 
-What makes these questions non-trivial is the compositional nature of amplicon count data:
+What makes these analyses non-trivial is the compositional nature of amplicon count data:
 read counts are constrained to sum to a fixed library size, making standard Euclidean
 distances geometrically inappropriate and Pearson correlations spurious\cite{aitchison1986}\cite{gloor2017}. Soil microbiome data are
 additionally high-dimensional and sparse, with thousands of lineages and many rare taxa
 present in only a handful of samples. 
 
-We ask two questions. First, can unsupervised clustering of centered log-ratio
-(CLR)-transformed profiles reveal recurring community types without reference to sample
+We ask two questions. First, can unsupervised clustering of suitable compositional data analysis transformation profiles reveal recurring community types without reference to sample
 metadata? Second, does community composition allow a random forest classifier, trained on
 biome labels, to predict habitat of origin, and which taxa carry the most predictive signal?
 
@@ -326,7 +324,7 @@ Access
 %------------------------------------------------------------
 
 All analyses were performed on the Hopper high performance computer (HPC) cluster at
-Claremont McKenna College (Rocky Linux), managed by SLURM\cite{yoo2003}. Compute nodes provide up to
+Claremont McKenna College. Compute nodes provide up to
 128 CPUs and either 750 GB RAM or 3 TB RAM (high-memory nodes). Each analytical step is
 wrapped in a dedicated SLURM batch script and output files from each step are written to
 structured subdirectories to ensure reproducibility and auditability of the full pipeline.
@@ -389,8 +387,7 @@ in Sections~\ref{sec:prevalence} and~\ref{sec:clr} respectively.
 \label{sec:emp-processing}
 %------------------------------------------------------------
 
-The EMP soil subset data used was a
-centrally harmonized ASV table denoised with Deblur\cite{amir2017} at a
+The EMP soil subset data used was an ASV table denoised with Deblur\cite{amir2017} at a
 fixed 150 bp read length, accompanied by a representative FASTA file of all unique sequences
 and a comprehensive metadata table. 
 
@@ -856,7 +853,7 @@ showed the highest recall of the larger classes (63.6\%), while the southern tem
 class showed the lowest recall (14.3\%), with misclassification distributed across multiple
 other temperate categories. Under grouped labels, the Tropical Forest group showed the best
 recall of the four evaluable classes (75.0\%), followed by Temperate Forest (55.9\%). The most
-predictive lineages by permutation importance (MDA) under original biome labels were
+predictive lineages by permutation importance (Mean Decrease Accuracy) under original biome labels were
 \textit{Ellin516} (MDA\,=\,7.97), \textit{Tundrisphaera} (MDA\,=\,7.80), and
 \textit{Pedomicrobium} (MDA\,=\,7.73). Under grouped labels, \textit{Ellin516}
 (MDA\,=\,7.47), \textit{Anaeromyxobacter} (MDA\,=\,7.31), and \textit{Bacillus}
@@ -999,7 +996,7 @@ of the wider environmental scope. When both marine and terrestrial samples are p
 the salinity variability overwhelms the finer signals that differentiate one terrestrial biome
 from another.
 
-The $t$-SNE projections reinforced these observations nonlinearly. In the EMP dataset,
+The $t$-SNE projections reinforced these observations in a nonlinear space. In the EMP dataset,
 $t$-SNE produced clearly separated islands corresponding to MixGGM clusters, particularly
 for marine and freshwater samples. In the topsoil dataset, the separation was less distinct,
 with clusters overlapping in the two-dimensional projection. This is not a failure of the
@@ -1117,7 +1114,7 @@ structuring scales with the breadth of environmental contrast. When the sample s
 wide gradient, from ocean sediment to tundra to cropland, community types are well
 defined and classification is nearly perfect. When the sample set covers terrestrial soils
 only, the compositional signal is weaker, clusters are fuzzier, and classification accuracy
-is moderate. This is not a limitation of the analytical methods; it is a property of the
+is moderate. This is not a limitation of the analytical methods; it may be a property of the
 biological system. This reflects a biological reality: soil microbial communities across terrestrial biomes share many widespread genera, and differences between biomes arise mainly from shifts in relative abundance rather than entire turnover of taxa.
 
 %------------------------------------------------------------
@@ -1181,11 +1178,11 @@ characterized, are high-priority targets for further genomic and physiological s
 \chapter{Conclusion}
 %============================================================
 
-This thesis applied a consistent analytical framework --- centered log-ratio transformation, mixture of Gaussian Graphical Models clustering, and random forest classification --- to two independent global soil microbiome datasets derived from 16S rRNA amplicon sequencing. The global topsoil dataset (Bahram et al.\ 2018) provided 193 samples from a single coordinated survey of terrestrial biomes, while the Earth Microbiome Project soil subset (Thompson et al.\ 2017) provided 2,209 samples spanning terrestrial, marine, and freshwater environments across 97 independent studies.
+This thesis applied a consistent analytical framework: centered log-ratio transformation, mixture of Gaussian Graphical Models clustering, and random forest classification to two independent global soil microbiome datasets derived from 16S rRNA amplicon sequencing. The global topsoil dataset (Bahram et al.\ 2018) provided 193 samples from a single coordinated survey of terrestrial biomes, while the Earth Microbiome Project soil subset (Thompson et al.\ 2017) provided 2,209 samples spanning terrestrial, marine, and freshwater environments across 97 independent studies.
 
 Unsupervised clustering recovered environmentally coherent community groupings in both datasets without access to sample metadata. In the global topsoil dataset, 19 populated clusters showed significant associations with biome type, country, and latitude, though no cluster was exclusively composed of a single biome. In the EMP soil subset, 10 populated clusters separated sharply by habitat type, with marine, freshwater, and terrestrial samples occupying distinct clusters. The strength of cluster-metadata correspondence scaled with the breadth of environmental contrast represented in the dataset: wider environmental gradients produced cleaner separations.
 
-Random forest classifiers trained on the same CLR-transformed profiles achieved 61.8\% accuracy on the global topsoil dataset under grouped biome labels and 98.2\% on the EMP soil subset. The contrast reflects the underlying biology: distinguishing marine sediment from agricultural soil is a fundamentally easier classification problem than separating moist tropical forest from dry tropical forest on the basis of genus-level composition alone. The taxa carrying the strongest predictive signal --- \textit{Ellin516} and \textit{Candidatus Udaeobacter} (Verrucomicrobiota), \textit{Anaeromyxobacter} (Myxococcota), \textit{Bacillus} (Bacillota), and \textit{Paenibacillus} (Firmicutes) --- have known ecological associations with the biome categories they discriminated, providing biological grounding for the statistical results.
+Random forest classifiers trained on the same CLR-transformed profiles achieved 61.8\% accuracy on the global topsoil dataset under grouped biome labels and 98.2\% on the EMP soil subset. The contrast reflects the underlying biology: distinguishing marine sediment from agricultural soil is a fundamentally easier classification problem than separating moist tropical forest from dry tropical forest on the basis of genus-level composition alone. The taxa carrying the strongest predictive signal: \textit{Ellin516} and \textit{Candidatus Udaeobacter} (Verrucomicrobiota), \textit{Anaeromyxobacter} (Myxococcota), \textit{Bacillus} (Bacillota), and \textit{Paenibacillus} (Firmicutes), have known ecological associations with the biome categories they discriminated, providing biological grounding for the statistical results.
 
 The convergence of supervised and unsupervised approaches on consistent conclusions strengthens the central finding: soil microbial communities are structured by environment in a manner encoded in genus-level 16S rRNA profiles. That structure is strongest across major habitat boundaries and weaker, though still detectable, within terrestrial biomes where communities share many of the same genera and differ primarily in relative abundance.
 
