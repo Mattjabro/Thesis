@@ -1,0 +1,201 @@
+dataset,biome_label_scheme,rank,genus,phylum,full_lineage,MeanDecreaseAccuracy,MeanDecreaseGini
+Global_Topsoil,original_biomes,1,Ellin516,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Pedosphaerales;Pedosphaeraceae;Ellin516,7.9731,2.0677
+Global_Topsoil,original_biomes,2,Tundrisphaera,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Isosphaerales;Isosphaeraceae;Tundrisphaera,7.8009,2.0974
+Global_Topsoil,original_biomes,3,Pedomicrobium,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Hyphomicrobiaceae;Pedomicrobium,7.7325,2.3557
+Global_Topsoil,original_biomes,4,Acidibacter,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Gammaproteobacteria Incertae Sedis;Unknown Family;Acidibacter,7.3477,1.677
+Global_Topsoil,original_biomes,5,ADurb.Bin063-1,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Pedosphaerales;Pedosphaeraceae;ADurb.Bin063-1,7.2605,2.152
+Global_Topsoil,original_biomes,6,Granulicella,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Terriglobales;Acidobacteriaceae (Subgroup 1);Granulicella,7.1812,1.8848
+Global_Topsoil,original_biomes,7,Conexibacter,Actinomycetota,Bacteria;Actinomycetota;Thermoleophilia;Solirubrobacterales;Solirubrobacteraceae;Conexibacter,6.8082,1.4304
+Global_Topsoil,original_biomes,8,Bacillus,Bacillota,Bacteria;Bacillota;Bacilli;Bacillales;Bacillaceae;Bacillus,6.1983,1.4104
+Global_Topsoil,original_biomes,9,Tengunoibacter,Chloroflexota,Bacteria;Chloroflexota;Ktedonobacteria;Ktedonobacterales;Ktedonobacteraceae;Tengunoibacter,5.6615,1.0864
+Global_Topsoil,original_biomes,10,Aquisphaera,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Isosphaerales;Isosphaeraceae;Aquisphaera,5.36,1.2741
+Global_Topsoil,original_biomes,11,Rubrobacter,Actinomycetota,Bacteria;Actinomycetota;Rubrobacteria;Rubrobacterales;Rubrobacteriaceae;Rubrobacter,4.9007,0.6517
+Global_Topsoil,original_biomes,12,Silvibacterium,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Terriglobales;Acidobacteriaceae (Subgroup 1);Silvibacterium,4.5302,0.9454
+Global_Topsoil,original_biomes,13,Acidiferrimicrobium,Actinomycetota,Bacteria;Actinomycetota;Acidimicrobiia;Acidimicrobiales;Acidimicrobiaceae;Acidiferrimicrobium,4.3504,1.2226
+Global_Topsoil,original_biomes,14,Sphingomonas,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Sphingomonas,4.3128,1.1112
+Global_Topsoil,original_biomes,15,RB41,Acidobacteriota,Bacteria;Acidobacteriota;Blastocatellia;Pyrinomonadales;Pyrinomonadaceae;RB41,4.2871,1.2567
+Global_Topsoil,original_biomes,16,Acidothermus,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Frankiales;Acidothermaceae;Acidothermus,4.0088,1.0118
+Global_Topsoil,original_biomes,17,Candidatus Xiphinematobacter,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Chthoniobacterales;Xiphinematobacteraceae;Candidatus Xiphinematobacter,3.9416,1.2417
+Global_Topsoil,original_biomes,18,Adhaeribacter,Bacteroidota,Bacteria;Bacteroidota;Bacteroidia;Cytophagales;Hymenobacteraceae;Adhaeribacter,3.906,0.9203
+Global_Topsoil,original_biomes,19,Gaiella,Actinomycetota,Bacteria;Actinomycetota;Thermoleophilia;Gaiellales;Gaiellaceae;Gaiella,3.838,1.1029
+Global_Topsoil,original_biomes,20,Variibacter,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Xanthobacteraceae;Variibacter,3.7775,0.6228
+Global_Topsoil,original_biomes,21,Mycobacterium,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Mycobacteriales;Mycobacteriaceae;Mycobacterium,3.5964,0.6293
+Global_Topsoil,original_biomes,22,Iamia,Actinomycetota,Bacteria;Actinomycetota;Acidimicrobiia;Microtrichales;Iamiaceae;Iamia,3.5841,0.9386
+Global_Topsoil,original_biomes,23,Croceibacterium,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Croceibacterium,3.5795,1.0332
+Global_Topsoil,original_biomes,24,Burkholderia-Caballeronia-Paraburkholderia,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Burkholderiales;Burkholderiaceae;Burkholderia-Caballeronia-Paraburkholderia,3.5181,1.1264
+Global_Topsoil,original_biomes,25,Terracidiphilus,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Terriglobales;Acidobacteriaceae (Subgroup 1);Terracidiphilus,3.4961,0.665
+Global_Topsoil,original_biomes,26,Jatrophihabitans,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Frankiales;Frankiaceae;Jatrophihabitans,3.4862,0.7107
+Global_Topsoil,original_biomes,27,Arsenicitalea,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Devosiaceae;Arsenicitalea,3.4817,0.9371
+Global_Topsoil,original_biomes,28,Rhodanobacter,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Lysobacterales;Rhodanobacteraceae;Rhodanobacter,3.4744,0.7388
+Global_Topsoil,original_biomes,29,Dictyobacter,Chloroflexota,Bacteria;Chloroflexota;Ktedonobacteria;Ktedonobacterales;Ktedonobacteraceae;Dictyobacter,3.4159,0.5967
+Global_Topsoil,original_biomes,30,Acidicaldus,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Acetobacterales;Acetobacteraceae;Acidicaldus,3.2742,0.7357
+Global_Topsoil,original_biomes,31,Roseiarcus,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Beijerinckiaceae;Roseiarcus,3.2522,0.9703
+Global_Topsoil,original_biomes,32,Kineosporia,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Kineosporiales;Kineosporiaceae;Kineosporia,3.2147,0.2407
+Global_Topsoil,original_biomes,33,Steroidobacter,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Steroidobacterales;Steroidobacteraceae;Steroidobacter,3.1173,0.6061
+Global_Topsoil,original_biomes,34,Luedemannella,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Micromonosporales;Micromonosporaceae;Luedemannella,3.0162,1.0304
+Global_Topsoil,original_biomes,35,Methylovirgula,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Beijerinckiaceae;Methylovirgula,2.9916,0.2517
+Global_Topsoil,original_biomes,36,Specibacter,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Micrococcales;Micrococcaceae;Specibacter,2.9772,0.5066
+Global_Topsoil,original_biomes,37,Luteolibacter,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Verrucomicrobiales;Rubritaleaceae;Luteolibacter,2.9686,0.7701
+Global_Topsoil,original_biomes,38,Skermanella,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Azospirillales;Azospirillaceae;Skermanella,2.8906,0.5243
+Global_Topsoil,original_biomes,39,Candidatus Solibacter,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Solibacterales;Solibacteraceae;Candidatus Solibacter,2.8224,1.268
+Global_Topsoil,original_biomes,40,Gemmata,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Gemmatales;Gemmataceae;Gemmata,2.8053,1.1114
+Global_Topsoil,original_biomes,41,Chungangia,Bacillota,Bacteria;Bacillota;Bacilli;Bacillales;Planococcaceae;Chungangia,2.7941,0.9265
+Global_Topsoil,original_biomes,42,Nitrobacter,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Xanthobacteraceae;Nitrobacter,2.6956,0.9235
+Global_Topsoil,original_biomes,43,Acidipila,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Terriglobales;Acidobacteriaceae (Subgroup 1);Acidipila,2.6495,0.7687
+Global_Topsoil,original_biomes,44,Hyphomicrobium,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Hyphomicrobiaceae;Hyphomicrobium,2.572,0.792
+Global_Topsoil,original_biomes,45,HSB OF53-F07,Chloroflexota,Bacteria;Chloroflexota;Ktedonobacteria;Ktedonobacterales;Ktedonobacteraceae;HSB OF53-F07,2.5378,0.527
+Global_Topsoil,original_biomes,46,Nordella,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Hyphomicrobiales Incertae Sedis;Nordella,2.52,0.4353
+Global_Topsoil,original_biomes,47,Rhodopila,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Acetobacterales;Acetobacteraceae;Rhodopila,2.5174,0.4107
+Global_Topsoil,original_biomes,48,Paraconexibacter,Actinomycetota,Bacteria;Actinomycetota;Thermoleophilia;Solirubrobacterales;Solirubrobacteraceae;Paraconexibacter,2.4864,0.605
+Global_Topsoil,original_biomes,49,Actinomycetospora,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Actinomycetospora,2.4835,0.5732
+Global_Topsoil,original_biomes,50,Methylobacterium,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Beijerinckiaceae;Methylobacterium,2.4638,0.6424
+Global_Topsoil,grouped_biomes,1,Ellin516,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Pedosphaerales;Pedosphaeraceae;Ellin516,7.4706,2.0379
+Global_Topsoil,grouped_biomes,2,Anaeromyxobacter,Myxococcota,Bacteria;Myxococcota;Myxococcia;Myxococcales;Anaeromyxobacteraceae;Anaeromyxobacter,7.3147,1.9998
+Global_Topsoil,grouped_biomes,3,Bacillus,Bacillota,Bacteria;Bacillota;Bacilli;Bacillales;Bacillaceae;Bacillus,6.5779,1.6867
+Global_Topsoil,grouped_biomes,4,Geodermatophilus,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Frankiales;Geodermatophilaceae;Geodermatophilus,6.502,1.3986
+Global_Topsoil,grouped_biomes,5,Acidibacter,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Gammaproteobacteria Incertae Sedis;Unknown Family;Acidibacter,5.8325,1.8148
+Global_Topsoil,grouped_biomes,6,Pedomicrobium,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Hyphomicrobiaceae;Pedomicrobium,5.8304,1.9649
+Global_Topsoil,grouped_biomes,7,Aquisphaera,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Isosphaerales;Isosphaeraceae;Aquisphaera,5.5927,0.9397
+Global_Topsoil,grouped_biomes,8,Granulicella,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Terriglobales;Acidobacteriaceae (Subgroup 1);Granulicella,5.5372,1.5436
+Global_Topsoil,grouped_biomes,9,ADurb.Bin063-1,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Pedosphaerales;Pedosphaeraceae;ADurb.Bin063-1,5.2271,2.1567
+Global_Topsoil,grouped_biomes,10,Thermosporothrix,Chloroflexota,Bacteria;Chloroflexota;Ktedonobacteria;Ktedonobacterales;Ktedonobacteraceae;Thermosporothrix,5.1905,1.1137
+Global_Topsoil,grouped_biomes,11,RB41,Acidobacteriota,Bacteria;Acidobacteriota;Blastocatellia;Pyrinomonadales;Pyrinomonadaceae;RB41,4.9766,1.0584
+Global_Topsoil,grouped_biomes,12,Rugosimonospora,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Micromonosporales;Micromonosporaceae;Rugosimonospora,4.9252,1.0905
+Global_Topsoil,grouped_biomes,13,Hephaestia,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Hephaestia,4.7081,1.3728
+Global_Topsoil,grouped_biomes,14,Luedemannella,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Micromonosporales;Micromonosporaceae;Luedemannella,4.4139,1.558
+Global_Topsoil,grouped_biomes,15,Candidatus Solibacter,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Solibacterales;Solibacteraceae;Candidatus Solibacter,4.3361,1.4693
+Global_Topsoil,grouped_biomes,16,Terracidiphilus,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Terriglobales;Acidobacteriaceae (Subgroup 1);Terracidiphilus,4.2805,0.9499
+Global_Topsoil,grouped_biomes,17,Chungangia,Bacillota,Bacteria;Bacillota;Bacilli;Bacillales;Planococcaceae;Chungangia,4.2532,1.3153
+Global_Topsoil,grouped_biomes,18,Rhodanobacter,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Lysobacterales;Rhodanobacteraceae;Rhodanobacter,4.0424,0.5918
+Global_Topsoil,grouped_biomes,19,Methylobacterium,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Beijerinckiaceae;Methylobacterium,3.9336,1.0279
+Global_Topsoil,grouped_biomes,20,Puia,Bacteroidota,Bacteria;Bacteroidota;Bacteroidia;Chitinophagales;Chitinophagaceae;Puia,3.8536,1.1003
+Global_Topsoil,grouped_biomes,21,Bryobacter,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Bryobacterales;Bryobacteraceae;Bryobacter,3.5483,1.299
+Global_Topsoil,grouped_biomes,22,Rubrobacter,Actinomycetota,Bacteria;Actinomycetota;Rubrobacteria;Rubrobacterales;Rubrobacteriaceae;Rubrobacter,3.5411,0.9968
+Global_Topsoil,grouped_biomes,23,Burkholderia-Caballeronia-Paraburkholderia,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Burkholderiales;Burkholderiaceae;Burkholderia-Caballeronia-Paraburkholderia,3.5341,1.099
+Global_Topsoil,grouped_biomes,24,Conexibacter,Actinomycetota,Bacteria;Actinomycetota;Thermoleophilia;Solirubrobacterales;Solirubrobacteraceae;Conexibacter,3.342,0.9118
+Global_Topsoil,grouped_biomes,25,Sphingomonas,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Sphingomonas,3.2459,1.2863
+Global_Topsoil,grouped_biomes,26,Massilia,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Burkholderiales;Oxalobacteraceae;Massilia,3.098,0.7674
+Global_Topsoil,grouped_biomes,27,Singulisphaera,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Isosphaerales;Isosphaeraceae;Singulisphaera,3.07,0.5826
+Global_Topsoil,grouped_biomes,28,mle1-7,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Burkholderiales;Nitrosomonadaceae;mle1-7,3.0486,0.644
+Global_Topsoil,grouped_biomes,29,HSB OF53-F07,Chloroflexota,Bacteria;Chloroflexota;Ktedonobacteria;Ktedonobacterales;Ktedonobacteraceae;HSB OF53-F07,2.9154,0.9169
+Global_Topsoil,grouped_biomes,30,Luteolibacter,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Verrucomicrobiales;Rubritaleaceae;Luteolibacter,2.8991,0.6234
+Global_Topsoil,grouped_biomes,31,Streptacidiphilus,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Kitasatosporales;Streptomycetaceae;Streptacidiphilus,2.8536,0.6765
+Global_Topsoil,grouped_biomes,32,Gemmata,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Gemmatales;Gemmataceae;Gemmata,2.7973,1.3437
+Global_Topsoil,grouped_biomes,33,Variibacter,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Xanthobacteraceae;Variibacter,2.663,0.383
+Global_Topsoil,grouped_biomes,34,Microvirga,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Hyphomicrobiales;Beijerinckiaceae;Microvirga,2.6627,0.5548
+Global_Topsoil,grouped_biomes,35,Agromyces,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Micrococcales;Microbacteriaceae;Agromyces,2.6248,0.3838
+Global_Topsoil,grouped_biomes,36,AKYG587,Planctomycetota,Bacteria;Planctomycetota;Phycisphaerae;Phycisphaerales;Phycisphaeraceae;AKYG587,2.5824,0.2662
+Global_Topsoil,grouped_biomes,37,Candidatus Xiphinematobacter,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiia;Chthoniobacterales;Xiphinematobacteraceae;Candidatus Xiphinematobacter,2.5534,0.781
+Global_Topsoil,grouped_biomes,38,Crossiella,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Crossiella,2.5053,0.9822
+Global_Topsoil,grouped_biomes,39,Silvibacterium,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Terriglobales;Acidobacteriaceae (Subgroup 1);Silvibacterium,2.4961,0.6101
+Global_Topsoil,grouped_biomes,40,Plot4-2H12,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Plot4-2H12,2.4884,0.4795
+Global_Topsoil,grouped_biomes,41,Iamia,Actinomycetota,Bacteria;Actinomycetota;Acidimicrobiia;Microtrichales;Iamiaceae;Iamia,2.4044,0.402
+Global_Topsoil,grouped_biomes,42,Kribbella,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Propionibacteriales;Nocardioidaceae;Kribbella,2.3736,0.7311
+Global_Topsoil,grouped_biomes,43,Phaselicystis,Myxococcota,Bacteria;Myxococcota;Polyangiia;Polyangiales;Phaselicystaceae;Phaselicystis,2.3617,0.9001
+Global_Topsoil,grouped_biomes,44,Chthonomonas,Armatimonadota,Bacteria;Armatimonadota;Chthonomonadia;Chthonomonadales;Chthonomonadaceae;Chthonomonas,2.3613,0.4384
+Global_Topsoil,grouped_biomes,45,Hypericibacter,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Incertae Sedis;Incertae Sedis;Hypericibacter,2.289,0.9222
+Global_Topsoil,grouped_biomes,46,Piscinibacter,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Burkholderiales;Comamonadaceae;Piscinibacter,2.2569,1.0463
+Global_Topsoil,grouped_biomes,47,SH-PL14,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Planctomycetales;Rubinisphaeraceae;SH-PL14,2.2161,0.3277
+Global_Topsoil,grouped_biomes,48,Inquilinus,Pseudomonadota,Bacteria;Pseudomonadota;Alphaproteobacteria;Azospirillales;Inquilinaceae;Inquilinus,2.1649,0.4402
+Global_Topsoil,grouped_biomes,49,Steroidobacter,Pseudomonadota,Bacteria;Pseudomonadota;Gammaproteobacteria;Steroidobacterales;Steroidobacteraceae;Steroidobacter,2.1449,0.6538
+Global_Topsoil,grouped_biomes,50,Micromonospora,Actinomycetota,Bacteria;Actinomycetota;Actinobacteria;Micromonosporales;Micromonosporaceae;Micromonospora,2.1129,0.386
+EMP_Soil_Subset,original_biomes,1,Sphingomonas,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Sphingomonas,10.7566,7.0851
+EMP_Soil_Subset,original_biomes,2,Paenibacillus,Firmicutes,Bacteria;Firmicutes;Bacilli;Paenibacillales;Paenibacillaceae;Paenibacillus,10.6671,13.5192
+EMP_Soil_Subset,original_biomes,3,Candidatus Udaeobacter,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiae;Chthoniobacterales;Chthoniobacteraceae;Candidatus Udaeobacter,9.3865,19.2268
+EMP_Soil_Subset,original_biomes,4,Planococcaceae,Firmicutes,Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae,9.3564,6.2137
+EMP_Soil_Subset,original_biomes,5,ADurb.Bin063-1,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiae;Pedosphaerales;Pedosphaeraceae;ADurb.Bin063-1,9.1659,18.0483
+EMP_Soil_Subset,original_biomes,6,IS-44,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Burkholderiales;Nitrosomonadaceae;IS-44,8.6208,3.5883
+EMP_Soil_Subset,original_biomes,7,Pseudonocardia,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Pseudonocardia,8.561,6.4551
+EMP_Soil_Subset,original_biomes,8,Asanoa,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Micromonosporales;Micromonosporaceae;Asanoa,8.5254,7.0869
+EMP_Soil_Subset,original_biomes,9,Citrifermentans,Desulfobacterota,Bacteria;Desulfobacterota;Desulfuromonadia;Geobacterales;Geobacteraceae;Citrifermentans,8.3711,17.8103
+EMP_Soil_Subset,original_biomes,10,GOUTA6,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Burkholderiales;Nitrosomonadaceae;GOUTA6,8.3653,3.3585
+EMP_Soil_Subset,original_biomes,11,Pseudarthrobacter,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Micrococcales;Micrococcaceae;Pseudarthrobacter,8.2346,2.3817
+EMP_Soil_Subset,original_biomes,12,Actinobacteriota,Actinobacteriota,Bacteria;Actinobacteriota,8.234,5.9166
+EMP_Soil_Subset,original_biomes,13,Geobacter,Desulfobacterota,Bacteria;Desulfobacterota;Desulfuromonadia;Geobacterales;Geobacteraceae;Geobacter,7.9812,16.2532
+EMP_Soil_Subset,original_biomes,14,Candidatus Nitrososphaera,Crenarchaeota,Archaea;Crenarchaeota;Nitrososphaeria;Nitrososphaerales;Nitrososphaeraceae;Candidatus Nitrososphaera,7.7439,5.7424
+EMP_Soil_Subset,original_biomes,15,BIrii41,Myxococcota,Bacteria;Myxococcota;Polyangia;Polyangiales;BIrii41,7.5548,9.891
+EMP_Soil_Subset,original_biomes,16,Rubrobacter,Actinobacteriota,Bacteria;Actinobacteriota;Rubrobacteria;Rubrobacterales;Rubrobacteriaceae;Rubrobacter,7.5083,6.2926
+EMP_Soil_Subset,original_biomes,17,NB1-j,NB1-j,Bacteria;NB1-j,7.5039,1.9402
+EMP_Soil_Subset,original_biomes,18,Desulfobacterota,Desulfobacterota,Bacteria;Desulfobacterota,7.4516,3.4483
+EMP_Soil_Subset,original_biomes,19,Flavisolibacter,Bacteroidota,Bacteria;Bacteroidota;Bacteroidia;Chitinophagales;Chitinophagaceae;Flavisolibacter,7.4121,3.6851
+EMP_Soil_Subset,original_biomes,20,Subgroup 2,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Subgroup 2,7.361,3.2974
+EMP_Soil_Subset,original_biomes,21,AD3,Chloroflexi,Bacteria;Chloroflexi;AD3,7.115,4.2681
+EMP_Soil_Subset,original_biomes,22,Anaerolineaceae,Chloroflexi,Bacteria;Chloroflexi;Anaerolineae;Anaerolineales;Anaerolineaceae,6.9909,2.9794
+EMP_Soil_Subset,original_biomes,23,Blastococcus,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Frankiales;Geodermatophilaceae;Blastococcus,6.9821,4.0143
+EMP_Soil_Subset,original_biomes,24,Enterobacterales,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales,6.9682,4.0953
+EMP_Soil_Subset,original_biomes,25,Nitrososphaeraceae,Crenarchaeota,Archaea;Crenarchaeota;Nitrososphaeria;Nitrososphaerales;Nitrososphaeraceae,6.9681,4.369
+EMP_Soil_Subset,original_biomes,26,Xanthomonadaceae,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae,6.956,5.8322
+EMP_Soil_Subset,original_biomes,27,Woesearchaeales,Nanoarchaeota,Archaea;Nanoarchaeota;Nanoarchaeia;Woesearchaeales,6.9395,2.3343
+EMP_Soil_Subset,original_biomes,28,Geobacteraceae,Desulfobacterota,Bacteria;Desulfobacterota;Desulfuromonadia;Geobacterales;Geobacteraceae,6.9074,7.713
+EMP_Soil_Subset,original_biomes,29,Acidothermus,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Frankiales;Acidothermaceae;Acidothermus,6.87,4.2515
+EMP_Soil_Subset,original_biomes,30,Pseudolabrys,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Xanthobacteraceae;Pseudolabrys,6.8539,8.7237
+EMP_Soil_Subset,original_biomes,31,Yersinia,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Yersiniaceae;Yersinia,6.8307,5.7808
+EMP_Soil_Subset,original_biomes,32,RCP2-54,RCP2-54,Bacteria;RCP2-54,6.7979,3.4282
+EMP_Soil_Subset,original_biomes,33,Gaiellales,Actinobacteriota,Bacteria;Actinobacteriota;Thermoleophilia;Gaiellales,6.7002,2.9498
+EMP_Soil_Subset,original_biomes,34,Stenotrophobacter,Acidobacteriota,Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae;Stenotrophobacter,6.6412,5.8075
+EMP_Soil_Subset,original_biomes,35,Phyllobacterium,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Phyllobacterium,6.6345,4.0364
+EMP_Soil_Subset,original_biomes,36,Ellin516,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiae;Pedosphaerales;Pedosphaeraceae;Ellin516,6.62,12.0092
+EMP_Soil_Subset,original_biomes,37,MBNT15,MBNT15,Bacteria;MBNT15,6.5358,5.0043
+EMP_Soil_Subset,original_biomes,38,Rhodomicrobium,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhodomicrobiaceae;Rhodomicrobium,6.446,3.6798
+EMP_Soil_Subset,original_biomes,39,Blastocatellaceae,Acidobacteriota,Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae,6.4418,2.8413
+EMP_Soil_Subset,original_biomes,40,JGI 0001001-H03,Acidobacteriota,Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae;JGI 0001001-H03,6.4155,8.1723
+EMP_Soil_Subset,original_biomes,41,Subgroup 5,Acidobacteriota,Bacteria;Acidobacteriota;Subgroup 5,6.3734,10.3321
+EMP_Soil_Subset,original_biomes,42,Crossiella,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Crossiella,6.3586,3.4072
+EMP_Soil_Subset,original_biomes,43,Sulfurovum,Campylobacterota,Bacteria;Campylobacterota;Campylobacteria;Campylobacterales;Sulfurovaceae;Sulfurovum,6.345,8.7822
+EMP_Soil_Subset,original_biomes,44,KI89A clade,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;KI89A clade,6.2922,3.11
+EMP_Soil_Subset,original_biomes,45,JG36-TzT-191,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;JG36-TzT-191,6.2296,1.1734
+EMP_Soil_Subset,original_biomes,46,Bradyrhizobium,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Xanthobacteraceae;Bradyrhizobium,6.0652,2.8504
+EMP_Soil_Subset,original_biomes,47,Rhizobiales Incertae Sedis,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiales Incertae Sedis,6.032,3.787
+EMP_Soil_Subset,original_biomes,48,Planctomycetales,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Planctomycetales,6.0299,8.2283
+EMP_Soil_Subset,original_biomes,49,Ramlibacter,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Burkholderiales;Comamonadaceae;Ramlibacter,6.0261,2.9656
+EMP_Soil_Subset,original_biomes,50,Oryzihumus,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Micrococcales;Intrasporangiaceae;Oryzihumus,5.8542,1.3026
+EMP_Soil_Subset,grouped_biomes,1,Paenibacillus,Firmicutes,Bacteria;Firmicutes;Bacilli;Paenibacillales;Paenibacillaceae;Paenibacillus,10.1871,12.5442
+EMP_Soil_Subset,grouped_biomes,2,ADurb.Bin063-1,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiae;Pedosphaerales;Pedosphaeraceae;ADurb.Bin063-1,9.5433,16.2878
+EMP_Soil_Subset,grouped_biomes,3,Planococcaceae,Firmicutes,Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae,9.4569,5.9545
+EMP_Soil_Subset,grouped_biomes,4,Asanoa,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Micromonosporales;Micromonosporaceae;Asanoa,9.0496,7.3485
+EMP_Soil_Subset,grouped_biomes,5,Sphingomonas,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Sphingomonas,8.5609,5.999
+EMP_Soil_Subset,grouped_biomes,6,Pseudonocardia,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Pseudonocardiales;Pseudonocardiaceae;Pseudonocardia,8.442,7.2987
+EMP_Soil_Subset,grouped_biomes,7,Candidatus Nitrososphaera,Crenarchaeota,Archaea;Crenarchaeota;Nitrososphaeria;Nitrososphaerales;Nitrososphaeraceae;Candidatus Nitrososphaera,8.1883,5.7922
+EMP_Soil_Subset,grouped_biomes,8,Gaiellales,Actinobacteriota,Bacteria;Actinobacteriota;Thermoleophilia;Gaiellales,8.1847,4.4218
+EMP_Soil_Subset,grouped_biomes,9,Citrifermentans,Desulfobacterota,Bacteria;Desulfobacterota;Desulfuromonadia;Geobacterales;Geobacteraceae;Citrifermentans,8.1719,17.3107
+EMP_Soil_Subset,grouped_biomes,10,Blastococcus,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Frankiales;Geodermatophilaceae;Blastococcus,8.108,5.2578
+EMP_Soil_Subset,grouped_biomes,11,Pseudarthrobacter,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Micrococcales;Micrococcaceae;Pseudarthrobacter,8.0716,3.0341
+EMP_Soil_Subset,grouped_biomes,12,Candidatus Udaeobacter,Verrucomicrobiota,Bacteria;Verrucomicrobiota;Verrucomicrobiae;Chthoniobacterales;Chthoniobacteraceae;Candidatus Udaeobacter,8.0624,12.5512
+EMP_Soil_Subset,grouped_biomes,13,Actinobacteriota,Actinobacteriota,Bacteria;Actinobacteriota,8.0587,6.4343
+EMP_Soil_Subset,grouped_biomes,14,Xanthomonadaceae,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Xanthomonadales;Xanthomonadaceae,8.0547,6.3324
+EMP_Soil_Subset,grouped_biomes,15,Rubrobacter,Actinobacteriota,Bacteria;Actinobacteriota;Rubrobacteria;Rubrobacterales;Rubrobacteriaceae;Rubrobacter,7.8867,4.81
+EMP_Soil_Subset,grouped_biomes,16,Phyllobacterium,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiaceae;Phyllobacterium,7.8055,5.0379
+EMP_Soil_Subset,grouped_biomes,17,Yersinia,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales;Yersiniaceae;Yersinia,7.7528,6.7503
+EMP_Soil_Subset,grouped_biomes,18,WX65,Methylomirabilota,Bacteria;Methylomirabilota;Methylomirabilia;Rokubacteriales;WX65,7.6002,1.8398
+EMP_Soil_Subset,grouped_biomes,19,GOUTA6,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Burkholderiales;Nitrosomonadaceae;GOUTA6,7.4908,3.2261
+EMP_Soil_Subset,grouped_biomes,20,Pseudolabrys,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Xanthobacteraceae;Pseudolabrys,7.4571,6.8807
+EMP_Soil_Subset,grouped_biomes,21,Geobacter,Desulfobacterota,Bacteria;Desulfobacterota;Desulfuromonadia;Geobacterales;Geobacteraceae;Geobacter,7.3497,10.6618
+EMP_Soil_Subset,grouped_biomes,22,Nitrososphaeraceae,Crenarchaeota,Archaea;Crenarchaeota;Nitrososphaeria;Nitrososphaerales;Nitrososphaeraceae,7.2213,4.451
+EMP_Soil_Subset,grouped_biomes,23,RCP2-54,RCP2-54,Bacteria;RCP2-54,7.218,2.4313
+EMP_Soil_Subset,grouped_biomes,24,Flavisolibacter,Bacteroidota,Bacteria;Bacteroidota;Bacteroidia;Chitinophagales;Chitinophagaceae;Flavisolibacter,7.1927,3.8582
+EMP_Soil_Subset,grouped_biomes,25,BIrii41,Myxococcota,Bacteria;Myxococcota;Polyangia;Polyangiales;BIrii41,7.1785,14.5431
+EMP_Soil_Subset,grouped_biomes,26,Subgroup 2,Acidobacteriota,Bacteria;Acidobacteriota;Acidobacteriae;Subgroup 2,7.1389,3.3089
+EMP_Soil_Subset,grouped_biomes,27,Candidatus Nitrocosmicus,Crenarchaeota,Archaea;Crenarchaeota;Nitrososphaeria;Nitrososphaerales;Nitrososphaeraceae;Candidatus Nitrocosmicus,7.0704,2.6511
+EMP_Soil_Subset,grouped_biomes,28,KI89A clade,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Pseudomonadales;KI89A clade,6.939,5.0589
+EMP_Soil_Subset,grouped_biomes,29,Desulfobacterota,Desulfobacterota,Bacteria;Desulfobacterota,6.8825,3.0973
+EMP_Soil_Subset,grouped_biomes,30,IS-44,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Burkholderiales;Nitrosomonadaceae;IS-44,6.752,2.9253
+EMP_Soil_Subset,grouped_biomes,31,AD3,Chloroflexi,Bacteria;Chloroflexi;AD3,6.6516,3.5683
+EMP_Soil_Subset,grouped_biomes,32,Enterobacterales,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Enterobacterales,6.6189,4.1364
+EMP_Soil_Subset,grouped_biomes,33,Solibacillus,Firmicutes,Bacteria;Firmicutes;Bacilli;Bacillales;Planococcaceae;Solibacillus,6.571,3.4143
+EMP_Soil_Subset,grouped_biomes,34,Methylocella,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Beijerinckiaceae;Methylocella,6.5372,15.9517
+EMP_Soil_Subset,grouped_biomes,35,Azohydromonas,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Burkholderiales;Comamonadaceae;Azohydromonas,6.4954,1.4402
+EMP_Soil_Subset,grouped_biomes,36,Geobacteraceae,Desulfobacterota,Bacteria;Desulfobacterota;Desulfuromonadia;Geobacterales;Geobacteraceae,6.4703,8.2112
+EMP_Soil_Subset,grouped_biomes,37,Haliangium,Myxococcota,Bacteria;Myxococcota;Polyangia;Haliangiales;Haliangiaceae;Haliangium,6.4414,11.0564
+EMP_Soil_Subset,grouped_biomes,38,NB1-j,NB1-j,Bacteria;NB1-j,6.4318,2.4385
+EMP_Soil_Subset,grouped_biomes,39,Rhodomicrobium,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhodomicrobiaceae;Rhodomicrobium,6.3707,3.2722
+EMP_Soil_Subset,grouped_biomes,40,Acidothermus,Actinobacteriota,Bacteria;Actinobacteriota;Actinobacteria;Frankiales;Acidothermaceae;Acidothermus,6.3423,4.9097
+EMP_Soil_Subset,grouped_biomes,41,MND1,Proteobacteria,Bacteria;Proteobacteria;Gammaproteobacteria;Burkholderiales;Nitrosomonadaceae;MND1,6.3298,4.0757
+EMP_Soil_Subset,grouped_biomes,42,Gaiella,Actinobacteriota,Bacteria;Actinobacteriota;Thermoleophilia;Gaiellales;Gaiellaceae;Gaiella,6.1982,3.4816
+EMP_Soil_Subset,grouped_biomes,43,Stenotrophobacter,Acidobacteriota,Bacteria;Acidobacteriota;Blastocatellia;Blastocatellales;Blastocatellaceae;Stenotrophobacter,6.1735,4.798
+EMP_Soil_Subset,grouped_biomes,44,Ellin6055,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Sphingomonadales;Sphingomonadaceae;Ellin6055,6.1224,2.6621
+EMP_Soil_Subset,grouped_biomes,45,Rhizobiales Incertae Sedis,Proteobacteria,Bacteria;Proteobacteria;Alphaproteobacteria;Rhizobiales;Rhizobiales Incertae Sedis,6.1178,4.5855
+EMP_Soil_Subset,grouped_biomes,46,Flavitalea,Bacteroidota,Bacteria;Bacteroidota;Bacteroidia;Chitinophagales;Chitinophagaceae;Flavitalea,6.1161,1.9833
+EMP_Soil_Subset,grouped_biomes,47,SCGC AAA011-D5,Nanoarchaeota,Archaea;Nanoarchaeota;Nanoarchaeia;Woesearchaeales;SCGC AAA011-D5,6.0911,1.3424
+EMP_Soil_Subset,grouped_biomes,48,Woesearchaeales,Nanoarchaeota,Archaea;Nanoarchaeota;Nanoarchaeia;Woesearchaeales,6.0881,1.3871
+EMP_Soil_Subset,grouped_biomes,49,Subgroup 5,Acidobacteriota,Bacteria;Acidobacteriota;Subgroup 5,6.0249,10.5142
+EMP_Soil_Subset,grouped_biomes,50,Planctomycetales,Planctomycetota,Bacteria;Planctomycetota;Planctomycetes;Planctomycetales,5.8725,7.2748

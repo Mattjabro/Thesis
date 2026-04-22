@@ -1,0 +1,194 @@
+sample_id,cluster,env_biome,group_biome,env_feature,env_material,country,latitude_deg,longitude_deg,elevation_m,depth_m,collection_date,observed_otus,chao1,shannon
+ERR1873185_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Colombia,-0.3919,-72.0461,0,0,2014/2015,512,513.875,5.9318
+ERR1873186_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Colombia,-0.3466,-72.059,0,0,2014/2015,275,275.0,5.3369
+ERR1873188_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Colombia,-0.3806,-72.236,0,0,2014/2015,238,238.0,5.1971
+ERR1873190_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Colombia,-0.55,-71.36,0,0,2014/2015,342,342.143,5.4619
+ERR1873193_F_filt.fastq.gz,17,Tropical_montane_forests,TROPICAL_FOREST,-,soil,Colombia,4.867,-75.167,0,0,2014/2015,545,547.0,5.9787
+ERR1873194_F_filt.fastq.gz,17,Tropical_montane_forests,TROPICAL_FOREST,-,soil,Colombia,6.705,-75.4667,0,0,2014/2015,246,246.0,5.157
+ERR1873195_F_filt.fastq.gz,16,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.12324,27.03222,0,0,2014/2015,461,461.0,5.9003
+ERR1873196_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.27961,26.3716,0,0,2014/2015,579,580.0,6.0976
+ERR1873197_F_filt.fastq.gz,13,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.04579,24.71194,0,0,2014/2015,543,543.143,6.0086
+ERR1873198_F_filt.fastq.gz,6,Mediterrean,MEDITERRANEAN,-,soil,Australia,-34.36113,116.291,0,0,2014/2015,375,375.0,5.6458
+ERR1873199_F_filt.fastq.gz,5,Mediterrean,MEDITERRANEAN,-,soil,Australia,-34.95216,116.75884,0,0,2014/2015,486,486.375,5.8831
+ERR1873201_F_filt.fastq.gz,5,Mediterrean,MEDITERRANEAN,-,soil,Australia,-34.95822,117.43759,0,0,2014/2015,356,356.25,5.6065
+ERR1873202_F_filt.fastq.gz,6,Mediterrean,MEDITERRANEAN,-,soil,Australia,-33.54495,117.08714,0,0,2014/2015,375,375.0,5.6997
+ERR1873203_F_filt.fastq.gz,18,Mediterrean,MEDITERRANEAN,-,soil,Australia,-33.18,117.0478,0,0,2014/2015,469,469.545,5.887
+ERR1873204_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-9.4347,147.35164,0,0,2014/2015,553,556.5,5.996
+ERR1873205_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-9.4448,147.34867,0,0,2014/2015,850,854.0,6.3763
+ERR1873206_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-9.44475,147.34958,0,0,2014/2015,840,845.571,6.3703
+ERR1873207_F_filt.fastq.gz,4,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-9.43501,147.37553,0,0,2014/2015,257,257.0,5.2191
+ERR1873208_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-9.41755,147.37845,0,0,2014/2015,553,553.125,5.9996
+ERR1873209_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-9.42183,147.36922,0,0,2014/2015,799,799.0,6.3547
+ERR1873212_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-7.30364,147.13239,0,0,2014/2015,218,218.0,5.0058
+ERR1873213_F_filt.fastq.gz,9,Tropical_montane_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-6.01732,145.41601,0,0,2014/2015,181,181.0,4.9143
+ERR1873215_F_filt.fastq.gz,17,Grasslands_and_shrublands,GRASSLAND_SHRUBLAND,-,soil,Papua New Guinea,-5.79035,145.05771,0,0,2014/2015,399,399.0,5.7442
+ERR1873218_F_filt.fastq.gz,17,Tropical_montane_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-6.3755,145.2558333,0,0,2014/2015,210,210.0,5.0347
+ERR1873219_F_filt.fastq.gz,9,Tropical_montane_forests,TROPICAL_FOREST,-,soil,Papua New Guinea,-6.193333333,145.3425,0,0,2014/2015,179,179.0,4.9272
+ERR1873220_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.32669,21.89557,0,0,2014/2015,307,307.5,5.4864
+ERR1873221_F_filt.fastq.gz,17,Savannas,GRASSLAND_SHRUBLAND,-,soil,Australia,-12.76216667,132.7516667,0,0,2014/2015,375,375.0,5.6693
+ERR1873222_F_filt.fastq.gz,1,Savannas,GRASSLAND_SHRUBLAND,-,soil,Australia,-13.53216667,131.3180833,0,0,2014/2015,305,305.0,5.4672
+ERR1873223_F_filt.fastq.gz,17,Savannas,GRASSLAND_SHRUBLAND,-,soil,Australia,-12.6725,131.0708333,0,0,2014/2015,340,340.0,5.5425
+ERR1873225_F_filt.fastq.gz,16,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.38859,22.65545,0,0,2014/2015,268,268.5,5.2711
+ERR1873226_F_filt.fastq.gz,9,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.01829,22.17463,0,0,2014/2015,371,371.0,5.6542
+ERR1873231_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,Finland,68.60353,21.74517,0,0,2014/2015,250,250.0,5.2524
+ERR1873232_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,Norway,69.89058,21.57109,0,0,2014/2015,547,551.0,5.9417
+ERR1873233_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,Norway,70.14726,24.78686,0,0,2014/2015,569,569.857,6.0765
+ERR1873234_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,Finland,68.06356,24.03387,0,0,2014/2015,658,658.429,6.1792
+ERR1873235_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Viet Nam,20.34902,105.59649,0,0,2014/2015,390,390.0,5.7331
+ERR1873236_F_filt.fastq.gz,17,Tropical_montane_forests,TROPICAL_FOREST,-,soil,Viet Nam,22.32166,103.78688,0,0,2014/2015,681,681.25,6.1309
+ERR1873237_F_filt.fastq.gz,19,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,59.42275,24.6661,0,0,2014/2015,405,405.75,5.8062
+ERR1873239_F_filt.fastq.gz,1,Dry_tropical_forests,TROPICAL_FOREST,-,soil,India,29.49347,79.13757,0,0,2014/2015,255,255.0,5.289
+ERR1873240_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,India,14.26995,74.75724,0,0,2014/2015,406,406.5,5.7278
+ERR1873241_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,India,13.49556,75.2251,0,0,2014/2015,200,200.0,5.0482
+ERR1873242_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,India,13.52236,75.01802,0,0,2014/2015,388,388.056,5.6326
+ERR1873243_F_filt.fastq.gz,14,Dry_tropical_forests,TROPICAL_FOREST,-,soil,India,13.45437,75.02213,0,0,2014/2015,220,220.0,5.1447
+ERR1873244_F_filt.fastq.gz,7,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.30122,21.936,0,0,2014/2015,488,488.0,5.8533
+ERR1873245_F_filt.fastq.gz,7,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.28253,22.46296,0,0,2014/2015,445,445.0,5.8884
+ERR1873246_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.47449,22.8236,0,0,2014/2015,333,333.0,5.5768
+ERR1873247_F_filt.fastq.gz,12,Dry_tropical_forests,TROPICAL_FOREST,-,soil,Madagascar,-24.95273,47.00282,0,0,2014/2015,452,452.5,5.8692
+ERR1873248_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Madagascar,-18.9162,47.917,0,0,2014/2015,561,563.5,5.9839
+ERR1873249_F_filt.fastq.gz,17,Savannas,GRASSLAND_SHRUBLAND,-,soil,Madagascar,-22.56647,45.36419,0,0,2014/2015,205,205.0,5.0422
+ERR1873250_F_filt.fastq.gz,17,Dry_tropical_forests,TROPICAL_FOREST,-,soil,Madagascar,-24.7787,47.167,0,0,2014/2015,312,327.0,5.4619
+ERR1873252_F_filt.fastq.gz,13,Boreal_forests,BOREAL_FOREST,-,soil,Russia,43.37804,132.9514,0,0,2014/2015,487,488.0,5.9661
+ERR1873253_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Russia,43.27805,133.15603,0,0,2014/2015,360,360.111,5.6188
+ERR1873254_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Russia,42.74177,130.68873,0,0,2014/2015,486,486.143,5.9255
+ERR1873255_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Russia,43.12807,131.41117,0,0,2014/2015,317,317.0,5.4809
+ERR1873256_F_filt.fastq.gz,17,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Russia,43.10035,131.55774,0,0,2014/2015,227,227.2,5.1454
+ERR1873257_F_filt.fastq.gz,13,Boreal_forests,BOREAL_FOREST,-,soil,Japan,43.28847,142.60428,0,0,2014/2015,427,428.2,5.7944
+ERR1873258_F_filt.fastq.gz,2,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Iran,37.43,49.1,0,0,2014/2015,410,410.0,5.8224
+ERR1873259_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,USA,18.32096,-65.81974,0,0,2014/2015,294,294.0,5.3676
+ERR1873260_F_filt.fastq.gz,18,Mediterrean,MEDITERRANEAN,-,soil,Iran,30.136581,51.543479,0,0,2014/2015,539,539.0,6.0645
+ERR1873262_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Brazil,5.305306,-59.925056,0,0,2014/2015,392,392.333,5.5714
+ERR1873263_F_filt.fastq.gz,12,Savannas,GRASSLAND_SHRUBLAND,-,soil,Australia,-37.73217,145.24386,0,0,2014/2015,255,255.0,5.2851
+ERR1873264_F_filt.fastq.gz,17,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Australia,-37.48833,145.83333,0,0,2014/2015,461,461.0,5.8392
+ERR1873265_F_filt.fastq.gz,1,Savannas,GRASSLAND_SHRUBLAND,-,soil,Zimbabwe,-20.01863,29.47745,0,0,2014/2015,973,976.3,6.5978
+ERR1873267_F_filt.fastq.gz,14,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,USA,29.73517,-82.44186,0,0,2014/2015,1592,1602.12,7.1037
+ERR1873268_F_filt.fastq.gz,16,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Chile,-44.07439,-73.096796,0,0,2014/2015,330,330.0,5.5319
+ERR1873269_F_filt.fastq.gz,13,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-40.1269,-71.6797,0,0,2014/2015,215,215.0,5.149
+ERR1873270_F_filt.fastq.gz,3,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-42.78133,-71.47167,0,0,2014/2015,789,789.0,6.2993
+ERR1873271_F_filt.fastq.gz,3,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-54.48108,-67.44908,0,0,2014/2015,1130,1130.312,6.6433
+ERR1873272_F_filt.fastq.gz,10,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-54.47952,-67.44773,0,0,2014/2015,900,905.25,6.5834
+ERR1873273_F_filt.fastq.gz,13,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-44.83255,-71.7265,0,0,2014/2015,375,375.0,5.6634
+ERR1873275_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Sri Lanka,6.42497,80.41758,0,0,2014/2015,422,422.0,5.636
+ERR1873276_F_filt.fastq.gz,12,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,China,30.3218,119.4427,0,0,2014/2015,295,295.0,5.477
+ERR1873277_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,China,42.06022,128.26089,0,0,2014/2015,560,560.231,6.0316
+ERR1873278_F_filt.fastq.gz,10,Boreal_forests,BOREAL_FOREST,-,soil,China,42.03121,128.43149,0,0,2014/2015,826,826.25,6.3647
+ERR1873279_F_filt.fastq.gz,2,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,China,39.96921,115.43165,0,0,2014/2015,420,420.0,5.7454
+ERR1873280_F_filt.fastq.gz,2,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,China,39.95546,115.42577,0,0,2014/2015,622,622.857,6.1345
+ERR1873282_F_filt.fastq.gz,16,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Germany,50.1413,8.2677,0,0,2014/2015,635,637.625,6.1642
+ERR1873283_F_filt.fastq.gz,2,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Italy,37.86361,14.04111,0,0,2014/2015,465,465.2,5.9473
+ERR1873284_F_filt.fastq.gz,18,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Italy,38.01639,14.04278,0,0,2014/2015,370,371.2,5.6348
+ERR1873286_F_filt.fastq.gz,13,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,Russia,51.91068,39.45722,0,0,2014/2015,1116,1116.417,6.7159
+ERR1873287_F_filt.fastq.gz,13,Boreal_forests,BOREAL_FOREST,-,soil,Russia,57.09869,53.15841,0,0,2014/2015,483,483.091,5.8834
+ERR1873289_F_filt.fastq.gz,6,Mediterrean,MEDITERRANEAN,-,soil,Portugal,38.794287,-9.415508,0,0,2014/2015,326,327.0,5.5648
+ERR1873291_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Panama,8.4868,-82.4336,0,0,2014/2015,337,337.25,5.5359
+ERR1873293_F_filt.fastq.gz,6,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,USA,37.81383896,-119.8925781,0,0,2014/2015,346,347.0,5.613
+ERR1873294_F_filt.fastq.gz,2,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,USA,37.84895325,-120.5805054,0,0,2014/2015,413,413.0,5.757
+ERR1873295_F_filt.fastq.gz,17,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Canada,48.9895,-57.787,0,0,2014/2015,635,636.556,6.08
+ERR1873296_F_filt.fastq.gz,13,Arctic_tundra,ARCTIC_TUNDRA,-,soil,USA,68.6232,-149.5992,0,0,2014/2015,634,634.261,6.0745
+ERR1873297_F_filt.fastq.gz,6,Tropical_montane_forests,TROPICAL_FOREST,-,soil,Mexico,22.1989,-102.60055,0,0,2014/2015,690,699.333,6.1378
+ERR1873298_F_filt.fastq.gz,16,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,New Zealand,-43.1805,172.2229,0,0,2014/2015,380,380.167,5.6241
+ERR1873301_F_filt.fastq.gz,14,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Australia,-17.02313,145.59963,0,0,2014/2015,488,489.0,5.9421
+ERR1873302_F_filt.fastq.gz,1,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Australia,-17.01765,145.58442,0,0,2014/2015,441,441.0,5.843
+ERR1873303_F_filt.fastq.gz,13,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Australia,-42.833,146.367,0,0,2014/2015,303,303.0,5.4706
+ERR1873304_F_filt.fastq.gz,17,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Australia,-43.093,146.65,0,0,2014/2015,436,436.5,5.8111
+ERR1873305_F_filt.fastq.gz,2,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,China,39.95724,115.42452,0,0,2014/2015,889,889.3,6.494
+ERR1873306_F_filt.fastq.gz,2,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,China,42.38407,128.09348,0,0,2014/2015,593,593.6,6.0719
+ERR1873307_F_filt.fastq.gz,1,Savannas,GRASSLAND_SHRUBLAND,-,soil,Democratic Republic of the Congo,-11.4795,27.6624,0,0,2014/2015,431,431.0,5.7886
+ERR1873308_F_filt.fastq.gz,1,Savannas,GRASSLAND_SHRUBLAND,-,soil,Democratic Republic of the Congo,-11.48405,27.65878,0,0,2014/2015,443,446.0,5.8286
+ERR1873310_F_filt.fastq.gz,16,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,USA,36.0361,-79.0711,0,0,2014/2015,385,385.0,5.655
+ERR1873311_F_filt.fastq.gz,12,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,USA,35.9794,-79.0928,0,0,2014/2015,426,426.25,5.7374
+ERR1873312_F_filt.fastq.gz,1,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Thailand,18.5289,98.3916,0,0,2014/2015,520,522.1,5.9472
+ERR1873314_F_filt.fastq.gz,17,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Australia,-28.2104,153.19188,0,0,2014/2015,769,772.333,6.2546
+ERR1873315_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.15685,22.5004,0,0,2014/2015,676,676.0,6.234
+ERR1873316_F_filt.fastq.gz,2,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,India,30.46288,78.16841,0,0,2014/2015,385,385.0,5.7294
+ERR1873318_F_filt.fastq.gz,1,Dry_tropical_forests,TROPICAL_FOREST,-,soil,India,30.35214,77.92019,0,0,2014/2015,335,335.0,5.4991
+ERR1873319_F_filt.fastq.gz,18,Savannas,GRASSLAND_SHRUBLAND,-,soil,Botswana,-18.07174,25.4991,0,0,2014/2015,256,256.0,5.1893
+ERR1873320_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,Indonesia,-0.05881,114.00517,0,0,2014/2015,306,306.5,5.4399
+ERR1873321_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,Finland,69.1691,26.9992,0,0,2014/2015,331,332.25,5.4771
+ERR1873322_F_filt.fastq.gz,13,Boreal_forests,BOREAL_FOREST,-,soil,Finland,66.174167,25.156667,0,0,2014/2015,518,518.75,5.9816
+ERR1873323_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,Finland,68.96782,20.94322,0,0,2014/2015,378,378.0,5.6466
+ERR1873324_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,-,soil,Sweden,67.85596,19.47575,0,0,2014/2015,629,629.056,6.0385
+ERR1873325_F_filt.fastq.gz,6,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,USA,37.74811,-119.55345,0,0,2014/2015,333,333.333,5.5203
+ERR1873326_F_filt.fastq.gz,16,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,Estonia,57.87791,27.68945,0,0,2014/2015,496,498.5,5.9575
+ERR1873327_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,France,4.553583,-52.209222,0,0,2014/2015,199,199.0,5.0177
+ERR1873328_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,-,soil,France,4.573,-52.190583,0,0,2014/2015,170,170.0,4.8618
+ERR1873329_F_filt.fastq.gz,8,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-50.445767,-72.780067,0,0,2014/2015,427,427.2,5.7605
+ERR1873330_F_filt.fastq.gz,2,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-49.376367,-72.881183,0,0,2014/2015,559,559.375,6.0418
+ERR1873331_F_filt.fastq.gz,13,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-41.260033,-71.286967,0,0,2014/2015,640,640.167,6.2188
+ERR1873332_F_filt.fastq.gz,16,Southern_temperate_forests,TEMPERATE_FOREST,-,soil,Argentina,-54.814983,-68.480483,0,0,2014/2015,429,430.5,5.8049
+ERR1873333_F_filt.fastq.gz,2,Mediterrean,MEDITERRANEAN,-,soil,Morocco,33.52149,-5.00242,0,0,2014/2015,233,233.0,5.2001
+ERR1873334_F_filt.fastq.gz,18,Mediterrean,MEDITERRANEAN,-,soil,Morocco,33.39624,-5.19417,0,0,2014/2015,361,361.75,5.6593
+ERR1873336_F_filt.fastq.gz,5,-,UNKNOWN,-,soil,New Zealand,-41.766539,172.193165,0,0,2014/2015,503,503.143,5.9356
+ERR1873337_F_filt.fastq.gz,16,-,UNKNOWN,-,soil,New Zealand,-44.716444,168.276258,0,0,2014/2015,307,307.0,5.3959
+ERR1873338_F_filt.fastq.gz,11,-,UNKNOWN,-,soil,Iran,34.6913382,50.88697806,0,0,2014/2015,808,808.526,6.3986
+ERR1873339_F_filt.fastq.gz,11,-,UNKNOWN,-,soil,Iran,35.56752665,53.34822133,0,0,2014/2015,618,618.25,6.1626
+ERR1873340_F_filt.fastq.gz,17,-,UNKNOWN,-,soil,France,-22.17581,166.76837,0,0,2014/2015,303,303.25,5.3718
+ERR1873342_F_filt.fastq.gz,14,-,UNKNOWN,-,soil,Australia,-16.24127,145.43657,0,0,2014/2015,238,238.0,5.169
+ERR1873343_F_filt.fastq.gz,18,-,UNKNOWN,-,soil,Argentina,-30.9005,-65.0116,0,0,2014/2015,314,315.0,5.4866
+ERR1873344_F_filt.fastq.gz,13,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.30223,22.0958,0,0,2014/2015,331,331.0,5.4881
+ERR1873345_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.23408,22.44107,0,0,2014/2015,292,292.0,5.4117
+ERR1873346_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.55674,23.54882,0,0,2014/2015,417,417.0,5.8362
+ERR1873347_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.58463,23.57021,0,0,2014/2015,571,572.5,6.1283
+ERR1873348_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.62038,24.10171,0,0,2014/2015,631,632.0,6.2475
+ERR1873349_F_filt.fastq.gz,8,Temperate_deciduous_forests,TEMPERATE_FOREST,-,soil,Estonia,58.92812,23.86384,0,0,2014/2015,828,828.0,6.4876
+ERR1873350_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Italy,36.73543,12.02417,0,0,2014/2015,1010,1010.75,6.6042
+ERR1873351_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Italy,36.76733,11.99648,0,0,2014/2015,550,550.0,5.9541
+ERR1873352_F_filt.fastq.gz,8,-,UNKNOWN,-,soil,Switzerland,46.896,8.451,0,0,2014/2015,604,615.25,6.1132
+ERR1873353_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Thailand,18.51,98.44,0,0,2014/2015,576,577.5,6.0787
+ERR1873354_F_filt.fastq.gz,19,-,UNKNOWN,-,soil,Thailand,20.08,99.16,0,0,2014/2015,649,649.3,6.262
+ERR1873355_F_filt.fastq.gz,8,-,UNKNOWN,-,soil,Estonia,59.4268,27.519,0,0,2014/2015,653,653.333,6.2427
+ERR1873356_F_filt.fastq.gz,8,-,UNKNOWN,-,soil,Estonia,58.0374,26.5666,0,0,2014/2015,496,496.75,5.9189
+ERR1873358_F_filt.fastq.gz,8,-,UNKNOWN,-,soil,Estonia,58.3611,26.665,0,0,2014/2015,528,528.167,6.0354
+ERR1873359_F_filt.fastq.gz,8,-,UNKNOWN,-,soil,Estonia,58.434,23.3011,0,0,2014/2015,325,326.5,5.5979
+ERR1873360_F_filt.fastq.gz,8,-,UNKNOWN,-,soil,Estonia,58.4709,26.7251,0,0,2014/2015,404,404.0,5.8009
+ERR1873361_F_filt.fastq.gz,14,-,UNKNOWN,-,soil,Colombia,11.309739,-73.93066401,0,0,2014/2015,590,590.071,6.1037
+ERR1873362_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Colombia,11.28425399,-74.011557,0,0,2014/2015,414,414.25,5.8142
+ERR1873363_F_filt.fastq.gz,11,-,UNKNOWN,-,soil,Morocco,34.213506,-3.477804009,0,0,2014/2015,510,510.857,5.9804
+ERR1873364_F_filt.fastq.gz,18,-,UNKNOWN,-,soil,Morocco,35.12319001,-4.471532023,0,0,2014/2015,326,326.0,5.5484
+ERR1873365_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Morocco,35.11757699,-4.998549968,0,0,2014/2015,514,514.0,5.9777
+ERR1873367_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Norway,78.2108869,15.701441,0,0,2014/2015,353,353.333,5.5213
+ERR1873368_F_filt.fastq.gz,17,-,UNKNOWN,-,soil,Norway,78.2471083,15.4619477,0,0,2014/2015,319,319.167,5.4449
+ERR1873369_F_filt.fastq.gz,14,-,UNKNOWN,-,soil,Russia,48.30509,134.81162,0,0,2014/2015,481,481.143,5.8598
+ERR1873370_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Greece,35.17795,24.93208,0,0,2014/2015,488,490.0,5.9289
+ERR1873374_F_filt.fastq.gz,11,-,UNKNOWN,-,soil,USA,34.149,-116.434,0,0,2014/2015,511,516.0,5.9857
+ERR1873375_F_filt.fastq.gz,18,-,UNKNOWN,-,soil,USA,33.75,-117.686,0,0,2014/2015,255,255.0,5.3348
+ERR1873376_F_filt.fastq.gz,2,-,UNKNOWN,-,soil,Georgia,41.88556,44.77894,0,0,2014/2015,394,394.0,5.7639
+ERR1873377_F_filt.fastq.gz,17,-,UNKNOWN,-,soil,Colombia,3.907,-77.35,0,0,2014/2015,665,667.0,6.2335
+ERR1873378_F_filt.fastq.gz,14,-,UNKNOWN,-,soil,Iran,36.304,52.901,0,0,2014/2015,398,398.0,5.6921
+ERR1873379_F_filt.fastq.gz,17,-,UNKNOWN,-,soil,USA,47.884752,-124.597216,0,0,2014/2015,864,865.25,6.387
+ERR1873380_F_filt.fastq.gz,14,-,UNKNOWN,-,soil,China,21.574,101.49,0,0,2014/2015,363,363.0,5.6453
+ERR1873381_F_filt.fastq.gz,17,-,UNKNOWN,-,soil,Australia,-19.0194,146.12023,0,0,2014/2015,630,635.0,6.1526
+ERR1877971_F_filt.fastq.gz,10,Temperate_coniferous_forests,TEMPERATE_FOREST,-,soil,Taiwan,24.162593,121.285533,0,0,2014/2015,396,397.0,5.7609
+ERR1877973_F_filt.fastq.gz,17,-,UNKNOWN,-,soil,Colombia,4.867,-75.25,0,0,2014/2015,716,718.5,6.2073
+ERR2602433_F_filt.fastq.gz,19,Temperate_coniferous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Estonia,58.46239,26.82084,0,0,2011,597,598.2,6.1529
+ERR2602434_F_filt.fastq.gz,5,Mediterrean,MEDITERRANEAN,soil [ENVO:00001998],soil [ENVO:00001998],Australia,-35.00227,116.65217,0,0,2011,394,394.0,5.7369
+ERR2602435_F_filt.fastq.gz,1,Savannas,GRASSLAND_SHRUBLAND,soil [ENVO:00001998],soil [ENVO:00001998],Australia,-12.7188333333,131.7455,0,0,2011,159,159.0,4.8658
+ERR2602436_F_filt.fastq.gz,19,Temperate_coniferous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Estonia,58.08112,26.34164,0,0,2011,301,301.0,5.4785
+ERR2602438_F_filt.fastq.gz,1,Dry_tropical_forests,TROPICAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],India,29.45644,79.22805,0,0,2011,305,305.0,5.5318
+ERR2602439_F_filt.fastq.gz,19,Temperate_deciduous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Estonia,59.49325,25.36253,0,0,2011,385,385.0,5.686
+ERR2602440_F_filt.fastq.gz,19,Temperate_deciduous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Estonia,58.35081,25.55063,0,0,2011,295,295.0,5.4768
+ERR2602441_F_filt.fastq.gz,20,Grasslands_and_shrublands,GRASSLAND_SHRUBLAND,soil [ENVO:00001998],soil [ENVO:00001998],Italy,36.77594,12.01178,0,0,2011,563,564.5,6.0285
+ERR2602442_F_filt.fastq.gz,20,Temperate_deciduous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Italy,36.81852,12.01496,0,0,2011,1094,1094.75,6.7075
+ERR2602443_F_filt.fastq.gz,20,Temperate_deciduous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Italy,36.77778,12.00829,0,0,2011,1296,1296.833,6.9233
+ERR2602445_F_filt.fastq.gz,9,Dry_tropical_forests,TROPICAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Madagascar,-24.952,47.002,0,0,2011,246,246.0,5.2278
+ERR2602446_F_filt.fastq.gz,4,Temperate_deciduous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Russia,43.2099,132.05064,0,0,2011,526,526.273,6.0041
+ERR2602447_F_filt.fastq.gz,20,Boreal_forests,BOREAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Russia,43.37664,132.9459,0,0,2011,540,540.0,6.0508
+ERR2602448_F_filt.fastq.gz,14,Dry_tropical_forests,TROPICAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Mexico,21.21018,-87.19355,0,0,2011,503,504.667,5.8914
+ERR2602449_F_filt.fastq.gz,2,Mediterrean,MEDITERRANEAN,soil [ENVO:00001998],soil [ENVO:00001998],Iran,38.34,47.31,0,0,2011,540,540.0,6.0367
+ERR2602450_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],USA,18.3167,-65.8167,0,0,2011,316,316.0,5.5162
+ERR2602451_F_filt.fastq.gz,2,Mediterrean,MEDITERRANEAN,soil [ENVO:00001998],soil [ENVO:00001998],Iran,30.732353,51.573399,0,0,2011,717,717.0,6.3456
+ERR2602452_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Brazil,5.305722,-59.924806,0,0,2011,332,332.0,5.4574
+ERR2602455_F_filt.fastq.gz,20,Southern_temperate_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Argentina,-41.0832,-71.5514,0,0,2011,585,585.0,6.1294
+ERR2602456_F_filt.fastq.gz,20,Southern_temperate_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Argentina,-40.13,-71.6608,0,0,2011,600,600.429,6.1159
+ERR2602457_F_filt.fastq.gz,10,Southern_temperate_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Argentina,-41.1976,-71.8228,0,0,2011,762,762.0,6.3743
+ERR2602458_F_filt.fastq.gz,17,Moist_tropical_forests,TROPICAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Sri Lanka,6.41782,80.4237,0,0,2011,348,348.0,5.4995
+ERR2602459_F_filt.fastq.gz,17,Boreal_forests,BOREAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Czech Republic,49.01738,13.47508,0,0,2011,535,535.077,5.9171
+ERR2602460_F_filt.fastq.gz,19,Temperate_deciduous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Italy,37.90722,14.65722,0,0,2011,1089,1089.217,6.6521
+ERR2602461_F_filt.fastq.gz,20,Temperate_deciduous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Iran,36.212199,52.824324,0,0,2011,393,393.0,5.7214
+ERR2602463_F_filt.fastq.gz,1,Savannas,GRASSLAND_SHRUBLAND,soil [ENVO:00001998],soil [ENVO:00001998],Zimbabwe,-19.9333,29.6167,0,0,2011,611,611.5,6.1026
+ERR2602464_F_filt.fastq.gz,2,Dry_tropical_forests,TROPICAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],India,30.57366,77.29648,0,0,2011,216,216.0,5.1485
+ERR2602465_F_filt.fastq.gz,1,Savannas,GRASSLAND_SHRUBLAND,soil [ENVO:00001998],soil [ENVO:00001998],Zimbabwe,-18.3284,30.0195,0,0,2011,497,497.0,5.914
+ERR2602466_F_filt.fastq.gz,16,Boreal_forests,BOREAL_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Finland,66.670278,25.313889,0,0,2011,803,804.25,6.406
+ERR2602467_F_filt.fastq.gz,20,Temperate_coniferous_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],USA,36.23099,-112.06814,0,0,2011,599,599.0,6.1782
+ERR2602468_F_filt.fastq.gz,10,Southern_temperate_forests,TEMPERATE_FOREST,soil [ENVO:00001998],soil [ENVO:00001998],Argentina,-54.84525,-68.584717,0,0,2011,591,591.0,6.0786

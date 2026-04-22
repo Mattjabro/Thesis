@@ -1,0 +1,122 @@
+dataset,biome_label_scheme,actual_class,predicted_class,count
+EMP_Soil_Subset,original_biomes,cropland biome,cropland biome,171
+EMP_Soil_Subset,original_biomes,cropland biome,forest biome,0
+EMP_Soil_Subset,original_biomes,cropland biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,cropland biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,cropland biome,marine biome,0
+EMP_Soil_Subset,original_biomes,cropland biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,cropland biome,rangeland biome,9
+EMP_Soil_Subset,original_biomes,cropland biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,cropland biome,tropical moist broadleaf forest biome,2
+EMP_Soil_Subset,original_biomes,cropland biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,cropland biome,urban biome,1
+EMP_Soil_Subset,original_biomes,forest biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,forest biome,forest biome,9
+EMP_Soil_Subset,original_biomes,forest biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,forest biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,forest biome,marine biome,0
+EMP_Soil_Subset,original_biomes,forest biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,forest biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,forest biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,forest biome,tropical moist broadleaf forest biome,1
+EMP_Soil_Subset,original_biomes,forest biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,forest biome,urban biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,forest biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,freshwater biome,3
+EMP_Soil_Subset,original_biomes,freshwater biome,Large river biome,1
+EMP_Soil_Subset,original_biomes,freshwater biome,marine biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,freshwater biome,tundra biome,2
+EMP_Soil_Subset,original_biomes,freshwater biome,urban biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,forest biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,Large river biome,2
+EMP_Soil_Subset,original_biomes,Large river biome,marine biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,Large river biome,urban biome,0
+EMP_Soil_Subset,original_biomes,marine biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,marine biome,forest biome,0
+EMP_Soil_Subset,original_biomes,marine biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,marine biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,marine biome,marine biome,92
+EMP_Soil_Subset,original_biomes,marine biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,marine biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,marine biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,marine biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,marine biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,marine biome,urban biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,forest biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,marine biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,montane grassland biome,68
+EMP_Soil_Subset,original_biomes,montane grassland biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,montane grassland biome,urban biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,forest biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,marine biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,rangeland biome,urban biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,forest biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,marine biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,Small river biome,13
+EMP_Soil_Subset,original_biomes,Small river biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,Small river biome,urban biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,forest biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,marine biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,tropical moist broadleaf forest biome,22
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,tropical moist broadleaf forest biome,urban biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,forest biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,freshwater biome,3
+EMP_Soil_Subset,original_biomes,tundra biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,marine biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,tundra biome,tundra biome,6
+EMP_Soil_Subset,original_biomes,tundra biome,urban biome,0
+EMP_Soil_Subset,original_biomes,urban biome,cropland biome,0
+EMP_Soil_Subset,original_biomes,urban biome,forest biome,0
+EMP_Soil_Subset,original_biomes,urban biome,freshwater biome,0
+EMP_Soil_Subset,original_biomes,urban biome,Large river biome,0
+EMP_Soil_Subset,original_biomes,urban biome,marine biome,0
+EMP_Soil_Subset,original_biomes,urban biome,montane grassland biome,0
+EMP_Soil_Subset,original_biomes,urban biome,rangeland biome,0
+EMP_Soil_Subset,original_biomes,urban biome,Small river biome,0
+EMP_Soil_Subset,original_biomes,urban biome,tropical moist broadleaf forest biome,0
+EMP_Soil_Subset,original_biomes,urban biome,tundra biome,0
+EMP_Soil_Subset,original_biomes,urban biome,urban biome,252

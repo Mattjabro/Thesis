@@ -1,0 +1,9 @@
+variable,type,method,p_value,adjusted_p_value,effect_size,effect_size_type,n
+env_biome,categorical,chisq,6.096185977004601e-28,3.657711586202761e-27,0.4848576468204737,cramers_v,193
+env_feature,categorical,chisq,1.16686599019815e-09,2.3337319803963e-09,0.6407286185519031,cramers_v,193
+env_material,categorical,chisq,1.16686599019815e-09,2.3337319803963e-09,0.6407286185519031,cramers_v,193
+country,categorical,chisq,4.4698590125032344e-08,5.363830815003881e-08,0.5032638824540101,cramers_v,193
+latitude_deg,numeric,kruskal,2.878880956215106e-09,4.318321434322659e-09,0.33895836132514695,epsilon_squared,193
+longitude_deg,numeric,kruskal,0.050457688988398336,0.050457688988398336,0.06225904951638925,epsilon_squared,193
+depth_m,numeric,kruskal,,,,epsilon_squared,193
+elevation_m,numeric,kruskal,,,,epsilon_squared,193

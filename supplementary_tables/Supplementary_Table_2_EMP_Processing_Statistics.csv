@@ -1,0 +1,43 @@
+section_id,section_description,statistic,unit,value,notes
+all_emp_samples,All EMP Samples (pre-soil filter),n_samples,,27751,Total samples in EMP Release 1
+all_emp_samples,All EMP Samples (pre-soil filter),reads_per_sample_mean,reads,20960.26,Mean read count per sample across all EMP samples (ASV table)
+all_emp_samples,All EMP Samples (pre-soil filter),reads_per_sample_median,reads,12726.5,Median read count per sample
+all_emp_samples,All EMP Samples (pre-soil filter),reads_per_sample_min,reads,2,Minimum read count per sample
+all_emp_samples,All EMP Samples (pre-soil filter),reads_per_sample_max,reads,17192214,Maximum read count per sample
+all_emp_samples,All EMP Samples (pre-soil filter),reads_per_sample_sd,reads,132213.36,SD of read count per sample
+all_emp_samples,All EMP Samples (pre-soil filter),asv_richness_per_sample_mean,ASVs,66.02,Mean ASV richness per sample
+all_emp_samples,All EMP Samples (pre-soil filter),asv_richness_per_sample_median,ASVs,20,Median ASV richness per sample
+all_emp_samples,All EMP Samples (pre-soil filter),asv_richness_per_sample_min,ASVs,1,Minimum ASV richness per sample
+all_emp_samples,All EMP Samples (pre-soil filter),asv_richness_per_sample_max,ASVs,5361,Maximum ASV richness per sample
+all_emp_samples,All EMP Samples (pre-soil filter),asv_richness_per_sample_sd,ASVs,164.89,SD of ASV richness per sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),n_samples,,2209,Samples retained after env_material filter
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),reads_per_sample_mean,reads,27600.55,Mean read count per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),reads_per_sample_median,reads,15528,Median read count per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),reads_per_sample_min,reads,2,Minimum read count per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),reads_per_sample_max,reads,482688,Maximum read count per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),reads_per_sample_sd,reads,30439.80,SD of read count per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),asv_richness_per_sample_mean,ASVs,2098.62,Mean ASV richness per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),asv_richness_per_sample_median,ASVs,1624,Median ASV richness per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),asv_richness_per_sample_min,ASVs,1,Minimum ASV richness per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),asv_richness_per_sample_max,ASVs,9877,Maximum ASV richness per soil sample
+soil_subset,EMP Soil Subset (env_material filter: soil|sediment|rhizosphere),asv_richness_per_sample_sd,ASVs,1696.19,SD of ASV richness per soil sample
+taxonomy,Taxonomy Assignment (SILVA v138.1 genus level),taxonomy_reference,,SILVA v138.1,Reference database used for taxonomy assignment
+taxonomy,Taxonomy Assignment (SILVA v138.1 genus level),taxonomy_level,,genus,Taxonomic resolution of assignment
+taxonomy,Taxonomy Assignment (SILVA v138.1 genus level),genus_retention_mean_pct,%,67.48,Mean % of ASV reads assigned to a resolved genus across soil samples
+taxonomy,Taxonomy Assignment (SILVA v138.1 genus level),genus_retention_median_pct,%,66.96,Median % retained
+taxonomy,Taxonomy Assignment (SILVA v138.1 genus level),genus_retention_min_pct,%,0,Minimum % retained
+taxonomy,Taxonomy Assignment (SILVA v138.1 genus level),genus_retention_max_pct,%,100,Maximum % retained
+taxonomy,Taxonomy Assignment (SILVA v138.1 genus level),genus_retention_sd_pct,%,22.15,SD of % retained
+genus_collapse,Genus-Level Collapse and CLR Transformation,total_unique_genus_resolved_lineages,,2513,Total unique lineages resolved to genus level across all soil samples (from genus_prevalence_summary.csv)
+genus_collapse,Genus-Level Collapse and CLR Transformation,total_unique_genus_resolved_lineages_in_any_soil_sample,,2057,Genus-resolved lineages present in at least 1 soil sample (base for prevalence sweep in Supp Table 3b)
+genus_collapse,Genus-Level Collapse and CLR Transformation,prevalence_filter_threshold,samples,50,Minimum number of samples a lineage must appear in to be retained
+genus_collapse,Genus-Level Collapse and CLR Transformation,genus_resolved_lineages_in_clr_matrix,,942,"Lineages fully resolved to genus level (depth=6) present in final CLR matrix. Confirmed by taxonomy-depth analysis of lineage_clr_matrix_soil_filtered.csv row labels."
+genus_collapse,Genus-Level Collapse and CLR Transformation,genus_resolved_lineages_in_prevalence_sweep,,966,"Genus-level lineages passing threshold>=50 in the prevalence sweep (Supp Table 3b). Higher than the CLR matrix count (942) because the sweep was computed before low-read sample exclusion; 24 genera dropped below threshold after samples with <5000 reads were removed."
+genus_collapse,Genus-Level Collapse and CLR Transformation,partial_taxonomy_lineages_after_prevalence_filter,,591,"Lineages resolved only to phylum/class/order/family (not genus) that also pass threshold>=50. These are retained in the CLR matrix as distinct features. Breakdown by depth: phylum=43; class=81; order=202; family=262; other/blank=3."
+genus_collapse,Genus-Level Collapse and CLR Transformation,final_all_level_lineages_in_clr_matrix,,1533,"Total lineage features in CLR matrix = 942 genus-resolved + 591 partial taxonomy (942+591=1533). Confirmed from row count of lineage_clr_matrix_soil_filtered.csv."
+genus_collapse,Genus-Level Collapse and CLR Transformation,pct_genus_resolved_of_final_lineages,%,61.45,942 of 1533 final lineages are fully genus-resolved
+genus_collapse,Genus-Level Collapse and CLR Transformation,pct_abundance_retained_at_threshold,%,98.71,Percentage of total read count abundance retained at threshold=50 (from prevalence sweep)
+genus_collapse,Genus-Level Collapse and CLR Transformation,samples_excluded_low_reads,,0,Samples excluded for having fewer than 5000 total counts
+genus_collapse,Genus-Level Collapse and CLR Transformation,final_samples,,2209,Final number of samples in CLR-transformed feature matrix
+genus_collapse,Genus-Level Collapse and CLR Transformation,pseudocount,,1,Pseudocount added to all entries before log transformation to handle zeros
+note,Reconciliation note,,,,"966 vs 942: The prevalence sweep (Supp Table 3b) counted 966 genus-resolved lineages at threshold>=50, but was computed on all soil samples including those later excluded for low read depth. After removing samples with <5000 reads during CLR matrix construction, 24 of those 966 genera fell below the threshold, leaving 942 genus-resolved features in the final matrix. Additionally, 591 partial-taxonomy lineages (resolved to phylum through family but not genus) independently pass threshold>=50 and are included as features. Final matrix: 942 + 591 = 1533 lineages x 2209 samples."

@@ -1,0 +1,35 @@
+dataset,grouping,biome,n_test_samples,recall,precision,f1,overall_accuracy
+EMP_Zenodo_Matthew,original_biomes,cropland biome,183,0.9344,1.0000,0.9661,0.9711
+EMP_Zenodo_Matthew,original_biomes,forest biome,10,0.9000,1.0000,0.9474,0.9711
+EMP_Zenodo_Matthew,original_biomes,freshwater biome,6,0.5000,0.5000,0.5000,0.9711
+EMP_Zenodo_Matthew,original_biomes,Large river biome,2,1.0000,0.6667,0.8000,0.9711
+EMP_Zenodo_Matthew,original_biomes,marine biome,92,1.0000,1.0000,1.0000,0.9711
+EMP_Zenodo_Matthew,original_biomes,montane grassland biome,68,1.0000,1.0000,1.0000,0.9711
+EMP_Zenodo_Matthew,original_biomes,rangeland biome,0,NA,NA,NA,0.9711
+EMP_Zenodo_Matthew,original_biomes,Small river biome,13,1.0000,1.0000,1.0000,0.9711
+EMP_Zenodo_Matthew,original_biomes,tropical moist broadleaf forest biome,22,1.0000,0.9565,0.9778,0.9711
+EMP_Zenodo_Matthew,original_biomes,tundra biome,9,0.6667,0.7500,0.7059,0.9711
+EMP_Zenodo_Matthew,original_biomes,urban biome,252,1.0000,0.9960,0.9980,0.9711
+EMP_Zenodo_Matthew,grouped_biomes,AGRICULTURAL,190,0.9474,1.0000,0.9730,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,AQUATIC_FRESHWATER,16,1.0000,1.0000,1.0000,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,AQUATIC_MARINE,91,1.0000,0.9891,0.9946,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,COLD_TUNDRA_POLAR,8,0.8750,0.8750,0.8750,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,FOREST,9,1.0000,1.0000,1.0000,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,GRASSLAND_SHRUBLAND,68,1.0000,1.0000,1.0000,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,OTHER,6,0.8333,0.8333,0.8333,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,TROPICAL_FOREST,23,1.0000,0.9200,0.9583,0.9817
+EMP_Zenodo_Matthew,grouped_biomes,URBAN_DEVELOPED,246,1.0000,0.9724,0.9860,0.9817
+global_topsoil_matthew,original_biomes,- (unclassified),6,0.3333,0.2000,0.2500,0.4375
+global_topsoil_matthew,original_biomes,Boreal_forests,3,0.0000,0.0000,0.0000,0.4375
+global_topsoil_matthew,original_biomes,Mediterrean,1,1.0000,0.3333,0.5000,0.4375
+global_topsoil_matthew,original_biomes,Moist_tropical_forests,11,0.6364,0.8750,0.7368,0.4375
+global_topsoil_matthew,original_biomes,Savannas,4,0.7500,1.0000,0.8571,0.4375
+global_topsoil_matthew,original_biomes,Southern_temperate_forests,7,0.1429,0.2000,0.1667,0.4375
+global_topsoil_matthew,original_biomes,Temperate_coniferous_forests,1,0.0000,0.0000,0.0000,0.4375
+global_topsoil_matthew,original_biomes,Temperate_deciduous_forests,15,0.4667,0.6364,0.5385,0.4375
+global_topsoil_matthew,grouped_biomes,BOREAL_FOREST,2,1.0000,0.5000,0.6667,0.6182
+global_topsoil_matthew,grouped_biomes,GRASSLAND_SHRUBLAND,0,NA,NA,NA,0.6182
+global_topsoil_matthew,grouped_biomes,MEDITERRANEAN,0,NA,NA,NA,0.6182
+global_topsoil_matthew,grouped_biomes,TEMPERATE_FOREST,34,0.5588,0.9048,0.6909,0.6182
+global_topsoil_matthew,grouped_biomes,TROPICAL_FOREST,16,0.7500,0.9231,0.8276,0.6182
+global_topsoil_matthew,grouped_biomes,UNKNOWN,3,0.3333,0.1000,0.1538,0.6182

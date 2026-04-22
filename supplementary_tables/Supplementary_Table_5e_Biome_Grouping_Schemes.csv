@@ -1,0 +1,53 @@
+dataset,original_biome,group_biome
+Global_Topsoil,Moist_tropical_forests,TROPICAL_FOREST
+Global_Topsoil,Dry_tropical_forests,TROPICAL_FOREST
+Global_Topsoil,Tropical_montane_forests,TROPICAL_FOREST
+Global_Topsoil,Temperate_deciduous_forests,TEMPERATE_FOREST
+Global_Topsoil,Temperate_coniferous_forests,TEMPERATE_FOREST
+Global_Topsoil,Southern_temperate_forests,TEMPERATE_FOREST
+Global_Topsoil,Boreal_forests,BOREAL_FOREST
+Global_Topsoil,Savannas,GRASSLAND_SHRUBLAND
+Global_Topsoil,Grasslands_and_shrublands,GRASSLAND_SHRUBLAND
+Global_Topsoil,Mediterrean,MEDITERRANEAN
+Global_Topsoil,Arctic_tundra,ARCTIC_TUNDRA
+Global_Topsoil,-,UNKNOWN
+Global_Topsoil,(missing/unknown),UNKNOWN
+Global_Topsoil,missing: Not provided,UNKNOWN
+Global_Topsoil,not provided,UNKNOWN
+EMP_Soil_Subset,cropland biome,AGRICULTURAL
+EMP_Soil_Subset,rangeland biome,AGRICULTURAL
+EMP_Soil_Subset,urban biome,URBAN_DEVELOPED
+EMP_Soil_Subset,dense settlement biome,URBAN_DEVELOPED
+EMP_Soil_Subset,marine biome,AQUATIC_MARINE
+EMP_Soil_Subset,marine benthic biome,AQUATIC_MARINE
+EMP_Soil_Subset,marginal sea biome,AQUATIC_MARINE
+EMP_Soil_Subset,Small lake biome,AQUATIC_FRESHWATER
+EMP_Soil_Subset,Large river biome,AQUATIC_FRESHWATER
+EMP_Soil_Subset,Small river biome,AQUATIC_FRESHWATER
+EMP_Soil_Subset,freshwater lake biome,AQUATIC_FRESHWATER
+EMP_Soil_Subset,lake biome,AQUATIC_FRESHWATER
+EMP_Soil_Subset,river biome,AQUATIC_FRESHWATER
+EMP_Soil_Subset,tundra biome,COLD_TUNDRA_POLAR
+EMP_Soil_Subset,polar desert biome,COLD_TUNDRA_POLAR
+EMP_Soil_Subset,alpine tundra biome,COLD_TUNDRA_POLAR
+EMP_Soil_Subset,forest biome,FOREST
+EMP_Soil_Subset,coniferous forest biome,FOREST
+EMP_Soil_Subset,temperate mixed forest biome,FOREST
+EMP_Soil_Subset,temperate coniferous forest biome,FOREST
+EMP_Soil_Subset,boreal forest biome,FOREST
+EMP_Soil_Subset,montane grassland biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,shrubland biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,tropical shrubland biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,grassland biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,montane shrubland biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,temperate grassland biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,tropical grassland biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,savanna biome,GRASSLAND_SHRUBLAND
+EMP_Soil_Subset,tropical moist broadleaf forest biome,TROPICAL_FOREST
+EMP_Soil_Subset,tropical broadleaf forest biome,TROPICAL_FOREST
+EMP_Soil_Subset,mangrove biome,TROPICAL_FOREST
+EMP_Soil_Subset,tropical forest biome,TROPICAL_FOREST
+EMP_Soil_Subset,desert biome,DESERT
+EMP_Soil_Subset,freshwater biome,OTHER
+EMP_Soil_Subset,estuarine biome,OTHER
+EMP_Soil_Subset,wetland biome,OTHER

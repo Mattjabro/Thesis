@@ -1,0 +1,152 @@
+old_path	new_path	notes
+R.XFilterClassifier	scripts/00_filter_classifier.R	renamed and moved
+R.1FilterAndTrim	scripts/01_filter_and_trim.R	renamed and moved
+R.2LearnErrors	scripts/02_learn_errors.R	renamed and moved
+R.3Denoise	scripts/03_denoise.R	renamed and moved
+R.4Merge	scripts/04_merge.R	renamed and moved
+R.5ASVTableAndChimera	scripts/05_asv_table_and_chimera.R	renamed and moved
+R.5.2RemoveEukaryota	scripts/06_remove_eukaryota.R	renamed and moved
+R.6ReadTracking	scripts/07_read_tracking.R	renamed and moved
+R.7Classify	scripts/08_classify.R	renamed and moved
+R.7.2ClassifyFiltered	scripts/09_classify_filtered.R	renamed and moved
+R.8Stats	scripts/10_stats.R	renamed and moved
+R.9AsvHist	scripts/11_asv_histogram.R	renamed and moved
+R.10Presence	scripts/12_taxa_presence_summary.R	renamed and moved
+R.11Presence2	scripts/13_taxa_presence_thresholds.R	renamed and moved
+R.12Presence3	scripts/14_taxa_presence_thresholds_bacteria.R	renamed and moved
+R.13TaxaCount	scripts/15_taxonomy_lineage_counts.R	renamed and moved
+R.14LineageThreshold	scripts/16_lineage_thresholds.R	renamed and moved
+R.15Lineage2	scripts/17_lineage_prevalence_thresholds.R	renamed and moved
+R.16Matrix2	scripts/18_build_lineage_clr_matrix.R	renamed and moved
+R.ML	scripts/19_model_fit_mixture.R	renamed and moved
+slurm.XFilterClassifier	scripts/slurm/r00_filter_classifier.slurm	renamed and moved
+slurm.R1	scripts/slurm/r01_filter_and_trim.slurm	renamed and moved
+slurm.R2	scripts/slurm/r02_learn_errors.slurm	renamed and moved
+slurm.R3	scripts/slurm/r03_denoise.slurm	renamed and moved
+slurm.R4	scripts/slurm/r04_merge.slurm	renamed and moved
+slurm.R5	scripts/slurm/r05_asv_table_and_chimera.slurm	renamed and moved
+slurm.R5.2	scripts/slurm/r06_remove_eukaryota.slurm	renamed and moved
+slurm.R6	scripts/slurm/r07_read_tracking.slurm	renamed and moved
+slurm.R7	scripts/slurm/r08_classify.slurm	renamed and moved
+slurm.R7.2	scripts/slurm/r09_classify_filtered.slurm	renamed and moved
+slurm.R8	scripts/slurm/r10_stats.slurm	renamed and moved
+slurm.R10	scripts/slurm/r18_build_lineage_clr_matrix.slurm	renamed and moved
+slurm.ML	scripts/slurm/r19_model_fit_mixture.slurm	renamed and moved
+slurm.Classifier	legacy/slurm/slurm.Classifier	legacy (QIIME)
+slurm.CompressFastQ	legacy/slurm/slurm.CompressFastQ	legacy (QIIME)
+slurm.CutVsDada2	legacy/slurm/slurm.CutVsDada2	legacy (QIIME)
+slurm.Dada2	legacy/slurm/slurm.Dada2	legacy (QIIME)
+slurm.DadaQZAtoQZV	legacy/slurm/slurm.DadaQZAtoQZV	legacy (QIIME)
+slurm.DemuxSeqs	legacy/slurm/slurm.DemuxSeqs	legacy (QIIME)
+slurm.DemuxSum	legacy/slurm/slurm.DemuxSum	legacy (QIIME)
+slurm.FastQDownload	legacy/slurm/slurm.FastQDownload	legacy (QIIME)
+slurm.TaxaCollpase	legacy/slurm/slurm.TaxaCollpase	legacy (QIIME)
+slurm.TaxaTSV	legacy/slurm/slurm.TaxaTSV	legacy (QIIME)
+slurm.TaxonomyQZV	legacy/slurm/slurm.TaxonomyQZV	legacy (QIIME)
+slurm.Taxonomy_Barplot	legacy/slurm/slurm.Taxonomy_Barplot	legacy (QIIME)
+fastq_files/	data/raw/fastq_files/	moved
+filtered/	data/intermediate/filtered_fastq/	renamed and moved
+manifest.tsv	data/raw/manifest.tsv	moved
+manifest_subset.tsv	data/raw/manifest_subset.tsv	moved
+metadata_subset.tsv	data/raw/metadata_subset.tsv	moved
+run_ids.txt	data/raw/run_ids.txt	moved
+sraRunTable.csv	data/raw/sraRunTable.csv	moved
+rdp_19_toGenus_trainset.fa.gz	data/reference/rdp_19_toGenus_trainset.fa.gz	moved
+silva_nr99_v138.2_toGenus_trainset.fa	data/reference/silva_nr99_v138.2_toGenus_trainset.fa	moved
+silva_nr99_v138.2_toGenus_trainset_filtered.fa	data/reference/silva_nr99_v138.2_toGenus_trainset_filtered.fa	moved
+filtering_summary.rds	data/intermediate/filtering_summary.rds	moved
+dadaFs.rds	data/intermediate/dadaFs.rds	moved
+dadaRs.rds	data/intermediate/dadaRs.rds	moved
+mergers.rds	data/intermediate/mergers.rds	moved
+seqtab.rds	data/intermediate/seqtab.rds	moved
+seqtab_nochim.rds	data/intermediate/seqtab_nochim.rds	moved
+seqtab_nochim_bacteria.rds	data/intermediate/seqtab_nochim_bacteria.rds	moved
+taxa.rds	data/intermediate/taxa.rds	moved
+taxa_bacteria.rds	data/intermediate/taxa_bacteria.rds	moved
+taxa_filtered_classifier.rds	data/intermediate/taxa_filtered_classifier.rds	moved
+taxonomy_table.csv	data/intermediate/taxonomy_table.csv	moved
+taxonomy_table_bacteria.csv	data/intermediate/taxonomy_table_bacteria.csv	moved
+taxonomy_table_filtered_classifier.csv	data/intermediate/taxonomy_table_filtered_classifier.csv	moved
+sample_taxa_matrix_L6.csv	data/intermediate/sample_taxa_matrix_L6.csv	moved
+sample_taxa_matrix_L6_bacteria.csv	data/intermediate/sample_taxa_matrix_L6_bacteria.csv	moved
+sample_taxa_matrix_L6_filtered_classifier.csv	data/intermediate/sample_taxa_matrix_L6_filtered_classifier.csv	moved
+asv_matrix_filtered_clr.csv	data/processed/asv_matrix_filtered_clr.csv	moved
+genus_L6_filtered_clr_matrix.csv	data/processed/genus_L6_filtered_clr_matrix.csv	moved
+genus_L6_filtered_clr_matrix_TRANSPOSED_full_lineage.csv	data/processed/lineage_clr_matrix_soil_filtered.csv	renamed and moved
+sample_taxa_matrix_L6_bacteria_filtered_clr.csv	data/processed/sample_taxa_matrix_L6_bacteria_filtered_clr.csv	moved
+asv_fraction_remaining_by_lineage_prevalence.csv	data/processed/asv_fraction_remaining_by_lineage_prevalence.csv	moved
+asv_fraction_vs_lineage_threshold.csv	data/processed/asv_fraction_vs_lineage_threshold.csv	moved
+fraction_lineages_and_counts_remaining.csv	data/processed/fraction_lineages_and_counts_remaining.csv	moved
+fraction_taxa_remaining_bacteria.csv	data/processed/fraction_taxa_remaining_bacteria.csv	moved
+taxonomy_full_lineage_counts.csv	data/processed/taxonomy_full_lineage_counts.csv	moved
+soil_fraction_taxa_remaining_1_to_20.csv	data/processed/soil_fraction_taxa_remaining_1_to_20.csv	moved
+taxa_presence_summary_soil.csv	data/processed/taxa_presence_summary_soil.csv	moved
+dada2stats_allseqs.csv	outputs/qc_tables/dada2stats_allseqs.csv	moved
+read_count_comparison.csv	outputs/qc_tables/read_count_comparison.csv	moved
+soil_row_nonzero.tsv	outputs/qc_tables/soil_row_nonzero.tsv	moved
+soil_row_sums.tsv	outputs/qc_tables/soil_row_sums.tsv	moved
+soil_summary_colD.tsv	outputs/qc_tables/soil_summary_colD.tsv	moved
+soil_summary_row_nonzero.tsv	outputs/qc_tables/soil_summary_row_nonzero.tsv	moved
+soil_summary_row_sums.tsv	outputs/qc_tables/soil_summary_row_sums.tsv	moved
+asv_fraction_remaining_plot.png	outputs/figures/asv_fraction_remaining_plot.png	moved
+fraction_counts_remaining_plot.png	outputs/figures/fraction_counts_remaining_plot.png	moved
+fraction_lineages_remaining_plot.png	outputs/figures/fraction_lineages_remaining_plot.png	moved
+fraction_matrix_remaining_plot.png	outputs/figures/fraction_matrix_remaining_plot.png	moved
+genus_level_barplot.png	outputs/figures/genus_level_barplot.png	moved
+genus_level_barplot_bacteria.png	outputs/figures/genus_level_barplot_bacteria.png	moved
+genus_level_barplot_filtered_classifier.png	outputs/figures/genus_level_barplot_filtered_classifier.png	moved
+soil_hist_asv_counts_per_sample.png	outputs/figures/soil_hist_asv_counts_per_sample.png	moved
+soil_hist_colD_read_count_comparison.png	outputs/figures/soil_hist_colD_read_count_comparison.png	moved
+soil_hist_row_nonzero.png	outputs/figures/soil_hist_row_nonzero.png	moved
+soil_hist_row_sums.png	outputs/figures/soil_hist_row_sums.png	moved
+soil_hist_total_asv_counts_per_sample.png	outputs/figures/soil_hist_total_asv_counts_per_sample.png	moved
+taxa_presence_histogram_soil.png	outputs/figures/taxa_presence_histogram_soil.png	moved
+Folder_Models/result_best_model_SOIL.RData	models/best_model_soil_k20.RData	renamed and moved
+ML_Soil.out	logs/ml_soil.out	renamed and moved
+ML_Soil.err	logs/ml_soil.err	renamed and moved
+Rplots.pdf	legacy/figures/Rplots.pdf	legacy figure
+._genus_L6_filtered_clr_matrix_TRANSPOSED_full_lineage.csv	legacy/osx_artifacts/._genus_L6_filtered_clr_matrix_TRANSPOSED_full_lineage.csv	OS artifact
+.DS_Store	legacy/osx_artifacts/.DS_Store	OS artifact
+._.DS_Store	legacy/osx_artifacts/._.DS_Store	OS artifact
+Folder_Models/.Rapp.history	legacy/session/.Rapp.history	legacy session file
+exported-table/	legacy/qiime/exported-table/	legacy (QIIME)
+demux_seqs.qza	legacy/qiime/demux_seqs.qza	legacy (QIIME)
+demux_seqs.qzv	legacy/qiime/demux_seqs.qzv	legacy (QIIME)
+demux_seqs_subset.qza	legacy/qiime/demux_seqs_subset.qza	legacy (QIIME)
+demux_seqs_subset.qzv	legacy/qiime/demux_seqs_subset.qzv	legacy (QIIME)
+denoising_stats_subset.qza	legacy/qiime/denoising_stats_subset.qza	legacy (QIIME)
+denoising_stats_subset2.qza	legacy/qiime/denoising_stats_subset2.qza	legacy (QIIME)
+denoising_stats_subset2.qzv	legacy/qiime/denoising_stats_subset2.qzv	legacy (QIIME)
+rep_seqs_subset.qza	legacy/qiime/rep_seqs_subset.qza	legacy (QIIME)
+rep_seqs_subset2.qza	legacy/qiime/rep_seqs_subset2.qza	legacy (QIIME)
+rep_seqs_subset2.qzv	legacy/qiime/rep_seqs_subset2.qzv	legacy (QIIME)
+table.qza	legacy/qiime/table.qza	legacy (QIIME)
+tableCollapsed.qza	legacy/qiime/tableCollapsed.qza	legacy (QIIME)
+table_subset2.qza	legacy/qiime/table_subset2.qza	legacy (QIIME)
+table_subset2.qzv	legacy/qiime/table_subset2.qzv	legacy (QIIME)
+taxa-bar-plots2.qzv	legacy/qiime/taxa-bar-plots2.qzv	legacy (QIIME)
+taxonomy.qza	legacy/qiime/taxonomy.qza	legacy (QIIME)
+taxonomy2.qza	legacy/qiime/taxonomy2.qza	legacy (QIIME)
+taxonomy2.qzv	legacy/qiime/taxonomy2.qzv	legacy (QIIME)
+silva-138-99-nb-classifier.qza	legacy/qiime/silva-138-99-nb-classifier.qza	legacy (QIIME)
+taxa-table.tsv	legacy/qiime/taxa-table.tsv	legacy (QIIME)
+NEW	scripts/20_cluster_metadata_compare.R	cluster metadata comparison script
+NEW	scripts/21_cluster_clr_averages.R	cluster CLR averages script
+NEW	scripts/22_plot_cluster_metadata.py	cluster metadata plotting script
+NEW	scripts/23_calculate_alpha_diversity.R	new alpha diversity calculation script
+NEW	scripts/24_plot_alpha_diversity_by_cluster.R	new alpha diversity plotting script
+NEW	scripts/slurm/r20_cluster_metadata_compare.slurm	SLURM wrapper for cluster metadata
+NEW	scripts/slurm/r21_cluster_clr_averages.slurm	SLURM wrapper for cluster CLR averages
+NEW	scripts/slurm/r22_plot_cluster_metadata.slurm	SLURM wrapper for cluster plots
+NEW	scripts/slurm/r23_calculate_alpha_diversity.slurm	new SLURM wrapper for alpha diversity
+NEW	scripts/slurm/r24_plot_alpha_diversity_by_cluster.slurm	new SLURM wrapper for alpha diversity plots
+NEW	data/processed/alpha_diversity_soil.csv	new alpha diversity metrics output
+NEW	outputs/cluster_metadata/cluster_alpha_diversity.tsv	new cluster alpha diversity joined table
+NEW	outputs/cluster_metadata/cluster_alpha_diversity_summary.tsv	new cluster alpha diversity summary
+NEW	outputs/figures/alpha_diversity_distributions.png	new alpha diversity distribution plots
+NEW	scripts/25_cluster_clr_statistics.R	new cluster statistics script
+NEW	scripts/26_ordination_analysis.R	new PCA/PCoA ordination script
+NEW	scripts/slurm/r25_cluster_clr_statistics.slurm	new SLURM wrapper
+NEW	scripts/slurm/r26_ordination_analysis.slurm	new SLURM wrapper
+NEW	outputs/ordination/	new directory for ordination outputs
+NEW	outputs/cluster_metadata/cluster_clr_statistics.csv	cluster statistics with error bars

@@ -1,0 +1,56 @@
+# Raw sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+data/raw/fastq_files/
+
+# Large binary / database files
+*.biom
+*.qza
+*.qzv
+*.RData
+*.rds
+*.tar.gz
+*.fasta.gz
+*.fa.gz
+*.fasta
+*.fa
+
+# Intermediate and processed data
+data/intermediate/
+data/processed/
+data/reference/
+
+# Model outputs
+models/
+
+# Generated outputs (figures, tables, logs)
+outputs/
+logs/
+
+# Legacy / deprecated files
+legacy/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# R session files
+.RData
+.Rhistory
+.Rapp.history
+
+# macOS artifacts
+.DS_Store
+._*
+._.DS_Store
+
+# SLURM job output (local)
+*.err
+*.out
+
+# Secrets / credentials
+.env
+*.token

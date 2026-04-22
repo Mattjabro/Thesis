@@ -1,0 +1,114 @@
+old_path	new_path	notes
+R.1MetadataExtract	scripts/01_extract_soil_sample_ids.R	renamed and moved
+R.2Taxonomy	scripts/02_assign_taxonomy_and_soil_asv_table.R	renamed and moved
+R.3TaxaCollapse	scripts/03_collapse_genus_all_samples.R	renamed and moved
+R.4DoubleCheck	scripts/04_qc_read_counts_vs_genus.R	renamed and moved
+R.5DoubleCheck2	scripts/05_qc_asv_id_match.R	renamed and moved
+R.6Stats	scripts/06_stats_all_samples.R	renamed and moved
+R.7TaxaCollpase2	scripts/07_collapse_genus_soil_only.R	renamed and moved
+R.8Stats2	scripts/08_stats_soil_only.R	renamed and moved
+R.9Matrix2	scripts/09_build_lineage_clr_matrix.R	renamed and moved
+R.10Prevelance	scripts/10_genus_prevalence_summary.R	renamed and moved
+R.11Prevelance2	scripts/11_genus_prevalence_thresholds.R	renamed and moved
+R.12Lineages	scripts/12_lineage_counts_thresholds.R	renamed and moved
+R.13Lineage2	scripts/13_lineage_prevalence_thresholds.R	renamed and moved
+R.ML	scripts/14_model_fit_mixture.R	renamed and moved
+slurm.R1	scripts/slurm/r01_extract_soil_sample_ids.slurm	renamed and moved
+slurm.R5MetadataFilter	scripts/slurm/r01b_extract_soil_metadata.slurm	renamed and moved
+slurm.R2	scripts/slurm/r02_assign_taxonomy_and_soil_asv_table.slurm	renamed and moved
+slurm.R4	scripts/slurm/r04_qc_read_counts_vs_genus.slurm	renamed and moved
+slurm.R5	scripts/slurm/r05_qc_asv_id_match.slurm	renamed and moved
+slurm.R3	scripts/slurm/r07_collapse_genus_soil_only.slurm	renamed and moved
+slurm.R10	scripts/slurm/r09_build_lineage_clr_matrix.slurm	renamed and moved
+slurm.ML	scripts/slurm/r14_model_fit_mixture.slurm	renamed and moved
+slurm.R6	legacy/slurm/slurm.R6_missing_script	kept for reference; script missing
+slurm.emp_import_all_qiime	legacy/qiime/slurm.emp_import_all_qiime	legacy QIIME
+slurm.EMPClassifier	legacy/qiime/slurm.EMPClassifier	legacy QIIME
+slurm.QZAtoQZV	legacy/qiime/slurm.QZAtoQZV	legacy QIIME
+slurm.TaxaQZAtoQZV	legacy/qiime/slurm.TaxaQZAtoQZV	legacy QIIME
+slurm.TaxaBarplot	legacy/qiime/slurm.TaxaBarplot	legacy QIIME
+emp_release1_20170912_metadata.tsv	data/raw/emp_metadata_release1_20170912.tsv	renamed and moved
+emp_deblur_150bp.release1.biom	data/raw/emp_deblur_150bp_release1.biom	renamed and moved
+emp.150.min25.deblur.seq.fa	data/raw/emp_deblur_150bp_min25.fasta	renamed and moved
+emp.100.min25.deblur.seq.fa	data/raw/emp_deblur_100bp_min25.fasta	renamed and moved
+emp.90.min25.deblur.seq.fa	data/raw/emp_deblur_90bp_min25.fasta	renamed and moved
+emp_observation_info_deblur.tar.gz	data/raw/emp_observation_info_deblur.tar.gz	moved
+silva_nr99_v138.1_train_set.fa.gz	data/reference/silva_nr99_v138_1_train_set.fasta.gz	renamed and moved
+emp90.5000_1000_rxbl_placement_pruned75.tog.tre	data/reference/trees/emp90_5000_1000_rxbl_placement_pruned75.tre	renamed and moved
+emp100.5000_1000_rxbl_placement_pruned75.tog.tre	data/reference/trees/emp100_5000_1000_rxbl_placement_pruned75.tre	renamed and moved
+emp150.5000_1000_rxbl_placement_pruned75.tog.tre	data/reference/trees/emp150_5000_1000_rxbl_placement_pruned75.tre	renamed and moved
+emp_table.tsv	data/intermediate/asv_table_all_samples.tsv	renamed and moved
+taxonomy_table.csv	data/intermediate/taxonomy_all_samples.csv	renamed and moved
+taxonomy_table_soil_only.csv	data/intermediate/taxonomy_soil_only.csv	renamed and moved
+asv_table_soil.csv	data/intermediate/asv_table_soil_only.csv	renamed and moved
+sample_taxa_matrix.csv	data/intermediate/asv_taxonomy_matrix_all_samples.csv	renamed and moved
+sample_taxa_matrix_genus.csv	data/intermediate/genus_matrix_all_samples.csv	renamed and moved
+sample_taxa_matrix_genus_soil_filtered.csv	data/intermediate/genus_matrix_soil_only.csv	renamed and moved
+soil_sample_ids.txt	data/intermediate/soil_sample_ids.txt	moved
+soil_metadata.tsv	data/intermediate/soil_metadata.tsv	moved
+debug_soil_samples.tsv	data/intermediate/debug_soil_samples.tsv	moved
+emp_lineage_filtered_clr.csv	data/processed/lineage_clr_matrix_soil_filtered.csv	renamed and moved
+taxa_presence_summary.csv	data/processed/genus_prevalence_summary.csv	renamed and moved
+emp_fraction_taxa_remaining_1_to_20.csv	data/processed/lineage_counts_thresholds_1_to_20.csv	renamed and moved
+emp_fraction_taxa_remaining_by_threshold.csv	data/processed/lineage_prevalence_thresholds.csv	renamed and moved
+emp_taxonomy_full_lineage_counts.csv	data/processed/lineage_counts_all.csv	renamed and moved
+read_count_comparison.csv	outputs/qc_tables/all_samples_read_count_comparison.csv	renamed and moved
+emp_col_sums.tsv	outputs/qc_tables/all_samples_asv_reads_per_sample.tsv	renamed and moved
+emp_genus_col_sums.tsv	outputs/qc_tables/all_samples_genus_reads_per_sample.tsv	renamed and moved
+emp_row_nonzero.tsv	outputs/qc_tables/all_samples_asv_nonzero_samples.tsv	renamed and moved
+emp_summary_col_sums.tsv	outputs/qc_tables/all_samples_asv_reads_per_sample_summary.tsv	renamed and moved
+emp_summary_row_nonzero.tsv	outputs/qc_tables/all_samples_asv_nonzero_samples_summary.tsv	renamed and moved
+emp_summary_genus_col_sums.tsv	outputs/qc_tables/all_samples_genus_reads_per_sample_summary.tsv	renamed and moved
+emp_summary_colD.tsv	outputs/qc_tables/all_samples_genus_retention_percent_summary.tsv	renamed and moved
+soil_row_sums.tsv	outputs/qc_tables/soil_reads_per_sample.tsv	renamed and moved
+soil_row_nonzero.tsv	outputs/qc_tables/soil_asv_nonzero_per_sample.tsv	renamed and moved
+soil_summary_row_sums.tsv	outputs/qc_tables/soil_reads_per_sample_summary.tsv	renamed and moved
+soil_summary_row_nonzero.tsv	outputs/qc_tables/soil_asv_nonzero_per_sample_summary.tsv	renamed and moved
+soil_summary_colD.tsv	outputs/qc_tables/soil_genus_retention_percent_summary.tsv	renamed and moved
+asv_match_summary.txt	outputs/qc_tables/asv_id_match_summary.txt	renamed and moved
+table_summary.txt	outputs/qc_tables/asv_table_summary.txt	renamed and moved
+emp_hist_col_sums.png	outputs/figures/all_samples_asv_reads_per_sample_hist.png	renamed and moved
+emp_hist_row_nonzero.png	outputs/figures/all_samples_asv_nonzero_samples_hist.png	renamed and moved
+emp_hist_genus_col_sums.png	outputs/figures/all_samples_genus_reads_per_sample_hist.png	renamed and moved
+emp_hist_colD_read_count_comparison.png	outputs/figures/all_samples_genus_retention_percent_hist.png	renamed and moved
+soil_hist_asv_counts_per_sample.png	outputs/figures/soil_asv_nonzero_per_sample_hist.png	renamed and moved
+soil_hist_colD_read_count_comparison.png	outputs/figures/soil_genus_retention_percent_hist.png	renamed and moved
+soil_hist_row_sums_capped_custom.png	outputs/figures/soil_reads_per_sample_hist_capped.png	renamed and moved
+taxa_presence_histogram.png	outputs/figures/genus_prevalence_histogram.png	renamed and moved
+emp_fraction_lineages_remaining_plot.png	outputs/figures/lineage_fraction_remaining_plot.png	renamed and moved
+emp_fraction_matrix_remaining_plot.png	outputs/figures/lineage_fraction_matrix_remaining_plot.png	renamed and moved
+emp_fraction_lineages_remaining.png	legacy/figures/lineage_fraction_remaining_legacy.png	legacy output
+emp_fraction_counts_remaining.png	legacy/figures/fraction_counts_remaining_legacy.png	legacy output
+Rplots.pdf	legacy/figures/Rplots.pdf	legacy output
+Folder_Models/result_best_model_EMP_20.RData	models/best_model_emp_k20.RData	renamed and moved
+Folder_Models/result_best_model_EMP.RData	models/best_model_emp_default.RData	renamed and moved
+ML_Soil.out	logs/ml_soil.out	renamed and moved
+ML_Soil.err	logs/ml_soil.err	renamed and moved
+EMP_taxonomy.qza	legacy/qiime/EMP_taxonomy.qza	legacy QIIME
+EMP_taxonomy.qzv	legacy/qiime/EMP_taxonomy.qzv	legacy QIIME
+EMP_taxa_barplot.qzv	legacy/qiime/EMP_taxa_barplot.qzv	legacy QIIME
+emp_table.qza	legacy/qiime/emp_table.qza	legacy QIIME
+emp_table.qzv	legacy/qiime/emp_table.qzv	legacy QIIME
+emp_rep_seqs.qza	legacy/qiime/emp_rep_seqs.qza	legacy QIIME
+emp_rep_seqs.qzv	legacy/qiime/emp_rep_seqs.qzv	legacy QIIME
+silva-138-99-nb-classifier.qza	legacy/qiime/silva-138-99-nb-classifier.qza	legacy QIIME
+.DS_Store	legacy/osx_artifacts/.DS_Store	OS artifact
+._.DS_Store	legacy/osx_artifacts/._.DS_Store	OS artifact
+._emp_lineage_filtered_clr.csv	legacy/osx_artifacts/._emp_lineage_filtered_clr.csv	OS artifact
+._emp_table.tsv	legacy/osx_artifacts/._emp_table.tsv	OS artifact
+.RData	legacy/session/.RData	R session
+.Rhistory	legacy/session/.Rhistory	R session
+NEW	scripts/18_calculate_alpha_diversity.R	new alpha diversity calculation script
+NEW	scripts/19_plot_alpha_diversity_by_cluster.R	new alpha diversity plotting script
+NEW	scripts/slurm/r18_calculate_alpha_diversity.slurm	new SLURM wrapper for alpha diversity
+NEW	scripts/slurm/r19_plot_alpha_diversity_by_cluster.slurm	new SLURM wrapper for alpha diversity plots
+NEW	data/processed/alpha_diversity_soil.csv	new alpha diversity metrics output
+NEW	outputs/cluster_metadata/cluster_alpha_diversity.tsv	new cluster alpha diversity joined table
+NEW	outputs/cluster_metadata/cluster_alpha_diversity_summary.tsv	new cluster alpha diversity summary
+NEW	outputs/figures/alpha_diversity_distributions.png	new alpha diversity distribution plots
+NEW	scripts/20_cluster_clr_statistics.R	new cluster statistics script
+NEW	scripts/21_ordination_analysis.R	new PCA/PCoA ordination script
+NEW	scripts/slurm/r20_cluster_clr_statistics.slurm	new SLURM wrapper
+NEW	scripts/slurm/r21_ordination_analysis.slurm	new SLURM wrapper
+NEW	outputs/ordination/	new directory for ordination outputs
+NEW	outputs/cluster_metadata/cluster_clr_statistics.csv	cluster statistics with error bars

@@ -1,0 +1,5 @@
+dataset,biome_label_scheme,n_train_samples,n_features,n_classes,n_trees,mtry,oob_error,test_accuracy,cohen_kappa,macro_precision,macro_recall,macro_F1
+Global_Topsoil,original_biomes,126,165,8,500,12,0.5397,0.4375,0.3268,0.4162,0.4056,0.5082
+Global_Topsoil,grouped_biomes,137,165,6,500,12,0.4088,0.6182,0.4407,0.6605,0.4046,0.5848
+EMP_Soil_Subset,original_biomes,1549,1533,11,500,39,0.0303,0.9711,0.9613,0.9001,0.7993,0.8854
+EMP_Soil_Subset,grouped_biomes,1549,1533,9,500,39,0.0213,0.9817,0.9755,0.9617,0.9544,0.9578
